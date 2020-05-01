@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="mainCollectionCell" id="gTV-IL-0wX" customClass="FeedCell" customModule="Delicace" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="688" height="535"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="688" height="535"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jennifer Cruise is making a Bohrata." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRf-an-Hyx" userLabel="Title Label">
+                        <rect key="frame" x="86" y="64" width="597" height="19.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rec-1" translatesAutoresizingMaskIntoConstraints="NO" id="mmH-wR-X5E" userLabel="Recipe Image">
+                        <rect key="frame" x="0.0" y="130" width="688" height="331"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="bVu-r7-Nrg" userLabel="Profile Image">
+                        <rect key="frame" x="15" y="59" width="56" height="56"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="56" id="iKW-uq-eGZ"/>
+                            <constraint firstAttribute="width" constant="56" id="mWa-FN-cbd"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="28"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwe-Ux-Dyw" userLabel="Time Label">
+                        <rect key="frame" x="86" y="91.5" width="37.5" height="14.5"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PMp-mu-wDs">
+                        <rect key="frame" x="10" y="471" width="93" height="20"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-heart-35" translatesAutoresizingMaskIntoConstraints="NO" id="MKa-j1-iUm" userLabel="Engament Image">
+                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J16-lj-RO8" userLabel="Comments Label">
+                                <rect key="frame" x="28" y="0.0" width="14.5" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.83921568629999999" green="0.42352941179999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comments-50" translatesAutoresizingMaskIntoConstraints="NO" id="nDT-g0-Sf3" userLabel="Comments Image">
+                                <rect key="frame" x="50.5" y="0.0" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="68K-XQ-6nA"/>
+                                    <constraint firstAttribute="width" constant="20" id="lST-zi-5Dd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="37" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYz-bw-guE" userLabel="Engament Indicator">
+                                <rect key="frame" x="78.5" y="0.0" width="14.5" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.83921568629999999" green="0.42352941179999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="MKa-j1-iUm" firstAttribute="width" secondItem="nDT-g0-Sf3" secondAttribute="width" id="p0e-9s-WP4"/>
+                            <constraint firstItem="MKa-j1-iUm" firstAttribute="height" secondItem="nDT-g0-Sf3" secondAttribute="height" id="t6F-HR-A1r"/>
+                        </constraints>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15u-ej-KY2">
+                        <rect key="frame" x="654" y="469" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="6N5-kJ-XRe"/>
+                            <constraint firstAttribute="height" constant="24" id="GKc-LR-NR1"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="menu-horizontal-35"/>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="RRf-an-Hyx" firstAttribute="top" secondItem="bVu-r7-Nrg" secondAttribute="top" constant="5" id="6hQ-Ye-wwE"/>
+                <constraint firstItem="Bwe-Ux-Dyw" firstAttribute="top" secondItem="RRf-an-Hyx" secondAttribute="bottom" constant="8" id="8il-Ya-DWi"/>
+                <constraint firstItem="PMp-mu-wDs" firstAttribute="bottom" secondItem="ZTg-uK-7eu" secondAttribute="bottom" constant="-10" id="GJf-wH-qda"/>
+                <constraint firstItem="PMp-mu-wDs" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="10" id="HbI-Y9-kmw"/>
+                <constraint firstItem="15u-ej-KY2" firstAttribute="bottom" secondItem="ZTg-uK-7eu" secondAttribute="bottom" constant="-8" id="J3h-eB-C2P"/>
+                <constraint firstItem="PMp-mu-wDs" firstAttribute="top" secondItem="mmH-wR-X5E" secondAttribute="bottom" constant="10" id="ODj-dt-m31"/>
+                <constraint firstItem="RRf-an-Hyx" firstAttribute="leading" secondItem="bVu-r7-Nrg" secondAttribute="trailing" constant="15" id="QrA-x2-5sL"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="mmH-wR-X5E" secondAttribute="trailing" id="Y23-zH-Vmd"/>
+                <constraint firstItem="Bwe-Ux-Dyw" firstAttribute="leading" secondItem="RRf-an-Hyx" secondAttribute="leading" id="cDR-Ag-2IC"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="15u-ej-KY2" secondAttribute="trailing" constant="10" id="cgH-jr-Zsj"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="bVu-r7-Nrg" secondAttribute="top" constant="-15" id="fIK-CV-G08"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="RRf-an-Hyx" secondAttribute="trailing" constant="5" id="jA1-mv-OUZ"/>
+                <constraint firstItem="mmH-wR-X5E" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="mmF-dA-uyI"/>
+                <constraint firstItem="mmH-wR-X5E" firstAttribute="top" secondItem="bVu-r7-Nrg" secondAttribute="bottom" constant="15" id="nJI-c6-1nl"/>
+                <constraint firstItem="bVu-r7-Nrg" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="15" id="zAM-hY-Qqc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="688" height="535"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="7"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipToBounds" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="profileImage" destination="bVu-r7-Nrg" id="7Fw-kx-dU9"/>
+                <outlet property="recipeImage" destination="mmH-wR-X5E" id="HBG-ay-gkZ"/>
+                <outlet property="timeLabel" destination="Bwe-Ux-Dyw" id="VgI-tn-bpx"/>
+                <outlet property="titleLabel" destination="RRf-an-Hyx" id="9cT-zd-93x"/>
+            </connections>
+            <point key="canvasLocation" x="523.1884057971015" y="17.075892857142858"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Background" width="375" height="667"/>
+        <image name="Rec-1" width="255" height="350"/>
+        <image name="comments-50" width="50" height="50"/>
+        <image name="icons8-heart-35" width="35" height="35"/>
+        <image name="menu-horizontal-35" width="17.5" height="17.5"/>
+    </resources>
+</document>
