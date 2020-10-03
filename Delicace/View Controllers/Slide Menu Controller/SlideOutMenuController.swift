@@ -12,7 +12,7 @@ class SlideMenuController: UIViewController {
     
     // MARK: - Properties
     var selectedSection = 0
-    let cellOptions = ["Recipe", "Feeds", "Chats", "Favorite", "Profile", "Settings"]
+    let cellOptions = ["Recipes", "Feed", "Chat", "Favorite", "Profile", "Settings", "Logout"]
     var delegate: LoginControllerDelegate?
     lazy var tableView: UITableView = {
         let tv = UITableView()
@@ -52,7 +52,6 @@ extension SlideMenuController: UITableViewDelegate {
                 UserDefaultsHelper.manager.setIsLoggedIn(bool: false)
                 delegate?.finishLoggingOut()
             }
-        
         selectedSection = indexPath.section
         self.tableView.reloadData()
     }

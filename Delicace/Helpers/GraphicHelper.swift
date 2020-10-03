@@ -33,15 +33,16 @@ class GraphicHelper: NSObject {
         return gradientImage
     }
     
-    func setGradient (button: UIButton) {
+    func setGradient (view: UIView) -> CAGradientLayer {
          let gradient = CAGradientLayer()
-        gradient.frame = button.bounds
-        gradient.colors = [UIColor.myPink.cgColor, UIColor.myRed.cgColor]
+        gradient.frame = view.frame
+        gradient.colors = [UIColor.green.cgColor, UIColor.red.cgColor]
         gradient.startPoint = CGPoint(x: 0.5, y: 0)
-        gradient.endPoint = CGPoint(x: 0.5, y: 1)
-        gradient.locations = [0.0, 1.0]
-//        button.layer.addSublayer(gradient)
-        button.layer.insertSublayer(gradient, at: 0)
+        gradient.endPoint = CGPoint(x: 0, y: 1)
+        return gradient
+//        gradient.locations = [0.0, 1.0]
+//        view.layer.addSublayer(gradient)  
+//        view.layer.insertSublayer(gradient, at: 0)
      }
     
     

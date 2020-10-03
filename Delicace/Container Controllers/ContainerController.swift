@@ -14,10 +14,10 @@ class ContainerController: UIViewController {
     weak var loginControllerDelegate: LoginControllerDelegate?
     var menuController: UIViewController!
     var centerController: UIViewController!
-    private var topConstraint: NSLayoutConstraint!
-    private var leadingConstraint: NSLayoutConstraint!
-    private var trailingConstraint: NSLayoutConstraint!
-    private var bottomConstraint: NSLayoutConstraint!
+    private var heightConstraint: NSLayoutConstraint!
+    private var widthConstraint: NSLayoutConstraint!
+    private var xConstraint: NSLayoutConstraint!
+    private var yConstraint: NSLayoutConstraint!
     var isExpanded = false
     let graphicHelper = GraphicHelper()
     
@@ -48,11 +48,11 @@ class ContainerController: UIViewController {
 
         centerController.view.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(centerController.view)
-        topConstraint = centerController.view.topAnchor.constraint(equalTo: self.view.topAnchor)
-        bottomConstraint = centerController.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
-        leadingConstraint = centerController.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor)
-        trailingConstraint = centerController.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
-        NSLayoutConstraint.activate([topConstraint, leadingConstraint, bottomConstraint, trailingConstraint])
+        heightConstraint = centerController.view.heightAnchor.constraint(equalTo: self.view.heightAnchor)
+        widthConstraint = centerController.view.widthAnchor.constraint(equalTo: self.view.widthAnchor)
+        xConstraint = centerController.view.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+        yConstraint = centerController.view.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+        NSLayoutConstraint.activate([heightConstraint, widthConstraint, xConstraint, yConstraint])
         addChild(centerController)
         centerController.didMove(toParent: self)
     }
@@ -83,19 +83,18 @@ class ContainerController: UIViewController {
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 
                 self.centerController.view.setCornerRadius(cornerR: 12)
-                self.topConstraint.constant = 100
-                self.bottomConstraint.constant = -100
-                self.leadingConstraint.constant =  (self.centerController.view.frame.width * 0.65)
-                self.trailingConstraint.constant = (self.centerController.view.frame.width * 0.65)
+                self.heightConstraint.constant = -(self.centerController.view.frame.height * 0.2)
+                self.widthConstraint.constant =  -(self.centerController.view.frame.width * 0.2)
+                self.xConstraint.constant = self.centerController.view.frame.width - (self.centerController.view.frame.width * 0.4)
+
             }, completion: nil)
         } else {
             // hide menu
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 self.centerController.view.setCornerRadius(cornerR: 0)
-                self.topConstraint.constant = 0
-                self.bottomConstraint.constant = 0
-                self.leadingConstraint.constant = 0
-                self.trailingConstraint.constant = 0
+                self.xConstraint.constant = 0
+                self.heightConstraint.constant = 0
+                self.widthConstraint.constant = 0
             }, completion: nil)
         }
     }
