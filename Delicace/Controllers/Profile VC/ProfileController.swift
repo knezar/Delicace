@@ -10,23 +10,35 @@ import UIKit
 
 class ProfileController: UIViewController {
 
+
+    // MARK: - Properties
+
+    // MARK: - Outlets
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        ConfigUI()
+    }
+    
+    // MARK: - Private
+    func ConfigUI() {
+        view.backgroundColor = .cyan
+        navigationItem.title = "Profile"
+        navigationController?.navigationBar.barStyle = .black
+        navigationItem.leftBarButtonItem = navButtonConfiguration(image: #imageLiteral(resourceName: "Logout"), selector:  #selector(cancelButtonToggeled))
         
         
-        view.backgroundColor = .brown
-        // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func navButtonConfiguration(image: UIImage, selector: Selector) -> UIBarButtonItem {
+        let barButton = UIBarButtonItem(image: image.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: selector)
+        return barButton
     }
-    */
+    
+    // MARK: - Actions
+    
+    @objc func cancelButtonToggeled(){
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }

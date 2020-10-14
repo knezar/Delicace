@@ -15,6 +15,8 @@
 		02C2BC192535664D00FB183F /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C2BC172535664D00FB183F /* ProfileController.xib */; };
 		02C2BC1F253566B100FB183F /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2BC1D253566B100FB183F /* CalendarController.swift */; };
 		02C2BC20253566B100FB183F /* CalendarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C2BC1E253566B100FB183F /* CalendarController.xib */; };
+		02C34A4525379370009E59AC /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C34A4325379370009E59AC /* SettingsController.swift */; };
+		02C34A4625379370009E59AC /* SettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C34A4425379370009E59AC /* SettingsController.xib */; };
 		02EDBB7D2535D9300064D581 /* ChatTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EDBB7B2535D9300064D581 /* ChatTableCell.swift */; };
 		02EDBB7E2535D9300064D581 /* ChatTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02EDBB7C2535D9300064D581 /* ChatTableCell.xib */; };
 		02EDBB832535D95D0064D581 /* ChatDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EDBB812535D95D0064D581 /* ChatDetailCell.swift */; };
@@ -72,6 +74,8 @@
 		02C2BC172535664D00FB183F /* ProfileController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
 		02C2BC1D253566B100FB183F /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 		02C2BC1E253566B100FB183F /* CalendarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarController.xib; sourceTree = "<group>"; };
+		02C34A4325379370009E59AC /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		02C34A4425379370009E59AC /* SettingsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsController.xib; sourceTree = "<group>"; };
 		02EDBB7B2535D9300064D581 /* ChatTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableCell.swift; sourceTree = "<group>"; };
 		02EDBB7C2535D9300064D581 /* ChatTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableCell.xib; sourceTree = "<group>"; };
 		02EDBB812535D95D0064D581 /* ChatDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailCell.swift; sourceTree = "<group>"; };
@@ -168,6 +172,15 @@
 				8108395B2449318A00FDE0AF /* Login VC */,
 			);
 			path = "Auth VCs";
+			sourceTree = "<group>";
+		};
+		02C34A482537937E009E59AC /* Settings VC */ = {
+			isa = PBXGroup;
+			children = (
+				02C34A4325379370009E59AC /* SettingsController.swift */,
+				02C34A4425379370009E59AC /* SettingsController.xib */,
+			);
+			path = "Settings VC";
 			sourceTree = "<group>";
 		};
 		02EDBB802535D9390064D581 /* Chat Table Cell */ = {
@@ -299,6 +312,7 @@
 				02C2BC1B2535665C00FB183F /* Profile VC */,
 				02C2BC23253566B600FB183F /* Calendar VC */,
 				02C2BC25253566D300FB183F /* Auth VCs */,
+				02C34A482537937E009E59AC /* Settings VC */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -493,6 +507,7 @@
 				81182A40245C8EFC00C8CFB8 /* SpecialsCell.xib in Resources */,
 				8108397B2449318A00FDE0AF /* LoginViewController.xib in Resources */,
 				81182A39245C53F000C8CFB8 /* HomeController.xib in Resources */,
+				02C34A4625379370009E59AC /* SettingsController.xib in Resources */,
 				02C2BC20253566B100FB183F /* CalendarController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,6 +553,7 @@
 				8108397C2449318A00FDE0AF /* LoginViewController.swift in Sources */,
 				810839722449318A00FDE0AF /* Protocols.swift in Sources */,
 				8108397D2449318A00FDE0AF /* MenuController.swift in Sources */,
+				02C34A4525379370009E59AC /* SettingsController.swift in Sources */,
 				81FC6811245B96FD00E5F7DD /* ErrorHelper.swift in Sources */,
 				81FCAC9B245EFFA60013DE74 /* MenuOptions.swift in Sources */,
 				81FC680D245B959400E5F7DD /* UserGenApi.swift in Sources */,

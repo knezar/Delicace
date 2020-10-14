@@ -1,15 +1,14 @@
 //
-//  FavoritesController.swift
+//  SettingsController.swift
 //  Delicace
 //
-//  Created by Nezar Khabar on 10/13/20.
+//  Created by Nezar Khabar on 10/14/20.
 //  Copyright © 2020 FoodTech. All rights reserved.
 //
 
 import UIKit
 
-class CalendarController: UIViewController {
-
+class SettingsController: UIViewController {
 
     // MARK: - Properties
 
@@ -23,8 +22,8 @@ class CalendarController: UIViewController {
     
     // MARK: - Private
     func ConfigUI() {
-        view.backgroundColor = .brown
-        navigationItem.title = "Calendar"
+        view.backgroundColor = .yellow
+        navigationItem.title = "Settings"
         navigationController?.navigationBar.barStyle = .black
         navigationItem.leftBarButtonItem = navButtonConfiguration(image: #imageLiteral(resourceName: "Logout"), selector:  #selector(cancelButtonToggeled))
         

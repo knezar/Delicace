@@ -131,11 +131,20 @@ class ContainerController: UIViewController {
             navController.modalPresentationStyle = .fullScreen
             present(navController, animated: true, completion: nil)
         case .Calendar:
-            print("Show recifavoritespes")
+            let controller = CalendarController(nibName: "CalendarController", bundle: nil)
+            let navController = UINavigationController(rootViewController:controller)
+            navController.modalPresentationStyle = .fullScreen
+            present(navController, animated: true, completion: nil)
         case .Profile:
-            print("Show profile")
+            let controller = ProfileController(nibName: "ProfileController", bundle: nil)
+            let navController = UINavigationController(rootViewController:controller)
+            navController.modalPresentationStyle = .fullScreen
+            present(navController, animated: true, completion: nil)
         case .Settings:
-            print("Show settings")
+            let controller = SettingsController(nibName: "SettingsController", bundle: nil)
+            let navController = UINavigationController(rootViewController:controller)
+            navController.modalPresentationStyle = .fullScreen
+            present(navController, animated: true, completion: nil)
         case .Logout:
             UserDefaultsHelper.manager.setIsLoggedIn(bool: false)
             delegate?.finishLoggingOut()
