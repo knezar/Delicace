@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreGraphics
 
 //"gender": "female",
 //"name": {"title": "Miss", "first": "Clarissa", "last": "Bröcker"},

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableCell" rowHeight="502" id="KGk-i7-Jjw" customClass="ChatTableCell" customModule="Delicace" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="798" height="502"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="798" height="502"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Gdq-T2-j49" userLabel="userImage">
+                        <rect key="frame" x="8" y="63" width="376.5" height="376.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Gdq-T2-j49" secondAttribute="height" multiplier="1:1" id="yIc-hS-R8z"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rTa-hi-rMP" userLabel="horizontal Stack">
+                        <rect key="frame" x="718.5" y="67.5" width="71.5" height="10"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21/34/20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFP-E4-3G4" userLabel="Date">
+                                <rect key="frame" x="0.0" y="0.0" width="57.5" height="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="31p-TT-E03">
+                                <rect key="frame" x="61.5" y="0.0" width="10" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="ZxE-eM-nHM"/>
+                                    <constraint firstAttribute="width" secondItem="31p-TT-E03" secondAttribute="height" multiplier="1:1" id="w8W-YZ-1xQ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="L2w-w9-MEv" userLabel="Vertical Stack">
+                        <rect key="frame" x="392.5" y="63" width="318" height="51"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0v-8M-mXu" userLabel="Name">
+                                <rect key="frame" x="0.0" y="0.0" width="84" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Message Snippet jebfejhb ehew hjwejhwe  hvdwwhvew dqwhevqwl h" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zul-BU-PyC" userLabel="Msg Snippet">
+                                <rect key="frame" x="0.0" y="19.5" width="259" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="L2w-w9-MEv" firstAttribute="top" secondItem="Gdq-T2-j49" secondAttribute="top" id="BvM-j8-HsG"/>
+                    <constraint firstItem="L2w-w9-MEv" firstAttribute="leading" secondItem="Gdq-T2-j49" secondAttribute="trailing" constant="8" id="jmS-FN-qwP"/>
+                    <constraint firstItem="L2w-w9-MEv" firstAttribute="trailing" secondItem="rTa-hi-rMP" secondAttribute="leading" constant="-8" id="n7a-bb-WDc"/>
+                    <constraint firstItem="rTa-hi-rMP" firstAttribute="centerY" secondItem="m0v-8M-mXu" secondAttribute="centerY" id="z8r-yE-Yez"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <constraints>
+                <constraint firstItem="Gdq-T2-j49" firstAttribute="centerY" secondItem="njF-e1-oar" secondAttribute="centerY" id="3Lp-Q4-MlM"/>
+                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="rTa-hi-rMP" secondAttribute="trailing" constant="8" id="CuG-v6-zrB"/>
+                <constraint firstItem="Gdq-T2-j49" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" constant="8" id="XJ5-dC-lAp"/>
+                <constraint firstItem="Gdq-T2-j49" firstAttribute="height" secondItem="njF-e1-oar" secondAttribute="height" multiplier="0.75" id="vHd-Mm-6Zf"/>
+            </constraints>
+            <connections>
+                <outlet property="date" destination="NFP-E4-3G4" id="k1O-QS-U5X"/>
+                <outlet property="msgSinppet" destination="Zul-BU-PyC" id="vrR-8q-AOh"/>
+                <outlet property="userImage" destination="Gdq-T2-j49" id="1gy-Yi-mw7"/>
+                <outlet property="userName" destination="m0v-8M-mXu" id="jOH-7d-f1z"/>
+            </connections>
+            <point key="canvasLocation" x="-120.28985507246378" y="156.69642857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Background" width="375" height="667"/>
+        <image name="add" width="64" height="64"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

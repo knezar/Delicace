@@ -7,9 +7,6 @@
 //
 
 import UIKit
-//import CoreImage
-//import CoreGraphics
-//import Darwin
 
 class GraphicHelper: NSObject {
 
@@ -17,6 +14,8 @@ class GraphicHelper: NSObject {
         super.init()
     }
 
+   
+    
     func getGradientImage(bounds: CGRect) -> UIImage? {
         let gradient = CAGradientLayer()
         gradient.frame = bounds

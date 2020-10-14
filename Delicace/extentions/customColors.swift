@@ -17,6 +17,9 @@ extension UIColor {
     static var myLightPink: UIColor {
         return UIColor.getRGB(red: 246, green: 234, blue: 237)
     }
+    static var myBgColor: UIColor {
+        return UIColor.getRGB(red: 255, green: 249, blue: 251)
+    }
     static func getRGB(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
         return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
     }

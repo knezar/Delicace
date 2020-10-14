@@ -9,7 +9,7 @@
 import Foundation
 
 protocol HomeControllerDelegate: class {
-    func slideOutMenuToggled()
+    func slideOutMenuToggled(ForMenuOption: MenuOptions?)
 }
 
 protocol LoginControllerDelegate: class {
