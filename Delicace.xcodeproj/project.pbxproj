@@ -63,6 +63,7 @@
 		81FCAC9B245EFFA60013DE74 /* MenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FCAC9A245EFFA60013DE74 /* MenuOptions.swift */; };
 		81FDE0EF24553E1900A16194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81FDE0EE24553E1900A16194 /* Assets.xcassets */; };
 		81FDE0F12455EB3D00A16194 /* customColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FDE0F02455EB3D00A16194 /* customColors.swift */; };
+		BB15D19A60314B39A25AF804 /* libPods-Delicace.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA08AB994BACB589673164B /* libPods-Delicace.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,8 @@
 		02EDBB822535D95D0064D581 /* ChatDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatDetailCell.xib; sourceTree = "<group>"; };
 		02F73A0925362D3000844C21 /* LeftChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftChatCell.swift; sourceTree = "<group>"; };
 		02F73A0C25362D6200844C21 /* RightChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightChatCell.swift; sourceTree = "<group>"; };
+		261F8095B6C6297BFA37331F /* Pods-Delicace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delicace.release.xcconfig"; path = "Target Support Files/Pods-Delicace/Pods-Delicace.release.xcconfig"; sourceTree = "<group>"; };
+		7DA08AB994BACB589673164B /* libPods-Delicace.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Delicace.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8104C86C2449431500DC53F4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81083924244930F900FDE0AF /* Delicace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delicace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8108393E2449318A00FDE0AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -124,6 +127,7 @@
 		81FCAC9A245EFFA60013DE74 /* MenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptions.swift; sourceTree = "<group>"; };
 		81FDE0EE24553E1900A16194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81FDE0F02455EB3D00A16194 /* customColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customColors.swift; sourceTree = "<group>"; };
+		F7D7C80B23F356DFDE776106 /* Pods-Delicace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delicace.debug.xcconfig"; path = "Target Support Files/Pods-Delicace/Pods-Delicace.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB15D19A60314B39A25AF804 /* libPods-Delicace.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,11 +208,23 @@
 			path = "Chat Detail Cell";
 			sourceTree = "<group>";
 		};
+		28041F4CAED6C11B5F2467AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7D7C80B23F356DFDE776106 /* Pods-Delicace.debug.xcconfig */,
+				261F8095B6C6297BFA37331F /* Pods-Delicace.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8108391B244930F900FDE0AF = {
 			isa = PBXGroup;
 			children = (
 				81083926244930F900FDE0AF /* Delicace */,
 				81083925244930F900FDE0AF /* Products */,
+				28041F4CAED6C11B5F2467AB /* Pods */,
+				DA180C4C959F31B5297AFF44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -433,6 +450,14 @@
 			path = "Client Api";
 			sourceTree = "<group>";
 		};
+		DA180C4C959F31B5297AFF44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DA08AB994BACB589673164B /* libPods-Delicace.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -440,9 +465,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81083938244930FB00FDE0AF /* Build configuration list for PBXNativeTarget "Delicace" */;
 			buildPhases = (
+				7E6E227F93772D5276207E38 /* [CP] Check Pods Manifest.lock */,
 				81083920244930F900FDE0AF /* Sources */,
 				81083921244930F900FDE0AF /* Frameworks */,
 				81083922244930F900FDE0AF /* Resources */,
+				C07B7C419B0BA1E5B3D0F12D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -513,6 +540,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E6E227F93772D5276207E38 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Delicace-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C07B7C419B0BA1E5B3D0F12D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Delicace/Pods-Delicace-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Delicace/Pods-Delicace-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Delicace/Pods-Delicace-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		81083920244930F900FDE0AF /* Sources */ = {
@@ -692,6 +761,7 @@
 		};
 		81083939244930FB00FDE0AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7D7C80B23F356DFDE776106 /* Pods-Delicace.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -711,6 +781,7 @@
 		};
 		8108393A244930FB00FDE0AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 261F8095B6C6297BFA37331F /* Pods-Delicace.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

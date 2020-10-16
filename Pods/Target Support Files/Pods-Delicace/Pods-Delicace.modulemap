@@ -1,0 +1,6 @@
+module Pods_Delicace {
+  umbrella header "Pods-Delicace-umbrella.h"
+
+  export *
+  module * { export * }
+}

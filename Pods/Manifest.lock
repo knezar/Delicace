@@ -1,0 +1,32 @@
+PODS:
+  - InputBarAccessoryView (4.3.3):
+    - InputBarAccessoryView/Core (= 4.3.3)
+  - InputBarAccessoryView/Core (4.3.3)
+  - JGProgressHUD (2.2)
+  - MessageKit (3.1.0):
+    - InputBarAccessoryView (~> 4.3.0)
+  - SDWebImage (5.9.3):
+    - SDWebImage/Core (= 5.9.3)
+  - SDWebImage/Core (5.9.3)
+
+DEPENDENCIES:
+  - JGProgressHUD
+  - MessageKit
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - InputBarAccessoryView
+    - JGProgressHUD
+    - MessageKit
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  InputBarAccessoryView: 8e7fc09e9cba75e0fee5da13450e15c194806f69
+  JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
+  MessageKit: 3beb578737a5aa2bba25cc27c7b6d6faa09af5a7
+  SDWebImage: a31ee8e90a97303529e03fb0c333eae0eacb88e9
+
+PODFILE CHECKSUM: 9f5d9ce9bf415ee6c943d663a4536b2dc4c11be6
+
+COCOAPODS: 1.9.3
