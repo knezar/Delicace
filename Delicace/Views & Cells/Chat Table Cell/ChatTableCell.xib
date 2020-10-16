@@ -33,7 +33,7 @@
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="31p-TT-E03">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="31p-TT-E03">
                                 <rect key="frame" x="61.5" y="0.0" width="10" height="10"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="10" id="ZxE-eM-nHM"/>
@@ -85,7 +85,7 @@
     </objects>
     <resources>
         <image name="Background" width="375" height="667"/>
-        <image name="add" width="64" height="64"/>
+        <image name="rightArrow" width="64" height="64"/>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

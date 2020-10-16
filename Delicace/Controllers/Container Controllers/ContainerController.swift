@@ -48,7 +48,7 @@ class ContainerController: UIViewController {
         centerController = UINavigationController(rootViewController: homeController)
         let navigationBarAppearace = UINavigationBar.appearance()
         let attrs = [NSAttributedString.Key.foregroundColor: UIColor.white,
-                     NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25, weight: .regular)]
+                     NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .regular)]
         navigationBarAppearace.titleTextAttributes = attrs
         navigationBarAppearace.tintColor = UIColor.white
         navigationBarAppearace.isTranslucent = false
