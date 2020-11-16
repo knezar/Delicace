@@ -11,15 +11,58 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalendarController" customModule="Delicace" customModuleProvider="target">
             <connections>
+                <outlet property="eventCV" destination="9m4-23-Hpl" id="Zz8-kh-mlv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" userLabel="Blue View">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULi-7F-24w" userLabel="White View">
+                    <rect key="frame" x="0.0" y="44" width="414" height="868"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9m4-23-Hpl">
+                            <rect key="frame" x="5" y="50" width="404" height="813"/>
+                            <color key="backgroundColor" red="1" green="0.6705882352941176" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" sectionInsetReference="safeArea" id="bbf-W5-j9l">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="25" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="40"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="9m4-23-Hpl" secondAttribute="trailing" constant="5" id="Nj8-aY-cHs"/>
+                        <constraint firstItem="9m4-23-Hpl" firstAttribute="leading" secondItem="ULi-7F-24w" secondAttribute="leading" constant="5" id="VR6-1a-Vdh"/>
+                        <constraint firstItem="9m4-23-Hpl" firstAttribute="top" secondItem="ULi-7F-24w" secondAttribute="top" constant="50" id="cT5-b6-efy"/>
+                        <constraint firstAttribute="bottom" secondItem="9m4-23-Hpl" secondAttribute="bottom" constant="5" id="xdH-xk-dHk"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ULi-7F-24w" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2DJ-Ee-7lb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ULi-7F-24w" secondAttribute="bottom" constant="-50" id="6bp-TZ-RjP"/>
+                <constraint firstItem="ULi-7F-24w" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9to-6m-hCp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ULi-7F-24w" secondAttribute="trailing" id="or2-TW-LS0"/>
+            </constraints>
             <point key="canvasLocation" x="64" y="67"/>
         </view>
     </objects>

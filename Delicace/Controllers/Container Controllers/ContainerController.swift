@@ -20,7 +20,7 @@ class ContainerController: UIViewController {
     private var yConstraint: NSLayoutConstraint!
     var isExpanded = false
     let graphicHelper = GraphicHelper()
-    
+
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -50,13 +50,19 @@ class ContainerController: UIViewController {
         let attrs = [NSAttributedString.Key.foregroundColor: UIColor.white,
                      NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .regular)]
         navigationBarAppearace.titleTextAttributes = attrs
-        navigationBarAppearace.tintColor = UIColor.white
+        navigationBarAppearace.tintColor = UIColor.mainBlue
+        
+//        navigationBarAppearace.barTintColor = .mainBlue
+//        navigationBarAppearace.setBackgroundImage(UIImage(), for: .default)
+//        navigationBarAppearace.shadowImage = UIImage()
+        
         navigationBarAppearace.isTranslucent = false
         let bounds = self.navigationController!.navigationBar.frame
         if let image = graphicHelper.getGradientImage(bounds: bounds) {
             navigationBarAppearace.setBackgroundImage(image, for: .default)
         }
         
+
         centerController.view.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(centerController.view)
         heightConstraint = centerController.view.heightAnchor.constraint(equalTo: self.view.heightAnchor)

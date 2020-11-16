@@ -26,7 +26,7 @@ class SettingsController: UIViewController {
         navigationItem.title = "Settings"
         navigationController?.navigationBar.barStyle = .black
         navigationItem.leftBarButtonItem = navButtonConfiguration(image: #imageLiteral(resourceName: "Cancel"), selector:  #selector(cancelButtonToggeled))
-        navigationItem.rightBarButtonItem = navButtonConfiguration(image: #imageLiteral(resourceName: "Search Icon"), selector:  #selector(addButtonToggeled))
+//        navigationItem.rightBarButtonItem = navButtonConfiguration(image: #imageLiteral(resourceName: "Search Icon"), selector:  #selector(addButtonToggeled))
     }
     func navButtonConfiguration(image: UIImage, selector: Selector) -> UIBarButtonItem {
         let barButton = UIBarButtonItem(image: image.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: selector)

@@ -94,8 +94,7 @@ extension ChatDetailController: UITextFieldDelegate {
         
         
         textField.resignFirstResponder()
-        print(textField.text)
-        textField.text = ""
+        print(textField.text!)
         return true
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {

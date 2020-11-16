@@ -22,7 +22,7 @@ class GraphicHelper: NSObject {
         gradient.colors = [UIColor.myPink.cgColor, UIColor.myRed.cgColor]
         gradient.startPoint = CGPoint(x: 0, y: 0)
         gradient.endPoint = CGPoint(x: 1, y: 0)
-        var gradientImage:UIImage?
+        var gradientImage: UIImage?
         UIGraphicsBeginImageContext(gradient.bounds.size)
         if let context = UIGraphicsGetCurrentContext() {
             gradient.render(in: context)
@@ -32,18 +32,37 @@ class GraphicHelper: NSObject {
         return gradientImage
     }
     
-    func setGradient (view: UIView) -> CAGradientLayer {
+    func setGradient (view: UIView) -> UIView {
          let gradient = CAGradientLayer()
-        gradient.frame = view.frame
+        gradient.frame = view.bounds
         gradient.colors = [UIColor.green.cgColor, UIColor.red.cgColor]
-        gradient.startPoint = CGPoint(x: 0.5, y: 0)
+        gradient.startPoint = CGPoint(x: 0, y: 0)
         gradient.endPoint = CGPoint(x: 0, y: 1)
-        return gradient
-//        gradient.locations = [0.0, 1.0]
-//        view.layer.addSublayer(gradient)  
-//        view.layer.insertSublayer(gradient, at: 0)
+        gradient.locations = [0.75, 1.0]
+
+        view.layer.insertSublayer(gradient, at: 0)
+
+        return view
+//        view.layer.addSublayer(gradient)
      }
     
+    
+    func addShadedGradient(bounds: CGRect) -> UIView {
+        let gradient = CAGradientLayer()
+       gradient.frame = bounds
+       gradient.colors = [UIColor.green.cgColor, UIColor.red.cgColor]
+       gradient.startPoint = CGPoint(x: 0, y: 0)
+       gradient.endPoint = CGPoint(x: 0, y: 1)
+       gradient.locations = [0.75, 1.0]
+
+        let view = UIView()
+        view.alpha = 0.5
+        
+
+       view.layer.insertSublayer(gradient, at: 0)
+
+        return view
+    }
     
 //    func addBlurTo(image: UIImage, radius: CGFloat) -> UIImage {
 //        let ciContext = CIContext(options: nil)
