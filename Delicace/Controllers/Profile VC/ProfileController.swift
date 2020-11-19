@@ -88,7 +88,7 @@ class ProfileController: UIViewController {
     }
     
     func ConfigNavUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .myBgColor
         navigationController?.navigationBar.barStyle = .black
         navigationItem.leftBarButtonItem = navButtonConfiguration(image: #imageLiteral(resourceName: "Cancel"), selector:  #selector(cancelButtonToggeled))
         //        navigationItem.rightBarButtonItem = navButtonConfiguration(image: #imageLiteral(resourceName: "Search Icon"), selector:  #selector(addButtonToggeled))

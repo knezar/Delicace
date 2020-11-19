@@ -40,30 +40,24 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        view.backgroundColor = .myBgColor
+        
         configureNavBar()
         configureMainCollectionView()
         configureFloatingMenu()
-        RecipeSearchAPI.manager.fetchRecipes(url: " ") { (recipes) in
-            print(recipes.results)
-            
-            
-            self.recipeSearch = recipes.results
-        } errorHandler: { (error) in
-            print(error)
-        }
-
+//        RecipeSearchAPI.manager.fetchRecipes(url: " ") { (recipes) in
+//            print(recipes.results)
+//            self.recipeSearch = recipes.results
+//        } errorHandler: { (error) in
+//            print(error)
+//        }
         
-//        RecipeSearchAPI.manager.fetchRecipes(url: " ", completionHandler: {self.recipeSearch = $0}, errorHandler: {print($0)})
+//        scrollTo
         
-        
-//        print(recipeSearch.count)
-
-        // ChatClientAPI.manager.fetchMessages(url: "http://dev.rapptrlabs.com/Tests/scripts/chat_log.php", completionHandler: {self.messages = $0}, errorHandler: {print($0)})
     }
     
     // MARK: - Private
     private func configureFloatingMenu() {
+        menuBarView.homeVC = self
         let menuBarItems = ["Popular", "Trending", "Recent"]
         menuBarView.menuBarItems = menuBarItems
         
@@ -112,6 +106,13 @@ class HomeController: UIViewController {
         return cell
     }
     
+    private func testData(cell: RecipesCell, indexPath: IndexPath) -> RecipesCell {
+        cell.recipeImage.image = UIImage(named: imageItems[indexPath.row])
+        cell.titleLabel.text = titleItems[indexPath.row]
+        
+        return cell
+    }
+    
     // MARK: - Actions
     @objc func handleSearchButtonPressed() {
         print("search button pressed")
@@ -133,7 +134,12 @@ extension HomeController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == recipesCV {
-            return recipeSearch.count
+            if recipeSearch.isEmpty {
+                return titleItems.count
+            } else {
+                return recipeSearch.count
+
+            }
         } else {
             return imageItems.count
         }
@@ -143,7 +149,9 @@ extension HomeController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == recipesCV {
             let cell = recipesCV.dequeueReusableCell(withReuseIdentifier: recipesCellID, for: indexPath) as! RecipesCell
-           return configureCell(cell: cell, indexPath: indexPath)
+            
+            return testData(cell: cell, indexPath: indexPath)
+//           return configureCell(cell: cell, indexPath: indexPath)
         } else {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: specialsCellID, for: indexPath) as! SpecialsCell
@@ -157,7 +165,7 @@ extension HomeController: UICollectionViewDataSource {
 extension HomeController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == recipesCV {
-            return CGSize(width: recipesCV.bounds.size.width, height: recipesCV.bounds.size.width/2)
+            return CGSize(width: recipesCV.bounds.size.width, height: recipesCV.bounds.size.width/2.5)
         } else {
             return CGSize(width: specialsCV.bounds.width, height: specialsCV.bounds.size.height)
         }

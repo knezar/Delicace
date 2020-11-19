@@ -86,6 +86,6 @@ extension RecipeBookController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension RecipeBookController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: recipesCV.bounds.size.width, height: recipesCV.bounds.size.width/3)
+        return CGSize(width: recipesCV.bounds.size.width, height: recipesCV.bounds.size.width/2.5)
     }
 }

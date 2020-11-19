@@ -48,7 +48,7 @@ class CalendarController: UIViewController {
     
     func ConfigUI() {
         view.backgroundColor = .mainBlue
-        navigationItem.title = "Calendar"
+        navigationItem.title = "Events"
         navigationController?.navigationBar.barStyle = .black
         navigationItem.leftBarButtonItem = navButtonConfiguration(image: #imageLiteral(resourceName: "Cancel"), selector:  #selector(cancelButtonToggeled))
         navigationItem.rightBarButtonItem = navButtonConfiguration(image: #imageLiteral(resourceName: "addClear"), selector:  #selector(addButtonToggeled))

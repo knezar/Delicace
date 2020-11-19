@@ -15,6 +15,9 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
 //    let menuBarItems = ["Popular", "Trending", "Recent"]
     var menuBarItems: [String]?
     let menuBarCellID = "menuBarCell"
+    var whiteBarLeftAnchorConstraint: NSLayoutConstraint?
+    var homeVC: HomeController?
+
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -26,7 +29,11 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         return cv
     }()
     
-    
+    let whiteBarView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.myRed
+        return view
+    }()
     
 //    init(menuBarItems: [String]) {
 //
@@ -36,12 +43,24 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupCollectionView()
+        setupWhiteBarEffect()
     }
     
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupCollectionView()
+        setupWhiteBarEffect()
+    }
+    
+    private func setupWhiteBarEffect(){
+        addSubview(whiteBarView)
+        whiteBarView.translatesAutoresizingMaskIntoConstraints = false
+        whiteBarLeftAnchorConstraint = whiteBarView.leftAnchor.constraint(equalTo: self.leftAnchor)
+        whiteBarLeftAnchorConstraint?.isActive = true
+        whiteBarView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        whiteBarView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/3).isActive = true
+        whiteBarView.heightAnchor.constraint(equalToConstant: 4).isActive = true
     }
     
     private func setupCollectionView(){
@@ -82,4 +101,18 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
 //
 //        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
 //    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.item)
+        
+        
+        let x = CGFloat(indexPath.item) * frame.width/3
+        whiteBarLeftAnchorConstraint?.constant = x
+
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
+            self.layoutIfNeeded()
+        }, completion: nil)
+//        HomeVC
+//        homeVC?.scrollToMenuIndex(menuIndex: indexPath.item)
+    }
 }

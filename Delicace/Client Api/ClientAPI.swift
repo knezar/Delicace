@@ -12,7 +12,7 @@ import UIKit
 struct RecipeSearchAPI {
     private init() {}
     static let manager = RecipeSearchAPI()
-    private let keyAPI = "4db378cd34bb4046867b13443d9b9dbe"
+    private let keyAPI = ""//"4db378cd34bb4046867b13443d9b9dbe"
     private let urlStrings = "https://api.spoonacular.com/recipes/complexSearch?apiKey=4db378cd34bb4046867b13443d9b9dbe&query=steak&addRecipeInformation=true"
     
     func fetchRecipes(url: String,
@@ -25,7 +25,6 @@ struct RecipeSearchAPI {
             do {
                 let onlineInfo = try JSONDecoder().decode(RecipeSearch.self, from: data)
                 
-               print(onlineInfo.results[0].title)
                 completionHandler(onlineInfo)
             }
             catch let error {

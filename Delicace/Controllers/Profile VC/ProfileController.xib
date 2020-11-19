@@ -56,14 +56,14 @@
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lrb-BP-wow" userLabel="Menu Bar View" customClass="MenuBarView" customModule="Delicace" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="313.5" width="414" height="50"/>
+                    <rect key="frame" x="8" y="313.5" width="398" height="40"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="830-2p-aXI"/>
+                        <constraint firstAttribute="height" constant="40" id="830-2p-aXI"/>
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wFb-HW-dGt">
-                    <rect key="frame" x="0.0" y="363.5" width="414" height="498.5"/>
+                    <rect key="frame" x="8" y="357.5" width="398" height="504.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fFd-5L-70C">
                         <size key="itemSize" width="128" height="128"/>
@@ -74,11 +74,10 @@
                 </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Lrb-BP-wow" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5iH-Mt-9YB"/>
-                <constraint firstItem="wFb-HW-dGt" firstAttribute="top" secondItem="Lrb-BP-wow" secondAttribute="bottom" id="6eK-3B-0RC"/>
-                <constraint firstItem="wFb-HW-dGt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9c8-0n-8dh"/>
+                <constraint firstItem="Lrb-BP-wow" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="5iH-Mt-9YB"/>
+                <constraint firstItem="wFb-HW-dGt" firstAttribute="top" secondItem="Lrb-BP-wow" secondAttribute="bottom" constant="4" id="6eK-3B-0RC"/>
+                <constraint firstItem="wFb-HW-dGt" firstAttribute="leading" secondItem="Lrb-BP-wow" secondAttribute="leading" id="9c8-0n-8dh"/>
                 <constraint firstItem="ODy-eD-i5G" firstAttribute="centerX" secondItem="nI7-ys-yxZ" secondAttribute="centerX" id="9uG-1u-lff"/>
                 <constraint firstItem="gYv-ze-TdX" firstAttribute="trailing" secondItem="nI7-ys-yxZ" secondAttribute="trailing" id="M4Y-q8-WfF"/>
                 <constraint firstAttribute="top" secondItem="nI7-ys-yxZ" secondAttribute="top" id="PkN-Ej-5SN"/>
@@ -87,12 +86,12 @@
                 <constraint firstItem="Lrb-BP-wow" firstAttribute="top" secondItem="gYv-ze-TdX" secondAttribute="bottom" id="a9y-7g-gzg"/>
                 <constraint firstItem="nI7-ys-yxZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aHq-pq-75l"/>
                 <constraint firstItem="gYv-ze-TdX" firstAttribute="top" secondItem="nI7-ys-yxZ" secondAttribute="top" id="g2f-1P-Pxs"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lrb-BP-wow" secondAttribute="trailing" id="ixZ-AI-ycs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lrb-BP-wow" secondAttribute="trailing" constant="8" id="ixZ-AI-ycs"/>
                 <constraint firstItem="gYv-ze-TdX" firstAttribute="leading" secondItem="nI7-ys-yxZ" secondAttribute="leading" id="j3s-xU-ngg"/>
                 <constraint firstItem="nI7-ys-yxZ" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.35" id="lE3-le-m5S"/>
                 <constraint firstItem="ODy-eD-i5G" firstAttribute="height" secondItem="nI7-ys-yxZ" secondAttribute="height" multiplier="0.3" id="mVe-mX-CFa"/>
                 <constraint firstItem="gYv-ze-TdX" firstAttribute="bottom" secondItem="nI7-ys-yxZ" secondAttribute="bottom" id="nBR-U1-NML"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wFb-HW-dGt" secondAttribute="trailing" id="p14-bK-ALV"/>
+                <constraint firstItem="Lrb-BP-wow" firstAttribute="trailing" secondItem="wFb-HW-dGt" secondAttribute="trailing" id="p14-bK-ALV"/>
                 <constraint firstItem="ODy-eD-i5G" firstAttribute="centerY" secondItem="nI7-ys-yxZ" secondAttribute="centerY" id="rnv-Cu-4m5"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="66.964285714285708"/>
