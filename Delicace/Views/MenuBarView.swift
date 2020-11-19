@@ -12,7 +12,8 @@ import UIKit
 class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     
-    let menuBarItems = ["Popular", "Trending", "Recent"]
+//    let menuBarItems = ["Popular", "Trending", "Recent"]
+    var menuBarItems: [String]?
     let menuBarCellID = "menuBarCell"
     
     lazy var collectionView: UICollectionView = {
@@ -25,6 +26,13 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         return cv
     }()
     
+    
+    
+//    init(menuBarItems: [String]) {
+//
+//        self.menuBarItems = menuBarItems
+//        super.init(frame: CGRect.zero)
+//    }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupCollectionView()
@@ -52,12 +60,17 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return menuBarItems.count
+        
+        guard let test = menuBarItems else {return 3}
+        return test.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: menuBarCellID, for: indexPath) as! MenuBarCell
-        cell.menuBarLabel.text = menuBarItems[indexPath.item]
+        if let test = menuBarItems {
+            cell.menuBarLabel.text = test[indexPath.item]
+        }
+        
         return cell
     }
     

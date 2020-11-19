@@ -17,7 +17,7 @@ class ProfileController: UIViewController {
     let imageItems = ["Rec-1", "Rec-2", "Rec-3", "Rec-4", "Rec-5"]
     let titleItems = ["Chermoula couscous", "Flaky chicken and almond pie", "Chermoula eggplant", "Garam masala bastilla", "Goat tagine with almonds"]
     let recipesCellID = "recipesCell"
-
+//    weak var menuBarView: MenuBarView!
     
     // MARK: - Outlets
     
@@ -27,14 +27,13 @@ class ProfileController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var menuBarView: MenuBarView!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Lifecycle
     
-//    override func viewWillLayoutSubviews() {
-//        super.viewWillLayoutSubviews()
-//
-//    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         UINavigationBar.appearance().isTranslucent = true
@@ -53,17 +52,35 @@ class ProfileController: UIViewController {
         super.viewDidLoad()
         ConfigNavUI()
         setNavBarIsTranslucent()
-        
-        configureUserUI()
+        configureMenuBarView()
         configureCollectionView()
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        configureUserUI()
+        
+        
+    }
+    
     // MARK: - Private
+    
+    
+    func configureMenuBarView() {
+//        let menuBarView = MenuBarView()
+        let menuBarItems = ["Favorites", "To Try", "My Recipes"]
+        menuBarView.menuBarItems = menuBarItems
+        
+        
+        
+    }
+    
     func configureUserUI() {
         userImage.image = #imageLiteral(resourceName: "obama")
         userImage.layer.borderWidth = 3
         userImage.layer.borderColor = UIColor.white.cgColor
-        userImage.layer.cornerRadius = userImage.bounds.height / 2
+        userImage.layer.cornerRadius = (userImage.bounds.height) / 2
         userImage.clipsToBounds = true
         
         nameLabel.text = " Barrack Obama"
@@ -93,7 +110,7 @@ class ProfileController: UIViewController {
     
     
     private func configureCollectionView() {
-
+        
         
         collectionView.register(UINib(nibName:"RecipesCell", bundle: nil), forCellWithReuseIdentifier: recipesCellID)
         collectionView.delegate = self
@@ -140,7 +157,7 @@ extension ProfileController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension ProfileController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: collectionView.bounds.size.width, height: collectionView.bounds.size.height/3.5)
+        return CGSize(width: collectionView.bounds.size.width, height: collectionView.bounds.size.height/3.5)
         
     }
 }

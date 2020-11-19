@@ -44,13 +44,13 @@ class ShadedView: UIView {
         
         let gradientLayer = CAGradientLayer()
 //        gradientLayer.type = .radial
-        let firstColor = UIColor.myRed.withAlphaComponent(0.4)
-        let secondColor = UIColor.myRed.withAlphaComponent(0.95)
+        let firstColor = UIColor.myRed.withAlphaComponent(0.3)
+        let secondColor = UIColor.myRed.withAlphaComponent(0.8)
         gradientLayer.colors = [firstColor.cgColor, secondColor.cgColor]
         
         gradientLayer.startPoint = CGPoint(x: 0, y:0)
         gradientLayer.endPoint = CGPoint(x: 0, y: 1)
-        gradientLayer.locations = [0, 0.9]
+        gradientLayer.locations = [0, 1]
         gradientLayer.frame = self.bounds
         gradientLayer.name = GradientLayerName
         self.layer.insertSublayer(gradientLayer, at: 0)

@@ -17,16 +17,21 @@ class RecipesCell: UICollectionViewCell {
     
 //    @IBOutlet weak var shadedView: UIView!
     @IBOutlet weak var recipeImage: UIImageView!
-    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var likesLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var servingLabel: UILabel!
+    
+    
+    
     
     override func layoutSublayers(of layer: CALayer) {
           super.layoutSublayers(of: self.layer)
         
-        recipeImage.layer.cornerRadius = (contentView.bounds.height * 0.8)/2
-        recipeImage.clipsToBounds = true
         backgroundColor = .white
+        recipeImage.layer.borderWidth = 1
+        recipeImage.layer.borderColor = UIColor.myPink.cgColor
         layer.borderWidth = 1
         layer.borderColor = UIColor.myLightPink.cgColor
 //          gradientLayer.frame = shadedView.bounds

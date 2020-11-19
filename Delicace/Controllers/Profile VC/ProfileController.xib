@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="collectionView" destination="wFb-HW-dGt" id="OqV-xt-BS0"/>
                 <outlet property="locationLabel" destination="ndd-hQ-Nob" id="BGe-H6-d9K"/>
+                <outlet property="menuBarView" destination="Lrb-BP-wow" id="HbV-FK-SiH"/>
                 <outlet property="nameLabel" destination="ceM-tE-Izd" id="qim-Dk-ash"/>
                 <outlet property="shadedView" destination="nI7-ys-yxZ" id="rMM-pp-gX2"/>
                 <outlet property="topImage" destination="gYv-ze-TdX" id="5Kf-CV-SYI"/>
@@ -26,28 +27,28 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" image="Rec-6" translatesAutoresizingMaskIntoConstraints="NO" id="gYv-ze-TdX" userLabel="Top Image View">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="358.5"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="313.5"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nI7-ys-yxZ" userLabel="ShadedView" customClass="ShadedView" customModule="Delicace" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="358.5"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="313.5"/>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Kaa-mU-tHc">
-                    <rect key="frame" x="137.5" y="149.5" width="109.5" height="154"/>
+                    <rect key="frame" x="137.5" y="149.5" width="109.5" height="140.5"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="ODy-eD-i5G" userLabel="Avatar Image View">
-                            <rect key="frame" x="0.5" y="0.0" width="108" height="107.5"/>
+                            <rect key="frame" x="7.5" y="0.0" width="94" height="94"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="ODy-eD-i5G" secondAttribute="height" multiplier="1:1" id="Yj5-2b-AbI"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avatar User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceM-tE-Izd" userLabel="Name Label">
-                            <rect key="frame" x="8" y="112.5" width="93" height="20.5"/>
+                            <rect key="frame" x="8" y="99" width="93" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York City, NY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndd-hQ-Nob" userLabel="Location Label">
-                            <rect key="frame" x="0.0" y="138" width="109.5" height="16"/>
+                            <rect key="frame" x="0.0" y="124.5" width="109.5" height="16"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -55,14 +56,14 @@
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lrb-BP-wow" userLabel="Menu Bar View" customClass="MenuBarView" customModule="Delicace" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="358.5" width="414" height="50"/>
+                    <rect key="frame" x="0.0" y="313.5" width="414" height="50"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="830-2p-aXI"/>
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wFb-HW-dGt">
-                    <rect key="frame" x="0.0" y="408.5" width="414" height="453.5"/>
+                    <rect key="frame" x="0.0" y="363.5" width="414" height="498.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fFd-5L-70C">
                         <size key="itemSize" width="128" height="128"/>
@@ -88,7 +89,7 @@
                 <constraint firstItem="gYv-ze-TdX" firstAttribute="top" secondItem="nI7-ys-yxZ" secondAttribute="top" id="g2f-1P-Pxs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lrb-BP-wow" secondAttribute="trailing" id="ixZ-AI-ycs"/>
                 <constraint firstItem="gYv-ze-TdX" firstAttribute="leading" secondItem="nI7-ys-yxZ" secondAttribute="leading" id="j3s-xU-ngg"/>
-                <constraint firstItem="nI7-ys-yxZ" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.4" id="lE3-le-m5S"/>
+                <constraint firstItem="nI7-ys-yxZ" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.35" id="lE3-le-m5S"/>
                 <constraint firstItem="ODy-eD-i5G" firstAttribute="height" secondItem="nI7-ys-yxZ" secondAttribute="height" multiplier="0.3" id="mVe-mX-CFa"/>
                 <constraint firstItem="gYv-ze-TdX" firstAttribute="bottom" secondItem="nI7-ys-yxZ" secondAttribute="bottom" id="nBR-U1-NML"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wFb-HW-dGt" secondAttribute="trailing" id="p14-bK-ALV"/>

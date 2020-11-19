@@ -10,6 +10,8 @@
 		0233324C253610BF00F8468A /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233324B253610BF00F8468A /* ChatController.swift */; };
 		02396F3625356024002FE30F /* RecipeBookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02396F3425356024002FE30F /* RecipeBookController.swift */; };
 		02396F3725356024002FE30F /* RecipeBookController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02396F3525356024002FE30F /* RecipeBookController.xib */; };
+		023D219625659F5700203154 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D219525659F5700203154 /* RecipeModel.swift */; };
+		023D219B2565A15500203154 /* ClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D219A2565A15500203154 /* ClientAPI.swift */; };
 		024CCB4825352D81004676B7 /* ChatDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024CCB4725352D81004676B7 /* ChatDetailController.xib */; };
 		02759EFA2562E0A600021997 /* ShadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02759EF92562E0A600021997 /* ShadedView.swift */; };
 		02A1FCF0254DCC2D00A1153E /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A1FCEE254DCC2D00A1153E /* EventCell.swift */; };
@@ -73,6 +75,8 @@
 		0233324B253610BF00F8468A /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		02396F3425356024002FE30F /* RecipeBookController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBookController.swift; sourceTree = "<group>"; };
 		02396F3525356024002FE30F /* RecipeBookController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeBookController.xib; sourceTree = "<group>"; };
+		023D219525659F5700203154 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		023D219A2565A15500203154 /* ClientAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAPI.swift; sourceTree = "<group>"; };
 		024CCB4725352D81004676B7 /* ChatDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatDetailController.xib; sourceTree = "<group>"; };
 		02759EF92562E0A600021997 /* ShadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadedView.swift; sourceTree = "<group>"; };
 		02A1FCEE254DCC2D00A1153E /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
@@ -256,7 +260,8 @@
 				81FC680B245B8F6600E5F7DD /* Models */,
 				81FC6814245B97EF00E5F7DD /* Client Api */,
 				8108394E2449318A00FDE0AF /* Controllers */,
-				810839412449318A00FDE0AF /* Views & Cells */,
+				810839452449318A00FDE0AF /* Views */,
+				810839412449318A00FDE0AF /* Cells */,
 				810839632449318A00FDE0AF /* extentions */,
 				8108394A2449318A00FDE0AF /* Helpers */,
 				8108393B2449318A00FDE0AF /* Supporting Files */,
@@ -276,10 +281,9 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		810839412449318A00FDE0AF /* Views & Cells */ = {
+		810839412449318A00FDE0AF /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				810839452449318A00FDE0AF /* Views */,
 				81182A42245C8F0D00C8CFB8 /* Specials Cell */,
 				81182A43245C8F1C00C8CFB8 /* Recipes Cell */,
 				810839422449318A00FDE0AF /* Menu Bar Cell */,
@@ -288,7 +292,7 @@
 				02EDBB872535D9670064D581 /* Chat Detail Cell */,
 				02A1FCF3254DCC3700A1153E /* Event Cell */,
 			);
-			path = "Views & Cells";
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		810839422449318A00FDE0AF /* Menu Bar Cell */ = {
@@ -454,6 +458,7 @@
 			children = (
 				81FC6809245B8F5700E5F7DD /* UserModel.swift */,
 				81FCAC9A245EFFA60013DE74 /* MenuOptions.swift */,
+				023D219525659F5700203154 /* RecipeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -461,6 +466,7 @@
 		81FC6814245B97EF00E5F7DD /* Client Api */ = {
 			isa = PBXGroup;
 			children = (
+				023D219A2565A15500203154 /* ClientAPI.swift */,
 				81FC680C245B959400E5F7DD /* UserGenApi.swift */,
 			);
 			path = "Client Api";
@@ -614,6 +620,7 @@
 				02C2BC182535664D00FB183F /* ProfileController.swift in Sources */,
 				02A1FCF0254DCC2D00A1153E /* EventCell.swift in Sources */,
 				81FCAC99245E985E0013DE74 /* CustomFlowLayout.swift in Sources */,
+				023D219B2565A15500203154 /* ClientAPI.swift in Sources */,
 				810839702449318A00FDE0AF /* UserDefaultsHelper.swift in Sources */,
 				810839692449318A00FDE0AF /* AppDelegate.swift in Sources */,
 				8108396D2449318A00FDE0AF /* MenuBarView.swift in Sources */,
@@ -628,6 +635,7 @@
 				02F73A0D25362D6200844C21 /* RightChatCell.swift in Sources */,
 				81182A3E245C8EFC00C8CFB8 /* SpecialsCell.swift in Sources */,
 				8108396E2449318A00FDE0AF /* FeedCell.swift in Sources */,
+				023D219625659F5700203154 /* RecipeModel.swift in Sources */,
 				02759EFA2562E0A600021997 /* ShadedView.swift in Sources */,
 				02396F3625356024002FE30F /* RecipeBookController.swift in Sources */,
 				81FC6813245B974100E5F7DD /* NSCacheHelper.swift in Sources */,
