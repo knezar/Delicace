@@ -22,6 +22,7 @@
 		02C2BC20253566B100FB183F /* CalendarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C2BC1E253566B100FB183F /* CalendarController.xib */; };
 		02C34A4525379370009E59AC /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C34A4325379370009E59AC /* SettingsController.swift */; };
 		02C34A4625379370009E59AC /* SettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C34A4425379370009E59AC /* SettingsController.xib */; };
+		02E865D825684D2400312B24 /* UserCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E865D725684D2400312B24 /* UserCollectionCell.swift */; };
 		02EDBB7D2535D9300064D581 /* ChatTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EDBB7B2535D9300064D581 /* ChatTableCell.swift */; };
 		02EDBB7E2535D9300064D581 /* ChatTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02EDBB7C2535D9300064D581 /* ChatTableCell.xib */; };
 		02EDBB832535D95D0064D581 /* ChatDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EDBB812535D95D0064D581 /* ChatDetailCell.swift */; };
@@ -87,6 +88,7 @@
 		02C2BC1E253566B100FB183F /* CalendarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarController.xib; sourceTree = "<group>"; };
 		02C34A4325379370009E59AC /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		02C34A4425379370009E59AC /* SettingsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsController.xib; sourceTree = "<group>"; };
+		02E865D725684D2400312B24 /* UserCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionCell.swift; sourceTree = "<group>"; };
 		02EDBB7B2535D9300064D581 /* ChatTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableCell.swift; sourceTree = "<group>"; };
 		02EDBB7C2535D9300064D581 /* ChatTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableCell.xib; sourceTree = "<group>"; };
 		02EDBB812535D95D0064D581 /* ChatDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailCell.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 		810839412449318A00FDE0AF /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				02E865D725684D2400312B24 /* UserCollectionCell.swift */,
 				81182A42245C8F0D00C8CFB8 /* Specials Cell */,
 				81182A43245C8F1C00C8CFB8 /* Recipes Cell */,
 				810839422449318A00FDE0AF /* Menu Bar Cell */,
@@ -648,6 +651,7 @@
 				8108397E2449318A00FDE0AF /* ContainerController.swift in Sources */,
 				8108397C2449318A00FDE0AF /* LoginViewController.swift in Sources */,
 				810839722449318A00FDE0AF /* Protocols.swift in Sources */,
+				02E865D825684D2400312B24 /* UserCollectionCell.swift in Sources */,
 				8108397D2449318A00FDE0AF /* MenuController.swift in Sources */,
 				02C34A4525379370009E59AC /* SettingsController.swift in Sources */,
 				81FC6811245B96FD00E5F7DD /* ErrorHelper.swift in Sources */,

@@ -13,6 +13,13 @@ class EventCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        
+        
+        layer.cornerRadius = 10
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.myLightPink.cgColor
+        clipsToBounds = true
     }
 
 }

@@ -16,7 +16,7 @@ class CalendarController: UIViewController {
     let titleItems = ["Chermoula couscous", "Flaky chicken and almond pie", "Chermoula eggplant", "Garam masala bastilla", "Goat tagine with almonds"]
     let imageItems = ["Rec-1", "Rec-2", "Rec-3", "Rec-4", "Rec-5"]
 //    let specialsCellID = "specialsCell"
-    let recipesCellID = "recipesCell"
+    let eventCellID = "eventCell"
     
     
     // MARK: - Outlets
@@ -34,20 +34,22 @@ class CalendarController: UIViewController {
     // MARK: - Private
     
     private func configureMainCollectionView() {
-        self.eventCV.register(UINib(nibName:"RecipesCell", bundle: nil), forCellWithReuseIdentifier: recipesCellID)
+        
+        self.eventCV.register(UINib(nibName:"EventCell", bundle: nil), forCellWithReuseIdentifier: eventCellID)
         eventCV.delegate = self
         eventCV.dataSource = self
         eventCV.collectionViewLayout = CustomFlowLayout()
         eventCV.showsVerticalScrollIndicator = false
         
-        eventCV.contentInset = UIEdgeInsets(top: 25, left: 0, bottom: 0, right: 0)
+        eventCV.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
+        eventCV.backgroundColor = .myBgColor
 //        eventCV.contentmi
     }
     
     
     
     func ConfigUI() {
-        view.backgroundColor = .mainBlue
+        view.backgroundColor = .myBgColor
         navigationItem.title = "Events"
         navigationController?.navigationBar.barStyle = .black
         navigationItem.leftBarButtonItem = navButtonConfiguration(image: #imageLiteral(resourceName: "Cancel"), selector:  #selector(cancelButtonToggeled))
@@ -80,11 +82,11 @@ extension CalendarController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: recipesCellID, for: indexPath) as! RecipesCell
-        cell.layer.cornerRadius = 25
-        cell.clipsToBounds = true
-            cell.titleLabel.text = titleItems[indexPath.row]
-            cell.recipeImage.image = UIImage(named: imageItems[indexPath.item])
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: eventCellID, for: indexPath) as! EventCell
+//        cell.layer.cornerRadius = 25
+//        cell.clipsToBounds = true
+//            cell.titleLabel.text = titleItems[indexPath.row]
+//            cell.recipeImage.image = UIImage(named: imageItems[indexPath.item])
             return cell
     }
     
@@ -102,10 +104,12 @@ extension CalendarController: UICollectionViewDelegate {
 extension CalendarController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: eventCV.bounds.size.width-35, height: eventCV.bounds.size.width/2)
+        let height = (eventCV.bounds.size.width - 20)/2
+        
+        return CGSize(width: eventCV.bounds.size.width, height: height + height * 0.15)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 5
+//    }
 }
