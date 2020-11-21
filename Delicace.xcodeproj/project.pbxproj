@@ -16,6 +16,7 @@
 		02759EFA2562E0A600021997 /* ShadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02759EF92562E0A600021997 /* ShadedView.swift */; };
 		02A1FCF0254DCC2D00A1153E /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A1FCEE254DCC2D00A1153E /* EventCell.swift */; };
 		02A1FCF1254DCC2D00A1153E /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A1FCEF254DCC2D00A1153E /* EventCell.xib */; };
+		02C1A12A25699D3F005189E3 /* WhiteShadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1A12925699D3F005189E3 /* WhiteShadeView.swift */; };
 		02C2BC182535664D00FB183F /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2BC162535664D00FB183F /* ProfileController.swift */; };
 		02C2BC192535664D00FB183F /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C2BC172535664D00FB183F /* ProfileController.xib */; };
 		02C2BC1F253566B100FB183F /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2BC1D253566B100FB183F /* CalendarController.swift */; };
@@ -82,6 +83,7 @@
 		02759EF92562E0A600021997 /* ShadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadedView.swift; sourceTree = "<group>"; };
 		02A1FCEE254DCC2D00A1153E /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		02A1FCEF254DCC2D00A1153E /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
+		02C1A12925699D3F005189E3 /* WhiteShadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteShadeView.swift; sourceTree = "<group>"; };
 		02C2BC162535664D00FB183F /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		02C2BC172535664D00FB183F /* ProfileController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
 		02C2BC1D253566B100FB183F /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		02A1FCF3254DCC3700A1153E /* Event Cell */ = {
 			isa = PBXGroup;
 			children = (
+				02E865D725684D2400312B24 /* UserCollectionCell.swift */,
 				02A1FCEE254DCC2D00A1153E /* EventCell.swift */,
 				02A1FCEF254DCC2D00A1153E /* EventCell.xib */,
 			);
@@ -286,7 +289,6 @@
 		810839412449318A00FDE0AF /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				02E865D725684D2400312B24 /* UserCollectionCell.swift */,
 				81182A42245C8F0D00C8CFB8 /* Specials Cell */,
 				81182A43245C8F1C00C8CFB8 /* Recipes Cell */,
 				810839422449318A00FDE0AF /* Menu Bar Cell */,
@@ -312,6 +314,7 @@
 			children = (
 				810839652449318A00FDE0AF /* CustomTextField.swift */,
 				02759EF92562E0A600021997 /* ShadedView.swift */,
+				02C1A12925699D3F005189E3 /* WhiteShadeView.swift */,
 				810839462449318A00FDE0AF /* MenuBarView.swift */,
 			);
 			path = Views;
@@ -650,6 +653,7 @@
 				810839802449318A00FDE0AF /* extentions.swift in Sources */,
 				8108397E2449318A00FDE0AF /* ContainerController.swift in Sources */,
 				8108397C2449318A00FDE0AF /* LoginViewController.swift in Sources */,
+				02C1A12A25699D3F005189E3 /* WhiteShadeView.swift in Sources */,
 				810839722449318A00FDE0AF /* Protocols.swift in Sources */,
 				02E865D825684D2400312B24 /* UserCollectionCell.swift in Sources */,
 				8108397D2449318A00FDE0AF /* MenuController.swift in Sources */,

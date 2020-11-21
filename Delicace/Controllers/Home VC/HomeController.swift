@@ -127,6 +127,15 @@ class HomeController: UIViewController {
 // MARK: - UICollectionViewDelegate
 extension HomeController: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let recipeDetailController = RecipeController(nibName: "RecipeController", bundle: nil)
+        recipeDetailController.x = indexPath.row
+        
+        navigationController?.pushViewController(recipeDetailController, animated: true)
+        
+        print(indexPath.row)
+    }
+    
 }
 
 // MARK: - UICollectionViewDataSource

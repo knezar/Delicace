@@ -83,10 +83,10 @@ extension CalendarController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: eventCellID, for: indexPath) as! EventCell
-//        cell.layer.cornerRadius = 25
-//        cell.clipsToBounds = true
-//            cell.titleLabel.text = titleItems[indexPath.row]
-//            cell.recipeImage.image = UIImage(named: imageItems[indexPath.item])
+        
+        
+        cell.titleLabel.text = titleItems[indexPath.row]
+        cell.recipeImage.image = UIImage(named: imageItems[indexPath.row])//imageItems[indexPath.row]
             return cell
     }
     
@@ -104,9 +104,10 @@ extension CalendarController: UICollectionViewDelegate {
 extension CalendarController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height = (eventCV.bounds.size.width - 20)/2
+        let height = eventCV.bounds.size.width/1.75
         
-        return CGSize(width: eventCV.bounds.size.width, height: height + height * 0.15)
+        
+        return CGSize(width: eventCV.bounds.size.width, height: height)
     }
     
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
