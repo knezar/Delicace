@@ -30,6 +30,53 @@ enum MenuOptions: Int, CustomStringConvertible, CaseIterable {
         }
     }
     
+    var lightColor: UIColor {
+        switch self {
+        case .Home: return UIColor.myPink
+        case .Chat: return UIColor.myPink
+        case .MyRecipes: return UIColor.myPink
+        case .Calendar: return UIColor.myPink
+        case .Profile: return UIColor.myPink
+        case .Settings: return UIColor.myPink
+        case .Logout: return UIColor.myPink
+        }
+    }
+    
+    var darkColor: UIColor {
+        switch self {
+        case .Home: return UIColor.myRed
+        case .Chat: return UIColor.myRed
+        case .MyRecipes: return UIColor.myRed
+        case .Calendar: return UIColor.myRed
+        case .Profile: return UIColor.myRed
+        case .Settings: return UIColor.myRed
+        case .Logout: return UIColor.myRed
+        }
+    }
+    
+    var lightFont: UIFont {
+        switch self {
+        case .Home: return UIFont.boldSystemFont(ofSize: 16)
+        case .Chat: return UIFont.boldSystemFont(ofSize: 16)
+        case .MyRecipes: return UIFont.boldSystemFont(ofSize: 16)
+        case .Calendar: return UIFont.boldSystemFont(ofSize: 16)
+        case .Profile: return UIFont.boldSystemFont(ofSize: 16)
+        case .Settings: return UIFont.boldSystemFont(ofSize: 16)
+        case .Logout: return UIFont.boldSystemFont(ofSize: 16)
+        }
+    }
+    var darkFont: UIFont {
+        switch self {
+        case .Home: return UIFont.boldSystemFont(ofSize: 20)
+        case .Chat: return UIFont.boldSystemFont(ofSize: 20)
+        case .MyRecipes: return UIFont.boldSystemFont(ofSize: 20)
+        case .Calendar: return UIFont.boldSystemFont(ofSize: 20)
+        case .Profile: return UIFont.boldSystemFont(ofSize: 20)
+        case .Settings: return UIFont.boldSystemFont(ofSize: 20)
+        case .Logout: return UIFont.boldSystemFont(ofSize: 20)
+        }
+    }
+    
     var lightImage: UIImage {
         switch self {
         case .Home: return UIImage(named: "Feed") ?? UIImage()
