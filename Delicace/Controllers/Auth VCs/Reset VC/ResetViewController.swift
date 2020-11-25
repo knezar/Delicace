@@ -26,7 +26,7 @@ class ResetViewController: UIViewController {
     
     // MARK: - Private
     private func configureResetButton() {
-        resetButton.layer.cornerRadius = resetButton.frame.height / 2
+        resetButton.setCornerRadius(cornerR: resetButton.frame.height / 2)
         resetButton.clipsToBounds = true
         let image = graphicHelper.getGradientImage(bounds: resetButton.bounds)
         resetButton.setBackgroundImage(image, for: .normal)

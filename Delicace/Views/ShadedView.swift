@@ -10,11 +10,7 @@ import UIKit
 
 class ShadedView: UIView {
     
-    //initWithFrame to init view from code
-    //    override init(frame: CGRect) {
-    //      super.init(frame: frame)
-    ////      setupView()
-    //    }
+
     
     //initWithCode to init view from xib or storyboard
     required init?(coder aDecoder: NSCoder) {

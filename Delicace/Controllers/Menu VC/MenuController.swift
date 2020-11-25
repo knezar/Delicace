@@ -27,52 +27,42 @@ class MenuController: UIViewController {
     
     lazy var profileImage: UIImageView = {
         let imgV = UIImageView()
-        imgV.frame = CGRect(x:0, y: 0, width: self.view.frame.width*0.4, height: self.view.frame.width*0.4)
-        imgV.backgroundColor = .black
-        imgV.image = #imageLiteral(resourceName: "Background")
-        imgV.contentMode = .scaleAspectFill
-        imgV.layer.cornerRadius = imgV.frame.height/2
-        imgV.layer.borderWidth = 4
-        imgV.layer.borderColor = UIColor.myRed.cgColor
-        imgV.clipsToBounds = true
+        imgV.image = #imageLiteral(resourceName: "name")
+        imgV.contentMode = .scaleAspectFit
         return imgV
     }()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupProfile()
+        setupProfileImage()
         setupTableView()
         view.backgroundColor = UIColor.clear
     }
     
     // MARK: - Private
-    func setupProfile(){
+    func setupProfileImage() {
         view.addSubview(profileImage)
         profileImage.translatesAutoresizingMaskIntoConstraints = false
-        profileImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 60).isActive = true
+        profileImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 44).isActive = true
         profileImage.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5).isActive = true
-        profileImage.heightAnchor.constraint(equalTo: profileImage.widthAnchor).isActive = true
+//        profileImage.heightAnchor.constraint(equalTo: profileImage.widthAnchor).isActive = true
         profileImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
     func setupTableView() {
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.topAnchor.constraint(equalTo: profileImage.bottomAnchor, constant: 50).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
-        tableView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75).isActive = true
+        tableView.topAnchor.constraint(equalTo: profileImage.bottomAnchor, constant: 44).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableView.centerXAnchor.constraint(equalTo: profileImage.centerXAnchor).isActive = true
+        tableView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75).isActive = true
     }
-    
 }
 
 // MARK: - TableViewDelegate
 extension MenuController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let menuOption = MenuOptions(rawValue: indexPath.section) else {return}
-        
-        //        selectedSection = indexPath.section
         delegate?.slideOutMenuToggled(ForMenuOption: menuOption)
         self.tableView.reloadData()
     }
@@ -104,19 +94,19 @@ extension MenuController: UITableViewDataSource {
         let cell = UITableViewCell()
         cell.backgroundColor = .clear
         cell.selectionStyle = .none
-        
         guard let menuOption = MenuOptions(rawValue: indexPath.section) else {return UITableViewCell()}
         cell.textLabel?.text = menuOption.description
         if indexPath.section  == selectedSection {
             cell.imageView?.image = menuOption.darkImage
             cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-            cell.textLabel?.textColor = .myRed
-            
+            cell.textLabel?.textColor = UIColor.myRed
         } else {
             cell.imageView?.image = menuOption.lightImage
             cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-            cell.textLabel?.textColor = .myPink
+            cell.textLabel?.textColor = UIColor.myPink
         }
         return cell
     }
+    
+    
 }

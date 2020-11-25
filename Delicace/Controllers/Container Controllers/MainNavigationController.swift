@@ -21,6 +21,10 @@ class MainNavigationController: UINavigationController, LoginControllerDelegate 
         }
     }
     
+    func setupNavBarAppearance() {
+        
+    }
+    
     func finishLoggingIn() {
         let containerController = ContainerController()
         containerController.delegate = self

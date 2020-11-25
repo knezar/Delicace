@@ -5,14 +5,17 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeController" customModule="Delicace" customModuleProvider="target">
             <connections>
+                <outlet property="addButtonView" destination="w89-hb-9mq" id="oVe-rM-KhY"/>
+                <outlet property="expandingView" destination="6JL-qC-Zas" id="Nad-fW-sZ6"/>
                 <outlet property="menuBarView" destination="Aq0-5G-dhN" id="nS6-Bm-SRv"/>
-                <outlet property="recipesCV" destination="ime-IT-lkS" id="X4B-0S-ogG"/>
-                <outlet property="specialsCV" destination="0Yb-gW-OxR" id="LgN-62-rsz"/>
+                <outlet property="recipesCV" destination="3R1-Je-lzc" id="zx9-4E-QGr"/>
+                <outlet property="speciallsView" destination="V94-6o-bUN" id="TPw-fb-Sxm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="u55-fY-deE"/>
             </connections>
         </placeholder>
@@ -21,16 +24,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0Yb-gW-OxR" userLabel="Specials Collection View">
-                    <rect key="frame" x="0.0" y="44" width="414" height="298.5"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="lZ6-eX-DNF">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aq0-5G-dhN" customClass="MenuBarView" customModule="Delicace" customModuleProvider="target">
                     <rect key="frame" x="8" y="342.5" width="398" height="40"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -38,47 +31,67 @@
                         <constraint firstAttribute="height" constant="40" id="QMm-p7-Gg5"/>
                     </constraints>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ime-IT-lkS" userLabel="Recipe Collection View">
-                    <rect key="frame" x="8" y="386.5" width="398" height="475.5"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4u7-Ov-i2f">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3R1-Je-lzc" userLabel="Recipes View" customClass="RecipeCollectionView" customModule="Delicace" customModuleProvider="target">
+                    <rect key="frame" x="8" y="382.5" width="398" height="479.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6JL-qC-Zas" userLabel="Expanding View" customClass="ExpandingView" customModule="Delicace" customModuleProvider="target">
+                    <rect key="frame" x="338" y="820" width="56" height="56"/>
+                    <color key="backgroundColor" red="0.83862876890000004" green="0.42249315980000002" blue="0.53115445380000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="28"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w89-hb-9mq">
-                    <rect key="frame" x="342" y="790" width="56" height="56"/>
+                    <rect key="frame" x="338" y="820" width="56" height="56"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="56" id="1q9-Mn-k2R"/>
                         <constraint firstAttribute="width" secondItem="w89-hb-9mq" secondAttribute="height" id="3QM-EJ-Wdr"/>
                     </constraints>
-                    <state key="normal" backgroundImage="add"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <state key="normal" backgroundImage="add">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="addButtonPressed:" destination="-1" eventType="touchUpInside" id="sOU-io-4Cw"/>
+                    </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V94-6o-bUN" userLabel="Specials View" customClass="SpeicalsCollectionView" customModule="Delicace" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="298.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="0.97628885509999996" blue="0.98423892260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="6JL-qC-Zas" firstAttribute="trailing" secondItem="w89-hb-9mq" secondAttribute="trailing" id="3Kn-i1-cKO"/>
                 <constraint firstItem="Aq0-5G-dhN" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" multiplier="0.8" id="56O-ob-es4"/>
-                <constraint firstItem="Aq0-5G-dhN" firstAttribute="top" secondItem="0Yb-gW-OxR" secondAttribute="bottom" id="5Qv-Mr-U87"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ime-IT-lkS" secondAttribute="bottom" id="6qh-w3-AGH"/>
-                <constraint firstItem="Aq0-5G-dhN" firstAttribute="leading" secondItem="ime-IT-lkS" secondAttribute="leading" id="Cmy-ig-9Js"/>
-                <constraint firstItem="Aq0-5G-dhN" firstAttribute="trailing" secondItem="ime-IT-lkS" secondAttribute="trailing" id="DS8-G6-hKc"/>
-                <constraint firstItem="Aq0-5G-dhN" firstAttribute="bottom" secondItem="ime-IT-lkS" secondAttribute="top" constant="-4" id="IoH-2o-qVe"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="w89-hb-9mq" secondAttribute="bottom" constant="16" id="Tjk-dr-NMC"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Yb-gW-OxR" secondAttribute="trailing" id="Tv0-mA-f3B"/>
-                <constraint firstItem="0Yb-gW-OxR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ucr-2u-vfl"/>
-                <constraint firstItem="ime-IT-lkS" firstAttribute="leading" secondItem="0Yb-gW-OxR" secondAttribute="leading" constant="8" id="fQ6-Jq-t1v"/>
-                <constraint firstItem="0Yb-gW-OxR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hU3-DJ-0rp"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="w89-hb-9mq" secondAttribute="trailing" constant="16" id="nj2-4F-mCk"/>
-                <constraint firstItem="ime-IT-lkS" firstAttribute="trailing" secondItem="0Yb-gW-OxR" secondAttribute="trailing" constant="-8" id="xRR-fb-c36"/>
+                <constraint firstItem="V94-6o-bUN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6Pa-4d-f7y"/>
+                <constraint firstItem="6JL-qC-Zas" firstAttribute="bottom" secondItem="w89-hb-9mq" secondAttribute="bottom" id="8Wg-9O-ciK"/>
+                <constraint firstItem="6JL-qC-Zas" firstAttribute="top" secondItem="w89-hb-9mq" secondAttribute="top" id="ACA-zf-01E"/>
+                <constraint firstItem="Aq0-5G-dhN" firstAttribute="top" secondItem="V94-6o-bUN" secondAttribute="bottom" id="CDE-7K-odf"/>
+                <constraint firstItem="6JL-qC-Zas" firstAttribute="leading" secondItem="w89-hb-9mq" secondAttribute="leading" id="Hti-bZ-YMr"/>
+                <constraint firstItem="Aq0-5G-dhN" firstAttribute="trailing" secondItem="3R1-Je-lzc" secondAttribute="trailing" id="Noa-TZ-Gzz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3R1-Je-lzc" secondAttribute="bottom" id="OJN-w4-7qd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="V94-6o-bUN" secondAttribute="trailing" id="Qig-tI-OmW"/>
+                <constraint firstAttribute="bottom" secondItem="w89-hb-9mq" secondAttribute="bottom" constant="20" id="Tjk-dr-NMC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3R1-Je-lzc" secondAttribute="trailing" constant="8" id="Xia-fw-uzN"/>
+                <constraint firstItem="3R1-Je-lzc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="Y2N-XI-jcC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="w89-hb-9mq" secondAttribute="trailing" constant="20" id="nj2-4F-mCk"/>
+                <constraint firstItem="V94-6o-bUN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="rc4-DD-thu"/>
+                <constraint firstItem="Aq0-5G-dhN" firstAttribute="leading" secondItem="3R1-Je-lzc" secondAttribute="leading" id="ror-sS-iFn"/>
+                <constraint firstItem="3R1-Je-lzc" firstAttribute="top" secondItem="Aq0-5G-dhN" secondAttribute="bottom" id="tvR-Qh-Die"/>
             </constraints>
             <point key="canvasLocation" x="57.971014492753625" y="28.794642857142854"/>
         </view>
     </objects>
     <resources>
         <image name="add" width="42.666667938232422" height="42.666667938232422"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -14,6 +14,7 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     
 //    let menuBarItems = ["Popular", "Trending", "Recent"]
     var menuBarItems: [String]?
+    
     let menuBarCellID = "menuBarCell"
     var whiteBarLeftAnchorConstraint: NSLayoutConstraint?
     var homeVC: HomeController?
@@ -92,27 +93,17 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         
         return cell
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (bounds.width)/3, height: bounds.height)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//
-//        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-//    }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
-        
-        
         let x = CGFloat(indexPath.item) * frame.width/3
         whiteBarLeftAnchorConstraint?.constant = x
-
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
             self.layoutIfNeeded()
         }, completion: nil)
-//        HomeVC
-//        homeVC?.scrollToMenuIndex(menuIndex: indexPath.item)
     }
 }

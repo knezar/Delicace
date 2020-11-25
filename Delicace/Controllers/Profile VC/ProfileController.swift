@@ -43,6 +43,7 @@ class ProfileController: UIViewController {
         
         let navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.isTranslucent = false
+        navigationBarAppearace.barStyle = .black
         let bounds = self.navigationController!.navigationBar.frame
         if let image = graphicHelper.getGradientImage(bounds: bounds) {
             navigationBarAppearace.setBackgroundImage(image, for: .default)
@@ -68,20 +69,19 @@ class ProfileController: UIViewController {
     
     
     func configureMenuBarView() {
-//        let menuBarView = MenuBarView()
-        let menuBarItems = ["Favorites", "To Try", "My Recipes"]
+        var menuBarItems = [String]()
+        for option in OwnProfileMenuOptions.allCases {
+            menuBarItems.append(option.description)
+        }
         menuBarView.menuBarItems = menuBarItems
-        
-        
-        
     }
     
     func configureUserUI() {
         userImage.image = #imageLiteral(resourceName: "obama")
         userImage.layer.borderWidth = 3
         userImage.layer.borderColor = UIColor.white.cgColor
-        userImage.layer.cornerRadius = (userImage.bounds.height) / 2
-        userImage.clipsToBounds = true
+        userImage.setCornerRadius(cornerR: (userImage.bounds.height) / 2)
+//        userImage.clipsToBounds = true
         
         nameLabel.text = " Barrack Obama"
         locationLabel.text = "Washington, D.C"
@@ -121,7 +121,7 @@ class ProfileController: UIViewController {
     // MARK: - Actions
     
     @objc func cancelButtonToggeled(){
-        self.dismiss(animated: true, completion: nil)
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     @objc func addButtonToggeled(){

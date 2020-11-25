@@ -8,12 +8,32 @@
 
 import UIKit
 
-enum ProfileMenuOptions: Int, CaseIterable, CustomStringConvertible {
+enum OwnProfileMenuOptions: Int, CaseIterable, CustomStringConvertible {
     
     case Favorites
     case TryOut
     case RecipeBook
     
-    
+    var description: String {
+        switch self {
+        case .Favorites: return "Favorites"
+        case .TryOut: return "Cooked"
+        case .RecipeBook: return "My Recipes"
+        }
+    }
 }
 
+enum HomeMenuOptions: Int, CaseIterable, CustomStringConvertible {
+    
+    case Popular
+    case Trending
+    case Recent
+    
+    var description: String {
+        switch self {
+        case .Popular: return "Popular"
+        case .Trending: return "Trending"
+        case .Recent: return "Recent"
+        }
+    }
+}

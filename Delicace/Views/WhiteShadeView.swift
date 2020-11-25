@@ -11,10 +11,10 @@ import UIKit
 class WhiteShadeView: UIView {
     
     //initWithFrame to init view from code
-    //    override init(frame: CGRect) {
-    //      super.init(frame: frame)
-    ////      setupView()
-    //    }
+//        override init(frame: CGRect) {
+//          super.init(frame: frame)
+//    //      setupView()
+//        }
     
     //initWithCode to init view from xib or storyboard
     required init?(coder aDecoder: NSCoder) {
@@ -40,7 +40,7 @@ class WhiteShadeView: UIView {
         
         //
         let firstColor = UIColor.clear
-        let secondColor = UIColor.white
+        let secondColor = UIColor.white.withAlphaComponent(0.99)
         
         
         let gradientLayer = CAGradientLayer()
@@ -51,7 +51,7 @@ class WhiteShadeView: UIView {
         
         gradientLayer.startPoint = CGPoint(x: 1, y:0)
         gradientLayer.endPoint = CGPoint(x: 0, y: 0.99)
-        gradientLayer.locations = [0.65, 1]
+        gradientLayer.locations = [0.5, 1]
         gradientLayer.frame = self.bounds
         gradientLayer.name = GradientLayerName
         self.layer.insertSublayer(gradientLayer, at: 0)

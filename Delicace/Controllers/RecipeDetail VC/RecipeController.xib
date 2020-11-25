@@ -5,12 +5,13 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecipeController" customModule="Delicace" customModuleProvider="target">
             <connections>
-                <outlet property="inProgress" destination="hKq-F2-rJS" id="sGw-dU-awE"/>
+                <outlet property="collectionViewTest" destination="4PM-aW-3z5" id="ysa-El-Bwk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,22 +20,25 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In progress ... Come back later" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKq-F2-rJS">
-                    <rect key="frame" x="103.5" y="388.5" width="207" height="129"/>
-                    <color key="backgroundColor" red="0.83862876890000004" green="0.42249315980000002" blue="0.53115445380000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4PM-aW-3z5" customClass="RecipeCollectionView" customModule="Delicace" customModuleProvider="target">
+                    <rect key="frame" x="8" y="52" width="398" height="802"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="hKq-F2-rJS" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="4H6-fC-ASJ"/>
-                <constraint firstItem="hKq-F2-rJS" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="gko-ks-8GR"/>
-                <constraint firstItem="hKq-F2-rJS" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="sMa-o7-5Pd"/>
+                <constraint firstItem="4PM-aW-3z5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="G3P-Aa-zun"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4PM-aW-3z5" secondAttribute="bottom" constant="8" id="KQ9-Gl-Tc3"/>
+                <constraint firstItem="4PM-aW-3z5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="Scn-bC-Z0e"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4PM-aW-3z5" secondAttribute="trailing" constant="8" id="r7s-eA-ZTs"/>
             </constraints>
             <point key="canvasLocation" x="139" y="103"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

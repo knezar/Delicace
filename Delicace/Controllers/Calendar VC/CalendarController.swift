@@ -63,7 +63,7 @@ class CalendarController: UIViewController {
     // MARK: - Actions
     
     @objc func cancelButtonToggeled(){
-        self.dismiss(animated: true, completion: nil)
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     @objc func addButtonToggeled(){

@@ -45,24 +45,7 @@ class ContainerController: UIViewController {
     func configureHomeController() {
         let homeController = HomeController(nibName: "HomeController", bundle: nil)
         homeController.delegate = self
-        centerController = UINavigationController(rootViewController: homeController)
-        let navigationBarAppearace = UINavigationBar.appearance()
-        let attrs = [NSAttributedString.Key.foregroundColor: UIColor.white,
-                     NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .regular)]
-        navigationBarAppearace.titleTextAttributes = attrs
-        navigationBarAppearace.tintColor = UIColor.mainBlue
-        
-//        navigationBarAppearace.barTintColor = .mainBlue
-//        navigationBarAppearace.setBackgroundImage(UIImage(), for: .default)
-//        navigationBarAppearace.shadowImage = UIImage()
-        
-        navigationBarAppearace.isTranslucent = false
-        let bounds = self.navigationController!.navigationBar.frame
-        if let image = graphicHelper.getGradientImage(bounds: bounds) {
-            navigationBarAppearace.setBackgroundImage(image, for: .default)
-        }
-        
-
+        centerController = CustomNavigationController(rootViewController: homeController)
         centerController.view.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(centerController.view)
         heightConstraint = centerController.view.heightAnchor.constraint(equalTo: self.view.heightAnchor)
@@ -92,6 +75,10 @@ class ContainerController: UIViewController {
         }
     }
     
+//    private func DimmView{
+//
+//    }
+    
     // MARK: - Actions
     
     func animatePanel(shouldExpand: Bool, menuOptions: MenuOptions?) {
@@ -102,10 +89,6 @@ class ContainerController: UIViewController {
             }, completion: nil)
         } else {
             // hide menu
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-                self.xConstraint.constant = 0
-            }, completion: nil)
-            
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut) {
                 self.xConstraint.constant = 0
             } completion: { (_) in

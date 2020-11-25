@@ -49,7 +49,7 @@ class RecipeBookController: UIViewController {
     // MARK: - Actions
     
     @objc func cancelButtonToggeled(){
-        self.dismiss(animated: true, completion: nil)
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     @objc func addButtonToggeled(){
@@ -88,4 +88,7 @@ extension RecipeBookController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: recipesCV.bounds.size.width, height: recipesCV.bounds.size.width/2.5)
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+           return UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
+        }
 }

@@ -10,21 +10,31 @@ import UIKit
 
 class CustomNavigationController: UINavigationController {
 
+    let graphicHelper = GraphicHelper()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupNavBarAppearance()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupNavBarAppearance() {
+        
+        let navigationBarAppearace = UINavigationBar.appearance()
+        let attrs = [NSAttributedString.Key.foregroundColor: UIColor.white,
+                     NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .regular)]
+        navigationBarAppearace.titleTextAttributes = attrs
+//        navigationBarAppearace.tintColor = UIColor.mainBlue
+        
+//        navigationBarAppearace.barTintColor = .mainBlue
+//        navigationBarAppearace.setBackgroundImage(UIImage(), for: .default)
+//        navigationBarAppearace.shadowImage = UIImage()
+        navigationBarAppearace.isTranslucent = false
+        navigationBarAppearace.barStyle = .black
+        let bounds = self.navigationBar.frame
+        if let image = graphicHelper.getGradientImage(bounds: bounds) {
+            navigationBarAppearace.setBackgroundImage(image, for: .default)
+        }
     }
-    */
 
 }

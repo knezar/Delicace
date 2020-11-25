@@ -14,7 +14,33 @@ class GraphicHelper: NSObject {
         super.init()
     }
 
-   
+    let myView = UIView()
+    func dimmScreen(view: UIView) -> UIView {
+        myView.backgroundColor = UIColor(white: 0, alpha: 0.7)
+        view.addSubview(myView)
+        myView.frame = view.frame
+            myView.alpha = 0
+            UIView.animate(withDuration: 0.5) {
+                self.myView.alpha = 1
+            }
+        return myView
+    }
+    
+    func dismissDimmedView () {
+        UIView.animate(withDuration: 0.5) {
+            self.myView.alpha = 0
+        }
+    }
+    
+    func animateButtonTransform(viewToRotate: UIView, rotate: CGAffineTransform, ViewtoExpand: UIView, expand: CGAffineTransform, alpha: Int) {
+        var alpha = alpha
+        UIView.animate(withDuration: 1) {
+            ViewtoExpand.transform = expand
+            viewToRotate.transform = rotate
+            alpha = 1
+            //            self
+        }
+    }
     
     func getGradientImage(bounds: CGRect) -> UIImage? {
         let gradient = CAGradientLayer()

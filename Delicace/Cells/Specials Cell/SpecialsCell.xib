@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,15 +20,14 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="Rec-1" translatesAutoresizingMaskIntoConstraints="NO" id="mmH-wR-X5E" userLabel="Recipe Image">
                         <rect key="frame" x="0.0" y="44" width="688" height="457"/>
                     </imageView>
-                    <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOX-JD-7QP" userLabel="Shaded View">
-                        <rect key="frame" x="0.0" y="387" width="688" height="114"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOX-JD-7QP" userLabel="Shaded View" customClass="ShadedView" customModule="Delicace" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="44" width="688" height="457"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Jennifer Cruise" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRf-an-Hyx" userLabel="Title Label">
-                        <rect key="frame" x="32" y="430.5" width="516" height="26.5"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                        <color key="textColor" systemColor="systemPinkColor"/>
+                        <rect key="frame" x="32" y="468" width="624" height="21"/>
+                        <fontDescription key="fontDescription" name="Charter-BoldItalic" family="Charter" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -37,17 +35,17 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="RRf-an-Hyx" firstAttribute="centerY" secondItem="sOX-JD-7QP" secondAttribute="centerY" id="0Pk-wd-gSt"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="sOX-JD-7QP" secondAttribute="trailing" id="7ot-9J-mRt"/>
                 <constraint firstItem="mmH-wR-X5E" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="CqD-5J-F4g"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="mmH-wR-X5E" secondAttribute="bottom" id="ImM-nR-e7n"/>
                 <constraint firstItem="sOX-JD-7QP" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="OKS-yU-ora"/>
                 <constraint firstItem="mmH-wR-X5E" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="Yqb-bY-dmx"/>
-                <constraint firstItem="sOX-JD-7QP" firstAttribute="height" secondItem="ZTg-uK-7eu" secondAttribute="height" multiplier="0.25" id="cbe-2A-YQd"/>
                 <constraint firstItem="RRf-an-Hyx" firstAttribute="leading" secondItem="sOX-JD-7QP" secondAttribute="leading" constant="32" id="dfS-R7-2GL"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="mmH-wR-X5E" secondAttribute="trailing" id="di8-Lr-M71"/>
                 <constraint firstItem="sOX-JD-7QP" firstAttribute="bottom" secondItem="ZTg-uK-7eu" secondAttribute="bottom" id="gKb-xQ-Svb"/>
-                <constraint firstItem="RRf-an-Hyx" firstAttribute="width" secondItem="sOX-JD-7QP" secondAttribute="width" multiplier="0.75" id="gpg-PN-OZQ"/>
+                <constraint firstItem="RRf-an-Hyx" firstAttribute="trailing" secondItem="sOX-JD-7QP" secondAttribute="trailing" constant="-32" id="gLc-rI-cke"/>
+                <constraint firstItem="RRf-an-Hyx" firstAttribute="bottom" secondItem="sOX-JD-7QP" secondAttribute="bottom" constant="-12" id="jfe-3x-Ziy"/>
+                <constraint firstItem="sOX-JD-7QP" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="rKQ-Vo-Hnw"/>
             </constraints>
             <size key="customSize" width="688" height="535"/>
             <connections>
@@ -59,8 +57,5 @@
     </objects>
     <resources>
         <image name="Rec-1" width="255" height="350"/>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

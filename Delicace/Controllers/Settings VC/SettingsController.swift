@@ -11,7 +11,7 @@ import UIKit
 class SettingsController: UIViewController {
 
     // MARK: - Properties
-
+    let graphicHelper = GraphicHelper()
     // MARK: - Outlets
     
     // MARK: - Lifecycle
@@ -19,12 +19,16 @@ class SettingsController: UIViewController {
         super.viewDidLoad()
         ConfigUI()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        ConfigUI()
+    }
     // MARK: - Private
     func ConfigUI() {
         view.backgroundColor = .yellow
         navigationItem.title = "Settings"
-        navigationController?.navigationBar.barStyle = .black
+//        self.navigationController?.navigationBar
+//        let navigationBarAppearace = UINavigationBar.appearance()
+//        navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.leftBarButtonItem = navButtonConfiguration(image: #imageLiteral(resourceName: "Cancel"), selector:  #selector(cancelButtonToggeled))
 //        navigationItem.rightBarButtonItem = navButtonConfiguration(image: #imageLiteral(resourceName: "Search Icon"), selector:  #selector(addButtonToggeled))
     }
@@ -36,7 +40,7 @@ class SettingsController: UIViewController {
     // MARK: - Actions
     
     @objc func cancelButtonToggeled(){
-        self.dismiss(animated: true, completion: nil)
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     @objc func addButtonToggeled(){

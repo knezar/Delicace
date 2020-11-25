@@ -11,54 +11,62 @@ import UIKit
 class HomeController: UIViewController {
     
     // MARK: - Outlets
-    @IBOutlet weak var specialsCV: UICollectionView!
+    @IBOutlet weak var expandingView: UIView!
+
+    @IBOutlet weak var speciallsView: SpeicalsCollectionView!
     @IBOutlet weak var menuBarView: MenuBarView!
-    @IBOutlet weak var recipesCV: UICollectionView!
+    @IBOutlet weak var addButtonView: UIButton!
+    @IBOutlet weak var recipesCV: RecipeCollectionView!
     
     // MARK: - Properties
     
+    //    guard let window = UIApplication.shared.keyWindow else {return}
+    var isDimmed: Bool = false
     let graphicHelper = GraphicHelper()
-    let imageItems = ["Rec-1", "Rec-2", "Rec-3", "Rec-4", "Rec-5"]
-    let titleItems = ["Chermoula couscous", "Flaky chicken and almond pie", "Chermoula eggplant", "Garam masala bastilla", "Goat tagine with almonds"]
+    
     var delegate: HomeControllerDelegate?
     let specialsCellID = "specialsCell"
-    let recipesCellID = "recipesCell"
-    private var recipeSearch = [SearchResults]() {
-            didSet {
-                DispatchQueue.main.async {
-                    self.recipesCV.reloadData()
-                }
-            }
-        }
-    
-    
-    
-    
-    
+    let recipesCellID = "recipesCell"    
+    private var recipeSearch = [SearchResults]()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         configureNavBar()
-        configureMainCollectionView()
         configureFloatingMenu()
-//        RecipeSearchAPI.manager.fetchRecipes(url: " ") { (recipes) in
-//            print(recipes.results)
-//            self.recipeSearch = recipes.results
-//        } errorHandler: { (error) in
-//            print(error)
-//        }
-        
-//        scrollTo
-        
+        loadTestData()
+        //        RecipeSearchAPI.manager.fetchRecipes(url: " ") { (recipes) in
+        //            print(recipes.results)
+        //            self.recipeSearch = recipes.results
+        //        } errorHandler: { (error) in
+        //            print(error)
+        //        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isTranslucent = false
+    }
+    override func viewWillLayoutSubviews() {
+        configureNavBar()
     }
     
     // MARK: - Private
+    
+    func loadTestData() {
+        for data in RecipeTestDataModel.allCases {
+            let recipedata = SearchResults(id: data.id, title: data.description, image: data.recipeImage, readyInMinutes: data.time, aggregateLikes: data.likes, servings: data.servings, summary: data.summary)
+            recipeSearch.append(recipedata)
+        }
+        recipesCV.recipesData = recipeSearch
+        speciallsView.specialsData = recipeSearch
+        
+    }
     private func configureFloatingMenu() {
         menuBarView.homeVC = self
-        let menuBarItems = ["Popular", "Trending", "Recent"]
+        var menuBarItems = [String]()
+        for option in HomeMenuOptions.allCases {
+            menuBarItems.append(option.description)
+        }
         menuBarView.menuBarItems = menuBarItems
         
     }
@@ -69,48 +77,44 @@ class HomeController: UIViewController {
         navigationItem.rightBarButtonItem =  navButtonConfiguration(image: #imageLiteral(resourceName: "Search Icon"), selector: #selector (handleSearchButtonPressed))
     }
     
- 
+    
     func navButtonConfiguration(image: UIImage, selector: Selector) -> UIBarButtonItem {
         let barButton = UIBarButtonItem(image: image.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: selector)
         return barButton
     }
-    private func configureMainCollectionView() {
-        self.specialsCV.register(UINib(nibName:"SpecialsCell", bundle: nil), forCellWithReuseIdentifier: specialsCellID)
-        specialsCV.delegate = self
-        specialsCV.dataSource = self
-        recipesCV.collectionViewLayout = CustomFlowLayout()
-        specialsCV.showsHorizontalScrollIndicator = false
+    
+    private func fullDimmView() {
+        guard let window = UIApplication.shared.keyWindow else {return}
+        let dimmView = graphicHelper.dimmScreen(view: view)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleMenuButtonPressed))
         
-        recipesCV.register(UINib(nibName:"RecipesCell", bundle: nil), forCellWithReuseIdentifier: recipesCellID)
-        recipesCV.delegate = self
-        recipesCV.dataSource = self
-        recipesCV.collectionViewLayout = CustomFlowLayout()
-        recipesCV.showsHorizontalScrollIndicator = false
+        dimmView.addGestureRecognizer(tapGesture)
+        window.addSubview(dimmView)
+        dimmView.translatesAutoresizingMaskIntoConstraints = false
+        dimmView.topAnchor.constraint(equalTo:  window.topAnchor).isActive = true
+        dimmView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        dimmView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        dimmView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
-    private func configureCell(cell: RecipesCell, indexPath: IndexPath) -> RecipesCell {
+    private func dimmView() {
+        let dimmView = graphicHelper.dimmScreen(view: view)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(addButtonPressed))
+        dimmView.addGestureRecognizer(tapGesture)
         
-        cell.titleLabel.text = recipeSearch[indexPath.row].title
-        cell.likesLabel.text = String(recipeSearch[indexPath.row].aggregateLikes)
-        cell.timeLabel.text = String(recipeSearch[indexPath.row].readyInMinutes)
-        cell.servingLabel.text  = String(recipeSearch[indexPath.row].servings)
-        let summaryString = "   \(recipeSearch[indexPath.row].summary.replacingOccurrences(of: "[\\</b><b>]", with: "", options: .regularExpression, range: nil))"
-        cell.summaryLabel.text = summaryString
-        
-        
-        RecipeSearchAPI.manager.getAvatarPic(urlString: recipeSearch[indexPath.row].image) { (image) in
-            cell.recipeImage.image = image
-        } errorHandler: { (error) in
-            print(error)
-        }
-        return cell
+        //        guard let window = UIApplication.shared.keyWindow else {return}
+        view.addSubview(dimmView)
+        dimmView.translatesAutoresizingMaskIntoConstraints = false
+        dimmView.topAnchor.constraint(equalTo:  view.topAnchor).isActive = true
+        dimmView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        dimmView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        dimmView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        view.bringSubviewToFront(expandingView)
+        view.bringSubviewToFront(addButtonView)
     }
     
-    private func testData(cell: RecipesCell, indexPath: IndexPath) -> RecipesCell {
-        cell.recipeImage.image = UIImage(named: imageItems[indexPath.row])
-        cell.titleLabel.text = titleItems[indexPath.row]
-        
-        return cell
+    private func dissmissDimmedView() {
+        graphicHelper.dismissDimmedView()
     }
     
     // MARK: - Actions
@@ -122,61 +126,14 @@ class HomeController: UIViewController {
         delegate?.slideOutMenuToggled(ForMenuOption: nil)
     }
     
-}
-
-// MARK: - UICollectionViewDelegate
-extension HomeController: UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let recipeDetailController = RecipeController(nibName: "RecipeController", bundle: nil)
-        recipeDetailController.x = indexPath.row
-        
-        navigationController?.pushViewController(recipeDetailController, animated: true)
-        
-        print(indexPath.row)
-    }
-    
-}
-
-// MARK: - UICollectionViewDataSource
-extension HomeController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        if collectionView == recipesCV {
-            if recipeSearch.isEmpty {
-                return titleItems.count
-            } else {
-                return recipeSearch.count
-
-            }
+    @IBAction func addButtonPressed(_ sender: UIButton) {
+        if isDimmed {
+            dissmissDimmedView()
+            graphicHelper.animateButtonTransform(viewToRotate: addButtonView, rotate: CGAffineTransform.identity, ViewtoExpand: expandingView, expand: CGAffineTransform.identity, alpha: 0)
         } else {
-            return imageItems.count
+            dimmView()
+            graphicHelper.animateButtonTransform(viewToRotate: addButtonView, rotate: CGAffineTransform(rotationAngle: CGFloat.pi/4), ViewtoExpand: expandingView, expand: CGAffineTransform(scaleX: 4.25, y: 4), alpha: 1)
         }
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == recipesCV {
-            let cell = recipesCV.dequeueReusableCell(withReuseIdentifier: recipesCellID, for: indexPath) as! RecipesCell
-            
-            return testData(cell: cell, indexPath: indexPath)
-//           return configureCell(cell: cell, indexPath: indexPath)
-        } else {
-            
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: specialsCellID, for: indexPath) as! SpecialsCell
-            
-            return cell
-        }
-    }
-}
-
-// MARK: - UICollectionViewDelegateFlowLayout
-extension HomeController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == recipesCV {
-            return CGSize(width: recipesCV.bounds.size.width, height: recipesCV.bounds.size.width/2.5)
-        } else {
-            return CGSize(width: specialsCV.bounds.width, height: specialsCV.bounds.size.height)
-        }
+        isDimmed = !isDimmed
     }
 }

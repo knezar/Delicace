@@ -51,7 +51,7 @@ class ChatController: UITableViewController {
     // MARK: - Actions
     
     @objc func cancelButtonToggeled(){
-        self.dismiss(animated: true, completion: nil)
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     @objc func addButtonToggeled(){

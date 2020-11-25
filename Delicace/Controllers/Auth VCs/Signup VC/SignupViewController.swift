@@ -31,7 +31,7 @@ class SignupViewController: UIViewController {
 
     // MARK: - Private
         private func configureSignUpButton() {
-            signupButton.layer.cornerRadius = signupButton.frame.height / 2
+            signupButton.setCornerRadius(cornerR: signupButton.frame.height / 2)
             signupButton.clipsToBounds = true
             let image = graphicHelper.getGradientImage(bounds: signupButton.bounds)
             signupButton.setBackgroundImage(image, for: .normal)
