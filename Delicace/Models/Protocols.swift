@@ -16,3 +16,8 @@ protocol LoginControllerDelegate: class {
     func finishLoggingIn()
     func finishLoggingOut()
 }
+
+//protocol CustomCollectionDelegate: class {
+//    func scrollToCellAtIndex(index: Int)
+//    func selectCellAtIndex(index: Int)
+//}

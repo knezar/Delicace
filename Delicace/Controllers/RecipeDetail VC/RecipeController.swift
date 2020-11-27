@@ -29,7 +29,7 @@ class RecipeController: UIViewController {
             let recipedata = SearchResults(id: data.id, title: data.description, image: data.recipeImage, readyInMinutes: data.time, aggregateLikes: data.likes, servings: data.servings, summary: data.summary)
             customData.append(recipedata)
         }
-        collectionViewTest.recipesData = customData
+//        collectionViewTest.recipesData = customData
         
     }
 

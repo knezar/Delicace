@@ -36,6 +36,9 @@ class HomeController: UIViewController {
         configureNavBar()
         configureFloatingMenu()
         loadTestData()
+        
+        menuBarView.homeVC = self
+        recipesCV.homeVC = self 
         //        RecipeSearchAPI.manager.fetchRecipes(url: " ") { (recipes) in
         //            print(recipes.results)
         //            self.recipeSearch = recipes.results
@@ -51,18 +54,16 @@ class HomeController: UIViewController {
     }
     
     // MARK: - Private
-    
     func loadTestData() {
         for data in RecipeTestDataModel.allCases {
             let recipedata = SearchResults(id: data.id, title: data.description, image: data.recipeImage, readyInMinutes: data.time, aggregateLikes: data.likes, servings: data.servings, summary: data.summary)
             recipeSearch.append(recipedata)
         }
-        recipesCV.recipesData = recipeSearch
         speciallsView.specialsData = recipeSearch
         
     }
+
     private func configureFloatingMenu() {
-        menuBarView.homeVC = self
         var menuBarItems = [String]()
         for option in HomeMenuOptions.allCases {
             menuBarItems.append(option.description)
@@ -70,6 +71,8 @@ class HomeController: UIViewController {
         menuBarView.menuBarItems = menuBarItems
         
     }
+    
+    
     
     private func configureNavBar() {
         navigationItem.title = "Good Food"
@@ -94,7 +97,6 @@ class HomeController: UIViewController {
         graphicHelper.dimmView(view: dimmView)
         let tapGesture = UITapGestureRecognizer(target: self, action: selector)
         dimmView.addGestureRecognizer(tapGesture)
-        //        delegate?.slideOutMenuToggled(ForMenuOption: nil)
     }
     func dissmissDimmedView() {
         graphicHelper.dismissDimmedView(view: dimmView)
@@ -102,6 +104,7 @@ class HomeController: UIViewController {
     
     // MARK: - Actions
     @objc func handleSearchButtonPressed() {
+        recipesCV.scrollToMenuIndex(menuIndex: 1)
         print("search button pressed")
     }
     
@@ -125,5 +128,18 @@ class HomeController: UIViewController {
             
         }
         isExpanded = !isExpanded
+    }
+}
+
+
+extension HomeController {
+    func scrollToCellAtIndex(index: Int) {
+        recipesCV.scrollToMenuIndex(menuIndex: index)
+    }
+
+    func selectCellAtIndex(index: Int) {
+        let indexPath = IndexPath(item: index, section: 0)
+        menuBarView.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .left)
+        menuBarView.animateRedBar(index: index)
     }
 }

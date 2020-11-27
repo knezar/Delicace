@@ -1,8 +1,8 @@
 //
-//  CustomCollectionView.swift
+//  RecipeCollectionView.swift
 //  Delicace
 //
-//  Created by Nezar Khabar on 11/23/20.
+//  Created by Nezar Khabar on 11/26/20.
 //  Copyright © 2020 FoodTech. All rights reserved.
 //
 
@@ -10,84 +10,107 @@ import UIKit
 
 class RecipeCollectionView: UIView {
     
-    // MARK: - Propreties
-    var recipesData = [SearchResults]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.RecipecollectionView.reloadData()
-            }
-        }
-    }
-    let recipesCellID = "recipesCell"
+    let recipeFeedCellID = "RecipeFeedCell"
+    let trendingCellID = "TrendingCell"
+    let recentCellID = "RecentCell"
+//    var delegate: CustomCollectionDelegate?
+    var homeVC: HomeController?
+//    let menuBar
     
-    lazy var RecipecollectionView: UICollectionView = {
+    lazy var recipeCollction: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 0
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.showsHorizontalScrollIndicator = false
-        cv.backgroundColor = .myBgColor
+        cv.backgroundColor = .blue
+        cv.isPagingEnabled = true
+        cv.dataSource = self
+        cv.delegate = self
         return cv
     }()
+    
+    
+    
     
     // MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupCollectionView()
+        setupMainCollectionView()
+//        setupIndicatorView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupCollectionView()
+        setupMainCollectionView()
+//        setupIndicatorView()
     }
-    // MARK: - Private
-    private func setupCollectionView() {
-        RecipecollectionView.register(UINib(nibName: "RecipesCell", bundle: nil), forCellWithReuseIdentifier: recipesCellID)
-        RecipecollectionView.dataSource = self
-        RecipecollectionView.delegate = self
-        addSubview(RecipecollectionView)
-        RecipecollectionView.translatesAutoresizingMaskIntoConstraints = false
-        RecipecollectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        RecipecollectionView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        RecipecollectionView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        RecipecollectionView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+    
+    
+    func setupMainCollectionView() {
+        
+        recipeCollction.register(RecipeFeedCell.self, forCellWithReuseIdentifier: recipeFeedCellID)
+        recipeCollction.register(TrendingCell.self, forCellWithReuseIdentifier: trendingCellID)
+        recipeCollction.register(RecentCell.self, forCellWithReuseIdentifier: recentCellID)
+
+        addSubview(recipeCollction)
+        recipeCollction.translatesAutoresizingMaskIntoConstraints = false
+        recipeCollction.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        recipeCollction.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        recipeCollction.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        recipeCollction.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
+    
+    func scrollToMenuIndex(menuIndex: Int) {
+        let indexPath = IndexPath(item: menuIndex, section: 0)
+        recipeCollction.scrollToItem(at: indexPath, at: .left, animated: true)
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let index = targetContentOffset.move().x / frame.width
+        print(index)
+        homeVC?.selectCellAtIndex(index: Int(index))
+//        let indexPath = IndexPath(item: Int(index), section: 0)
+//        menuBar.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .left)
+    }
+
 }
+
 
 // MARK: - UICollectionViewDelegate
 extension RecipeCollectionView: UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let recipeDetailController = RecipeController(nibName: "RecipeController", bundle: nil)
-//                recipeDetailController.x = indexPath.row
-        
-//                navigationController?.pushViewController(recipeDetailController, animated: true)
-        
-        print(indexPath.row)
-    }
+
+//    scrollmen
     
 }
+
 
 // MARK: - UICollectionViewDataSource
 extension RecipeCollectionView: UICollectionViewDataSource {
+
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return recipesData.count
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: recipesCellID, for: indexPath) as! RecipesCell
-        cell.likesLabel.text = String(recipesData[indexPath.row].aggregateLikes)
-        cell.servingLabel.text = String(recipesData[indexPath.row].servings)
-        cell.recipeImage.image = UIImage(named: recipesData[indexPath.row].image)
-        cell.titleLabel.text = recipesData[indexPath.row].title
-        cell.timeLabel.text = String(recipesData[indexPath.row].readyInMinutes)
-        return cell
+        if indexPath.item == 0 {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: recipeFeedCellID, for: indexPath)
+        } else if indexPath.item == 1 {
+        return collectionView.dequeueReusableCell(withReuseIdentifier: trendingCellID, for: indexPath) as! TrendingCell
+        } else {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: recentCellID, for: indexPath)
+        }
     }
 }
 
+
+
 // MARK: - UICollectionViewDelegateFlowLayout
 extension RecipeCollectionView: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: RecipecollectionView.bounds.size.width, height: RecipecollectionView.bounds.size.width/2.5)
-        
+        return CGSize(width: frame.width, height: frame.height)
     }
+    
 }

@@ -14,10 +14,10 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     
 //    let menuBarItems = ["Popular", "Trending", "Recent"]
     var menuBarItems: [String]?
-    
-    let menuBarCellID = "menuBarCell"
-    var whiteBarLeftAnchorConstraint: NSLayoutConstraint?
+//    var delegate: CustomCollectionDelegate?
     var homeVC: HomeController?
+    let menuBarCellID = "menuBarCell"
+    var redBarLeftAnchorConstraint: NSLayoutConstraint?
 
     
     lazy var collectionView: UICollectionView = {
@@ -30,7 +30,7 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         return cv
     }()
     
-    let whiteBarView: UIView = {
+    let redBarView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.myRed
         return view
@@ -55,13 +55,13 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     private func setupWhiteBarEffect(){
-        addSubview(whiteBarView)
-        whiteBarView.translatesAutoresizingMaskIntoConstraints = false
-        whiteBarLeftAnchorConstraint = whiteBarView.leftAnchor.constraint(equalTo: self.leftAnchor)
-        whiteBarLeftAnchorConstraint?.isActive = true
-        whiteBarView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        whiteBarView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/3).isActive = true
-        whiteBarView.heightAnchor.constraint(equalToConstant: 4).isActive = true
+        addSubview(redBarView)
+        redBarView.translatesAutoresizingMaskIntoConstraints = false
+        redBarLeftAnchorConstraint = redBarView.leftAnchor.constraint(equalTo: self.leftAnchor)
+        redBarLeftAnchorConstraint?.isActive = true
+        redBarView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        redBarView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/3).isActive = true
+        redBarView.heightAnchor.constraint(equalToConstant: 4).isActive = true
     }
     
     private func setupCollectionView(){
@@ -79,6 +79,13 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         collectionView.selectItem(at: selectedItem, animated: false, scrollPosition: UICollectionView.ScrollPosition())
     }
     
+    func animateRedBar(index: Int) {
+        let x = CGFloat(index) * frame.width/3
+        redBarLeftAnchorConstraint?.constant = x
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
+            self.layoutIfNeeded()
+        }, completion: nil)
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         guard let test = menuBarItems else {return 3}
@@ -100,10 +107,8 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
-        let x = CGFloat(indexPath.item) * frame.width/3
-        whiteBarLeftAnchorConstraint?.constant = x
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
-            self.layoutIfNeeded()
-        }, completion: nil)
+        homeVC?.scrollToCellAtIndex(index: indexPath.item)
+        animateRedBar(index: indexPath.item)
+
     }
 }

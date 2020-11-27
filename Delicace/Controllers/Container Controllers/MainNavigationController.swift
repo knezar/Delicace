@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainNavigationController: UINavigationController, LoginControllerDelegate {
+class MainNavigationController: UINavigationController {
 
     
     override func viewDidLoad() {
@@ -21,9 +21,12 @@ class MainNavigationController: UINavigationController, LoginControllerDelegate 
         }
     }
     
-    func setupNavBarAppearance() {
-        
+    fileprivate func isLoggedIn() -> Bool{
+        return UserDefaultsHelper.manager.isLoggedIn()
     }
+}
+
+extension MainNavigationController: LoginControllerDelegate{
     
     func finishLoggingIn() {
         let containerController = ContainerController()
@@ -36,8 +39,5 @@ class MainNavigationController: UINavigationController, LoginControllerDelegate 
         loginController.delegate = self
         setViewControllers([loginController], animated: true)
     }
-        
-    fileprivate func isLoggedIn() -> Bool{
-        return UserDefaultsHelper.manager.isLoggedIn()
-    }
+    
 }
