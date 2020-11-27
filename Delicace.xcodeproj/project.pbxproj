@@ -354,12 +354,10 @@
 			isa = PBXGroup;
 			children = (
 				81FC680E245B96B800E5F7DD /* NetworkHelper.swift */,
-				81FCAC98245E985E0013DE74 /* CustomFlowLayout.swift */,
 				81FC6812245B974100E5F7DD /* NSCacheHelper.swift */,
 				81FC6810245B96FD00E5F7DD /* ErrorHelper.swift */,
 				8108394B2449318A00FDE0AF /* UserDefaultsHelper.swift */,
 				8108394C2449318A00FDE0AF /* GraphicHelper.swift */,
-				8108394D2449318A00FDE0AF /* Protocols.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -449,6 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				810839642449318A00FDE0AF /* ViewExtension.swift */,
+				81FCAC98245E985E0013DE74 /* CustomFlowLayout.swift */,
 				81FDE0F02455EB3D00A16194 /* customColorsExtension.swift */,
 			);
 			path = extentions;
@@ -484,6 +483,7 @@
 		81FC680B245B8F6600E5F7DD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8108394D2449318A00FDE0AF /* Protocols.swift */,
 				81FC6809245B8F5700E5F7DD /* UserModel.swift */,
 				81FCAC9A245EFFA60013DE74 /* SlideMenuOptions.swift */,
 				026D1505256AE42F002FB9B9 /* FloatingMenuOptions.swift */,

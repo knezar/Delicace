@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeController" customModule="Delicace" customModuleProvider="target">
             <connections>
                 <outlet property="addButtonView" destination="w89-hb-9mq" id="oVe-rM-KhY"/>
+                <outlet property="dimmView" destination="8Fc-FJ-gBM" id="4Vp-i1-cHc"/>
                 <outlet property="expandingView" destination="6JL-qC-Zas" id="Nad-fW-sZ6"/>
                 <outlet property="menuBarView" destination="Aq0-5G-dhN" id="nS6-Bm-SRv"/>
                 <outlet property="recipesCV" destination="3R1-Je-lzc" id="zx9-4E-QGr"/>
@@ -24,6 +25,10 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V94-6o-bUN" userLabel="Specials View" customClass="SpeicalsCollectionView" customModule="Delicace" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="298.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aq0-5G-dhN" customClass="MenuBarView" customModule="Delicace" customModuleProvider="target">
                     <rect key="frame" x="8" y="342.5" width="398" height="40"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -35,7 +40,11 @@
                     <rect key="frame" x="8" y="382.5" width="398" height="479.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6JL-qC-Zas" userLabel="Expanding View" customClass="ExpandingView" customModule="Delicace" customModuleProvider="target">
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fc-FJ-gBM" userLabel="Dimm View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                </view>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6JL-qC-Zas" userLabel="Expanding View" customClass="ExpandingView" customModule="Delicace" customModuleProvider="target">
                     <rect key="frame" x="338" y="820" width="56" height="56"/>
                     <color key="backgroundColor" red="0.83862876890000004" green="0.42249315980000002" blue="0.53115445380000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <userDefinedRuntimeAttributes>
@@ -59,10 +68,6 @@
                         <action selector="addButtonPressed:" destination="-1" eventType="touchUpInside" id="sOU-io-4Cw"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V94-6o-bUN" userLabel="Specials View" customClass="SpeicalsCollectionView" customModule="Delicace" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="44" width="414" height="298.5"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="0.97628885509999996" blue="0.98423892260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -73,7 +78,9 @@
                 <constraint firstItem="6JL-qC-Zas" firstAttribute="bottom" secondItem="w89-hb-9mq" secondAttribute="bottom" id="8Wg-9O-ciK"/>
                 <constraint firstItem="6JL-qC-Zas" firstAttribute="top" secondItem="w89-hb-9mq" secondAttribute="top" id="ACA-zf-01E"/>
                 <constraint firstItem="Aq0-5G-dhN" firstAttribute="top" secondItem="V94-6o-bUN" secondAttribute="bottom" id="CDE-7K-odf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8Fc-FJ-gBM" secondAttribute="trailing" id="HbN-SY-uTp"/>
                 <constraint firstItem="6JL-qC-Zas" firstAttribute="leading" secondItem="w89-hb-9mq" secondAttribute="leading" id="Hti-bZ-YMr"/>
+                <constraint firstItem="8Fc-FJ-gBM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MXm-Hf-hMy"/>
                 <constraint firstItem="Aq0-5G-dhN" firstAttribute="trailing" secondItem="3R1-Je-lzc" secondAttribute="trailing" id="Noa-TZ-Gzz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3R1-Je-lzc" secondAttribute="bottom" id="OJN-w4-7qd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="V94-6o-bUN" secondAttribute="trailing" id="Qig-tI-OmW"/>
@@ -84,6 +91,8 @@
                 <constraint firstItem="V94-6o-bUN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="rc4-DD-thu"/>
                 <constraint firstItem="Aq0-5G-dhN" firstAttribute="leading" secondItem="3R1-Je-lzc" secondAttribute="leading" id="ror-sS-iFn"/>
                 <constraint firstItem="3R1-Je-lzc" firstAttribute="top" secondItem="Aq0-5G-dhN" secondAttribute="bottom" id="tvR-Qh-Die"/>
+                <constraint firstItem="8Fc-FJ-gBM" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="uog-qo-oC5"/>
+                <constraint firstAttribute="top" secondItem="8Fc-FJ-gBM" secondAttribute="top" id="ydJ-Qx-IKt"/>
             </constraints>
             <point key="canvasLocation" x="57.971014492753625" y="28.794642857142854"/>
         </view>

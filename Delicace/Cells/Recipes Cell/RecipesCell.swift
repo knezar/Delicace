@@ -17,7 +17,6 @@ class RecipesCell: UICollectionViewCell {
     
     
     // MARK: - Outlets
-    //    @IBOutlet weak var shadedView: UIView!
     @IBOutlet weak var recipeImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var summaryLabel: UILabel!

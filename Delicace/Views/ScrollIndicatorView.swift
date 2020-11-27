@@ -76,7 +76,7 @@ class ScrollIndicatorView: UIView, UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let indicators = indicators, let width = width, let height = height else {return CGSize(width: bounds.width, height: bounds.height)}
-        return CGSize(width: width/CGFloat(indicators), height: height)
+        return CGSize(width: width/CGFloat(indicators), height: height*0.99)
     }
 }
 

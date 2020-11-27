@@ -56,7 +56,7 @@ class EventCell: UICollectionViewCell {
         self.usersCV.register(UserCollectionCell.self, forCellWithReuseIdentifier: usersCellID)
         usersCV.delegate = self
         usersCV.dataSource = self
-        usersCV.collectionViewLayout = CustomFlowLayout()
+        usersCV.collectionViewLayout = UICollectionViewLayout()
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 0
         usersCV.collectionViewLayout = layout

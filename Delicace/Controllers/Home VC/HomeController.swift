@@ -12,7 +12,7 @@ class HomeController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var expandingView: UIView!
-
+    @IBOutlet weak var dimmView: UIView!
     @IBOutlet weak var speciallsView: SpeicalsCollectionView!
     @IBOutlet weak var menuBarView: MenuBarView!
     @IBOutlet weak var addButtonView: UIButton!
@@ -21,9 +21,8 @@ class HomeController: UIViewController {
     // MARK: - Properties
     
     //    guard let window = UIApplication.shared.keyWindow else {return}
-    var isDimmed: Bool = false
+    var isExpanded: Bool = false
     let graphicHelper = GraphicHelper()
-    
     var delegate: HomeControllerDelegate?
     let specialsCellID = "specialsCell"
     let recipesCellID = "recipesCell"    
@@ -33,6 +32,7 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        dimmView.alpha = 0
         configureNavBar()
         configureFloatingMenu()
         loadTestData()
@@ -78,43 +78,26 @@ class HomeController: UIViewController {
     }
     
     
-    func navButtonConfiguration(image: UIImage, selector: Selector) -> UIBarButtonItem {
+    private func navButtonConfiguration(image: UIImage, selector: Selector) -> UIBarButtonItem {
         let barButton = UIBarButtonItem(image: image.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: selector)
         return barButton
     }
     
-    private func fullDimmView() {
-        guard let window = UIApplication.shared.keyWindow else {return}
-        let dimmView = graphicHelper.dimmScreen(view: view)
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleMenuButtonPressed))
+    private func expandButtonView() {
+        graphicHelper.animateButtonTransform(rotateView: addButtonView, transformBy: CGAffineTransform(rotationAngle: CGFloat.pi/4), expandView: expandingView, expandBy: CGAffineTransform(scaleX: 4.25, y: 4), showView: expandingView, alpha:  1)
         
-        dimmView.addGestureRecognizer(tapGesture)
-        window.addSubview(dimmView)
-        dimmView.translatesAutoresizingMaskIntoConstraints = false
-        dimmView.topAnchor.constraint(equalTo:  window.topAnchor).isActive = true
-        dimmView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        dimmView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        dimmView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
-    
-    private func dimmView() {
-        let dimmView = graphicHelper.dimmScreen(view: view)
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(addButtonPressed))
-        dimmView.addGestureRecognizer(tapGesture)
-        
-        //        guard let window = UIApplication.shared.keyWindow else {return}
-        view.addSubview(dimmView)
-        dimmView.translatesAutoresizingMaskIntoConstraints = false
-        dimmView.topAnchor.constraint(equalTo:  view.topAnchor).isActive = true
-        dimmView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        dimmView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        dimmView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        view.bringSubviewToFront(expandingView)
-        view.bringSubviewToFront(addButtonView)
+    private func shrinkButtonView() {
+        graphicHelper.animateButtonTransform(rotateView: addButtonView, transformBy: CGAffineTransform.identity, expandView: expandingView, expandBy: CGAffineTransform.identity, showView: expandingView, alpha: 0)
     }
-    
-    private func dissmissDimmedView() {
-        graphicHelper.dismissDimmedView()
+    private func showDimmedView(selector: Selector) {
+        graphicHelper.dimmView(view: dimmView)
+        let tapGesture = UITapGestureRecognizer(target: self, action: selector)
+        dimmView.addGestureRecognizer(tapGesture)
+        //        delegate?.slideOutMenuToggled(ForMenuOption: nil)
+    }
+    func dissmissDimmedView() {
+        graphicHelper.dismissDimmedView(view: dimmView)
     }
     
     // MARK: - Actions
@@ -124,16 +107,23 @@ class HomeController: UIViewController {
     
     @objc func handleMenuButtonPressed() {
         delegate?.slideOutMenuToggled(ForMenuOption: nil)
+        if isExpanded {
+            shrinkButtonView()
+            dissmissDimmedView()
+            isExpanded = !isExpanded
+        }
+        
     }
     
     @IBAction func addButtonPressed(_ sender: UIButton) {
-        if isDimmed {
+        if isExpanded {
+            shrinkButtonView()
             dissmissDimmedView()
-            graphicHelper.animateButtonTransform(viewToRotate: addButtonView, rotate: CGAffineTransform.identity, ViewtoExpand: expandingView, expand: CGAffineTransform.identity, alpha: 0)
         } else {
-            dimmView()
-            graphicHelper.animateButtonTransform(viewToRotate: addButtonView, rotate: CGAffineTransform(rotationAngle: CGFloat.pi/4), ViewtoExpand: expandingView, expand: CGAffineTransform(scaleX: 4.25, y: 4), alpha: 1)
+            showDimmedView(selector: #selector(addButtonPressed))
+            expandButtonView()
+            
         }
-        isDimmed = !isDimmed
+        isExpanded = !isExpanded
     }
 }

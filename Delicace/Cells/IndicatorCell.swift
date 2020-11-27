@@ -29,13 +29,13 @@ class IndicatorCell: UICollectionViewCell {
     
     func configureUI() {
         indicatorLabel.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        indicatorLabel.setCornerRadius(cornerR: (bounds.height-4)/2)
+        indicatorLabel.setCornerRadius(cornerR: (bounds.height-2)/2)
         addSubview(indicatorLabel)
         indicatorLabel.translatesAutoresizingMaskIntoConstraints = false
-        indicatorLabel.topAnchor.constraint(equalTo: topAnchor, constant: 2).isActive = true
-        indicatorLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -2).isActive = true
-        indicatorLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 2).isActive = true
-        indicatorLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -2).isActive = true
+        indicatorLabel.topAnchor.constraint(equalTo: topAnchor, constant: 1).isActive = true
+        indicatorLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -1).isActive = true
+        indicatorLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 1).isActive = true
+        indicatorLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -1).isActive = true
         
     }
     override var isSelected: Bool {
