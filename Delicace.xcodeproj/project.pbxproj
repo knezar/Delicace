@@ -18,6 +18,8 @@
 		0284D58C25709B36008B2734 /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284D58B25709B36008B2734 /* TrendingCell.swift */; };
 		0284D59125709C73008B2734 /* RecipeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284D59025709C73008B2734 /* RecipeCollectionView.swift */; };
 		0284D5942570A12D008B2734 /* RecentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284D5932570A12D008B2734 /* RecentCell.swift */; };
+		0284D5972570D883008B2734 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284D5962570D883008B2734 /* SettingsCell.swift */; };
+		0284D59A25718FE0008B2734 /* SettingsOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284D59925718FE0008B2734 /* SettingsOptions.swift */; };
 		02A1FCF0254DCC2D00A1153E /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A1FCEE254DCC2D00A1153E /* EventCell.swift */; };
 		02A1FCF1254DCC2D00A1153E /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A1FCEF254DCC2D00A1153E /* EventCell.xib */; };
 		02AC7BD7256B8195007D0E8E /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC7BD6256B8195007D0E8E /* CustomNavigationController.swift */; };
@@ -96,6 +98,8 @@
 		0284D58B25709B36008B2734 /* TrendingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
 		0284D59025709C73008B2734 /* RecipeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionView.swift; sourceTree = "<group>"; };
 		0284D5932570A12D008B2734 /* RecentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCell.swift; sourceTree = "<group>"; };
+		0284D5962570D883008B2734 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		0284D59925718FE0008B2734 /* SettingsOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptions.swift; sourceTree = "<group>"; };
 		02A1FCEE254DCC2D00A1153E /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		02A1FCEF254DCC2D00A1153E /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 		02AC7BD6256B8195007D0E8E /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
@@ -322,6 +326,7 @@
 				02EDBB872535D9670064D581 /* Chat Detail Cell */,
 				02A1FCF3254DCC3700A1153E /* Event Cell */,
 				02DB569C256DAE070080A02E /* IndicatorCell.swift */,
+				0284D5962570D883008B2734 /* SettingsCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 				026D1505256AE42F002FB9B9 /* FloatingMenuOptions.swift */,
 				023D219525659F5700203154 /* RecipeModel.swift */,
 				02AC7BDF256C7736007D0E8E /* TestDataModel.swift */,
+				0284D59925718FE0008B2734 /* SettingsOptions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -664,6 +670,7 @@
 				023D219B2565A15500203154 /* ClientAPI.swift in Sources */,
 				810839702449318A00FDE0AF /* UserDefaultsHelper.swift in Sources */,
 				810839692449318A00FDE0AF /* AppDelegate.swift in Sources */,
+				0284D5972570D883008B2734 /* SettingsCell.swift in Sources */,
 				8108396D2449318A00FDE0AF /* MenuBarView.swift in Sources */,
 				02C2BC1F253566B100FB183F /* CalendarController.swift in Sources */,
 				02F73A0A25362D3000844C21 /* LeftChatCell.swift in Sources */,
@@ -697,6 +704,7 @@
 				8108397C2449318A00FDE0AF /* LoginViewController.swift in Sources */,
 				02C1A12A25699D3F005189E3 /* WhiteShadeView.swift in Sources */,
 				810839722449318A00FDE0AF /* Protocols.swift in Sources */,
+				0284D59A25718FE0008B2734 /* SettingsOptions.swift in Sources */,
 				02E865D825684D2400312B24 /* UserCollectionCell.swift in Sources */,
 				02AC7BDD256C7110007D0E8E /* RecipeFeedCell.swift in Sources */,
 				8108397D2449318A00FDE0AF /* MenuController.swift in Sources */,

@@ -55,7 +55,7 @@ class ChatController: UITableViewController {
     }
     
     @objc func addButtonToggeled(){
-    print("yaaaay")
+    print("Add Button Pressed")
         
     }
     

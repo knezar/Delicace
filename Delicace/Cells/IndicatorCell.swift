@@ -9,6 +9,9 @@
 import UIKit
 
 class IndicatorCell: UICollectionViewCell {
+    
+    
+    // MARK: - Properties
     lazy var indicatorLabel: UILabel = {
         let lbl = UILabel()
         
@@ -16,7 +19,7 @@ class IndicatorCell: UICollectionViewCell {
         return lbl
     }()
     
-    
+    //MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -27,7 +30,15 @@ class IndicatorCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureUI() {
+    
+    override var isSelected: Bool {
+        didSet {
+            self.indicatorLabel.backgroundColor = isSelected ? UIColor.white.withAlphaComponent(0.7) : UIColor.black.withAlphaComponent(0.5)
+        }
+    }
+    
+    //MARK: - Private
+    fileprivate func configureUI() {
         indicatorLabel.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         indicatorLabel.setCornerRadius(cornerR: (bounds.height-2)/2)
         addSubview(indicatorLabel)
@@ -37,10 +48,5 @@ class IndicatorCell: UICollectionViewCell {
         indicatorLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 1).isActive = true
         indicatorLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -1).isActive = true
         
-    }
-    override var isSelected: Bool {
-        didSet {
-            self.indicatorLabel.backgroundColor = isSelected ? UIColor.white.withAlphaComponent(0.7) : UIColor.black.withAlphaComponent(0.5)
-        }
     }
 }

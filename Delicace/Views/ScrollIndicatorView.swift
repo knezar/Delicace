@@ -56,7 +56,6 @@ class ScrollIndicatorView: UIView, UICollectionViewDelegate, UICollectionViewDat
         collectionView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         
         let selectedItem = IndexPath(item: 0, section: 0)
-        //        print
         collectionView.selectItem(at: selectedItem, animated: false, scrollPosition: UICollectionView.ScrollPosition())
     }
     

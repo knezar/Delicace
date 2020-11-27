@@ -13,9 +13,7 @@ class RecipeCollectionView: UIView {
     let recipeFeedCellID = "RecipeFeedCell"
     let trendingCellID = "TrendingCell"
     let recentCellID = "RecentCell"
-//    var delegate: CustomCollectionDelegate?
     var homeVC: HomeController?
-//    let menuBar
     
     lazy var recipeCollction: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -23,7 +21,7 @@ class RecipeCollectionView: UIView {
         layout.minimumLineSpacing = 0
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.showsHorizontalScrollIndicator = false
-        cv.backgroundColor = .blue
+        cv.backgroundColor = .clear
         cv.isPagingEnabled = true
         cv.dataSource = self
         cv.delegate = self
@@ -37,13 +35,11 @@ class RecipeCollectionView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupMainCollectionView()
-//        setupIndicatorView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupMainCollectionView()
-//        setupIndicatorView()
     }
     
     
@@ -68,10 +64,7 @@ class RecipeCollectionView: UIView {
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let index = targetContentOffset.move().x / frame.width
-        print(index)
         homeVC?.selectCellAtIndex(index: Int(index))
-//        let indexPath = IndexPath(item: Int(index), section: 0)
-//        menuBar.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .left)
     }
 
 }

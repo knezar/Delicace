@@ -106,7 +106,6 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.item)
         homeVC?.scrollToCellAtIndex(index: indexPath.item)
         animateRedBar(index: indexPath.item)
 

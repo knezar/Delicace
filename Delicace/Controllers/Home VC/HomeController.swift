@@ -104,7 +104,6 @@ class HomeController: UIViewController {
     
     // MARK: - Actions
     @objc func handleSearchButtonPressed() {
-        recipesCV.scrollToMenuIndex(menuIndex: 1)
         print("search button pressed")
     }
     

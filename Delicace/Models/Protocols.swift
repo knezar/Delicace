@@ -17,7 +17,6 @@ protocol LoginControllerDelegate: class {
     func finishLoggingOut()
 }
 
-//protocol CustomCollectionDelegate: class {
-//    func scrollToCellAtIndex(index: Int)
-//    func selectCellAtIndex(index: Int)
-//}
+protocol SectionType: CustomStringConvertible {
+    var ConstainsSwitch: Bool {get}
+}

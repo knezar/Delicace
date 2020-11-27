@@ -24,7 +24,7 @@ class RecipeFeedCell: UICollectionViewCell {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.showsHorizontalScrollIndicator = false
+        cv.showsVerticalScrollIndicator = false
         cv.backgroundColor = .myBgColor
         return cv
     }()
@@ -48,9 +48,6 @@ class RecipeFeedCell: UICollectionViewCell {
             let recipedata = SearchResults(id: data.id, title: data.description, image: data.recipeImage, readyInMinutes: data.time, aggregateLikes: data.likes, servings: data.servings, summary: data.summary)
             recipeSearch.append(recipedata)
         }
-//        recipesCV.recipeCollction = recipeSearch
-//        speciallsView.specialsData = recipeSearch
-        
     }
     private func setupCollectionView() {
         RecipecollectionView.register(UINib(nibName: "RecipesCell", bundle: nil), forCellWithReuseIdentifier: recipesCellID)
@@ -74,7 +71,6 @@ extension RecipeFeedCell: UICollectionViewDelegate {
         
 //                navigationController?.pushViewController(recipeDetailController, animated: true)
         
-        print(indexPath.row)
     }
     
 }
@@ -82,7 +78,7 @@ extension RecipeFeedCell: UICollectionViewDelegate {
 // MARK: - UICollectionViewDataSource
 extension RecipeFeedCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return recipeSearch.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
