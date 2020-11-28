@@ -20,7 +20,7 @@ enum SettingsOptions: Int, CaseIterable, CustomStringConvertible {
 
 enum SocialOptions: Int, CaseIterable, SectionType {
     
-    var ConstainsSwitch: Bool {return false}
+    var ContainsSwitch: Bool {return false}
     
     case EditName
     case EditPicture
@@ -50,7 +50,7 @@ enum CommunicationOptions: Int, CaseIterable, SectionType {
     }
     
     
-    var ConstainsSwitch: Bool {
+    var ContainsSwitch: Bool {
         switch self {
         case .Email: return true
         case .Notifications: return false

@@ -18,5 +18,12 @@ protocol LoginControllerDelegate: class {
 }
 
 protocol SectionType: CustomStringConvertible {
-    var ConstainsSwitch: Bool {get}
+    var ContainsSwitch: Bool {get}
+}
+
+protocol CollectionScrollDelegate: class {
+    func scrollToCellAtIndex(index: Int)
+}
+protocol CollectionSelectionDelegate: class {
+    func selectCellAtIndex(index: Int)
 }

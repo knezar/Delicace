@@ -16,7 +16,7 @@ class SettingsCell: UITableViewCell {
         didSet{
             guard let sectionType = sectionType else {return}
             textLabel?.text = sectionType.description
-            switchControll.isHidden = !sectionType.ConstainsSwitch
+            switchControll.isHidden = !sectionType.ContainsSwitch
         }
     }
     lazy var switchControll: UISwitch = {

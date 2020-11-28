@@ -9,16 +9,13 @@
 
 import UIKit
 
-class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class MenuBarView: UIView {
     
-    
-//    let menuBarItems = ["Popular", "Trending", "Recent"]
+    // MARK: - Properties
     var menuBarItems: [String]?
-//    var delegate: CustomCollectionDelegate?
-    var homeVC: HomeController?
+    weak var delegate: CollectionScrollDelegate?
     let menuBarCellID = "menuBarCell"
     var redBarLeftAnchorConstraint: NSLayoutConstraint?
-
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -36,15 +33,19 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         return view
     }()
     
-//    init(menuBarItems: [String]) {
-//
-//        self.menuBarItems = menuBarItems
-//        super.init(frame: CGRect.zero)
-//    }
+    init(menuBarItems: [String]) {
+
+        self.menuBarItems = menuBarItems
+        super.init(frame: CGRect.zero)
+    }
+    
+    // MARK: - init
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupCollectionView()
         setupWhiteBarEffect()
+        selectItemAtIndex(index: 0)
+
     }
     
     
@@ -53,7 +54,7 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         setupCollectionView()
         setupWhiteBarEffect()
     }
-    
+    // MARK: - Private
     private func setupWhiteBarEffect(){
         addSubview(redBarView)
         redBarView.translatesAutoresizingMaskIntoConstraints = false
@@ -74,18 +75,24 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         collectionView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         collectionView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        
-        let selectedItem = IndexPath(item: 0, section: 0)
+    }
+    
+    private func selectItemAtIndex(index: Int) {
+        let selectedItem = IndexPath(item: index, section: 0)
         collectionView.selectItem(at: selectedItem, animated: false, scrollPosition: UICollectionView.ScrollPosition())
     }
     
-    func animateRedBar(index: Int) {
+    private func animateRedBar(index: Int) {
         let x = CGFloat(index) * frame.width/3
         redBarLeftAnchorConstraint?.constant = x
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
             self.layoutIfNeeded()
         }, completion: nil)
     }
+    
+}
+    // MARK: - Collection DataSource
+extension MenuBarView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         guard let test = menuBarItems else {return 3}
@@ -97,17 +104,32 @@ class MenuBarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         if let test = menuBarItems {
             cell.menuBarLabel.text = test[indexPath.item]
         }
-        
         return cell
     }
+}
 
+    // MARK: - Collection FlowLayout Delegate
+extension MenuBarView: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (bounds.width)/3, height: bounds.height)
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        homeVC?.scrollToCellAtIndex(index: indexPath.item)
-        animateRedBar(index: indexPath.item)
+}
 
+    // MARK: - Collection Selection Delegate
+extension MenuBarView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.scrollToCellAtIndex(index: indexPath.item)
+        animateRedBar(index: indexPath.item)
     }
+}
+
+    // MARK: - Collection Selection Delegate
+extension MenuBarView: CollectionSelectionDelegate {
+    func selectCellAtIndex(index: Int) {
+        selectItemAtIndex(index: index)
+        animateRedBar(index: index)
+    }
+    
+    
 }

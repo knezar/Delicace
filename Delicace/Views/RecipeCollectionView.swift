@@ -13,7 +13,9 @@ class RecipeCollectionView: UIView {
     let recipeFeedCellID = "RecipeFeedCell"
     let trendingCellID = "TrendingCell"
     let recentCellID = "RecentCell"
-    var homeVC: HomeController?
+    weak var delegate: CollectionSelectionDelegate?
+//    let menuBar = MenuBarView
+
     
     lazy var recipeCollction: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -34,11 +36,17 @@ class RecipeCollectionView: UIView {
     // MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
+//        menuBar.delegate = self
+
         setupMainCollectionView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+//                menuBar.delegate = self
+        let menuBar = MenuBarView()
+        menuBar.delegate = self
+
         setupMainCollectionView()
     }
     
@@ -57,14 +65,11 @@ class RecipeCollectionView: UIView {
         recipeCollction.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
-    func scrollToMenuIndex(menuIndex: Int) {
-        let indexPath = IndexPath(item: menuIndex, section: 0)
-        recipeCollction.scrollToItem(at: indexPath, at: .left, animated: true)
-    }
+
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let index = targetContentOffset.move().x / frame.width
-        homeVC?.selectCellAtIndex(index: Int(index))
+        delegate?.selectCellAtIndex(index: Int(index))
     }
 
 }
@@ -106,4 +111,11 @@ extension RecipeCollectionView: UICollectionViewDelegateFlowLayout {
         return CGSize(width: frame.width, height: frame.height)
     }
     
+}
+
+extension RecipeCollectionView: CollectionScrollDelegate {
+    func scrollToCellAtIndex(index: Int) {
+        let indexPath = IndexPath(item: index, section: 0)
+        recipeCollction.scrollToItem(at: indexPath, at: .left, animated: true)
+    }
 }

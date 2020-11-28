@@ -36,9 +36,9 @@ class HomeController: UIViewController {
         configureNavBar()
         configureFloatingMenu()
         loadTestData()
+        menuBarView.delegate = recipesCV
+        recipesCV.delegate = menuBarView
         
-        menuBarView.homeVC = self
-        recipesCV.homeVC = self 
         //        RecipeSearchAPI.manager.fetchRecipes(url: " ") { (recipes) in
         //            print(recipes.results)
         //            self.recipeSearch = recipes.results
@@ -79,8 +79,6 @@ class HomeController: UIViewController {
         navigationItem.leftBarButtonItem =  navButtonConfiguration(image: #imageLiteral(resourceName: "Menu Icon"), selector: #selector (handleMenuButtonPressed))
         navigationItem.rightBarButtonItem =  navButtonConfiguration(image: #imageLiteral(resourceName: "Search Icon"), selector: #selector (handleSearchButtonPressed))
     }
-    
-    
     private func navButtonConfiguration(image: UIImage, selector: Selector) -> UIBarButtonItem {
         let barButton = UIBarButtonItem(image: image.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: selector)
         return barButton
@@ -113,8 +111,7 @@ class HomeController: UIViewController {
             shrinkButtonView()
             dissmissDimmedView()
             isExpanded = !isExpanded
-        }
-        
+        } 
     }
     
     @IBAction func addButtonPressed(_ sender: UIButton) {
@@ -127,18 +124,5 @@ class HomeController: UIViewController {
             
         }
         isExpanded = !isExpanded
-    }
-}
-
-
-extension HomeController {
-    func scrollToCellAtIndex(index: Int) {
-        recipesCV.scrollToMenuIndex(menuIndex: index)
-    }
-
-    func selectCellAtIndex(index: Int) {
-        let indexPath = IndexPath(item: index, section: 0)
-        menuBarView.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .left)
-        menuBarView.animateRedBar(index: index)
     }
 }
