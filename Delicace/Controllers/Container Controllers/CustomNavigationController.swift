@@ -9,15 +9,18 @@
 import UIKit
 
 class CustomNavigationController: UINavigationController {
-
+    
+    // MARK: - Properties
     let graphicHelper = GraphicHelper()
     
     
+    // MARK: - init
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBarAppearance()
     }
     
+    // MARK: - Private
     private func setupNavBarAppearance() {
         
         let navigationBarAppearace = UINavigationBar.appearance()

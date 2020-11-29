@@ -73,11 +73,7 @@ class SpeicalsCollectionView: UIView {
         specialsCollctions.dataSource = self
         specialsCollctions.delegate = self
         addSubview(specialsCollctions)
-        specialsCollctions.translatesAutoresizingMaskIntoConstraints = false
-        specialsCollctions.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        specialsCollctions.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        specialsCollctions.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        specialsCollctions.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        specialsCollctions.fillSuperView()
     }
     
     private func setupIndicatorView() {
@@ -104,9 +100,7 @@ extension SpeicalsCollectionView: UICollectionViewDelegate {
 //                recipeDetailController.x = indexPath.row
         
 //                navigationController?.pushViewController(recipeDetailController, animated: true)
-        
-        print(indexPath.row)
-    }
+        }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let index = targetContentOffset.move().x / frame.width

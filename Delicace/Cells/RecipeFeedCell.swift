@@ -18,6 +18,8 @@ class RecipeFeedCell: UICollectionViewCell {
             }
         }
     }
+    
+//    var image
     let recipesCellID = "recipesCell"
     
     lazy var RecipecollectionView: UICollectionView = {
@@ -44,21 +46,34 @@ class RecipeFeedCell: UICollectionViewCell {
     // MARK: - Private
     
     func loadTestData() {
-        for data in RecipeTestDataModel.allCases {
-            let recipedata = SearchResults(id: data.id, title: data.description, image: data.recipeImage, readyInMinutes: data.time, aggregateLikes: data.likes, servings: data.servings, summary: data.summary)
-            recipeSearch.append(recipedata)
+        //        for data in RecipeTestDataModel.allCases {
+        //            let recipedata = SearchResults(id: data.id, title: data.description, image: data.recipeImage, readyInMinutes: data.time, aggregateLikes: data.likes, servings: data.servings, summary: data.summary)
+        //            recipeSearch.append(recipedata)
+        //        }
+        
+        
+        RecipeSearchAPI.manager.fetchRecipes(query: "fish") { (recipes) in
+            self.recipeSearch = recipes.results
+        } errorHandler: { (error) in
+            print(error)
         }
     }
+//    private func loadPictures(url: String) -> UIImage {
+//        var image = UIImage()
+//        RecipeSearchAPI.manager.downloadPictures(urlString: url, completionHandler: { (avatarImage) in
+//            image = avatarImage
+//            print(image)
+//        }, errorHandler: {print($0)})
+//
+//        return image
+//    }
+    
     private func setupCollectionView() {
         RecipecollectionView.register(UINib(nibName: "RecipesCell", bundle: nil), forCellWithReuseIdentifier: recipesCellID)
         RecipecollectionView.dataSource = self
         RecipecollectionView.delegate = self
         addSubview(RecipecollectionView)
-        RecipecollectionView.translatesAutoresizingMaskIntoConstraints = false
-        RecipecollectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        RecipecollectionView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        RecipecollectionView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        RecipecollectionView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        RecipecollectionView.fillSuperView()
     }
 }
 
@@ -67,9 +82,9 @@ extension RecipeFeedCell: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let recipeDetailController = RecipeController(nibName: "RecipeController", bundle: nil)
-//                recipeDetailController.x = indexPath.row
+        //                recipeDetailController.x = indexPath.row
         
-//                navigationController?.pushViewController(recipeDetailController, animated: true)
+        //                navigationController?.pushViewController(recipeDetailController, animated: true)
         
     }
     
@@ -85,9 +100,17 @@ extension RecipeFeedCell: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: recipesCellID, for: indexPath) as! RecipesCell
         cell.likesLabel.text = String(recipeSearch[indexPath.row].aggregateLikes)
         cell.servingLabel.text = String(recipeSearch[indexPath.row].servings)
-        cell.recipeImage.image = UIImage(named: recipeSearch[indexPath.row].image)
-        cell.titleLabel.text = recipeSearch[indexPath.row].title
-        cell.timeLabel.text = String(recipeSearch   [indexPath.row].readyInMinutes)
+        let string = recipeSearch[indexPath.row].image
+        
+        cell.recipeImage.image = NSCacheHelper.manager.getImage(with: string)
+        let indexPath = IndexPath(item: indexPath.row, section: 0)
+        collectionView.reloadItems(at: [indexPath])
+            cell.titleLabel.text = recipeSearch[indexPath.row].title
+        cell.timeLabel.text = String(recipeSearch[indexPath.row].readyInMinutes)
+        let summaryString = recipeSearch[indexPath.row].summary
+        let summary = summaryString.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+            
+        cell.summaryLabel.text = summary
         return cell
     }
 }

@@ -12,7 +12,8 @@ import UIKit
 class MenuBarView: UIView {
     
     // MARK: - Properties
-    var menuBarItems: [String]?
+    var collectionOption: Int?
+    //    var menuBarItems: [String]?
     weak var delegate: CollectionScrollDelegate?
     let menuBarCellID = "menuBarCell"
     var redBarLeftAnchorConstraint: NSLayoutConstraint?
@@ -33,29 +34,25 @@ class MenuBarView: UIView {
         return view
     }()
     
-    init(menuBarItems: [String]) {
-
-        self.menuBarItems = menuBarItems
-        super.init(frame: CGRect.zero)
-    }
-    
     // MARK: - init
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
         setupCollectionView()
-        setupWhiteBarEffect()
+        setupRedBarEffect()
         selectItemAtIndex(index: 0)
-
     }
     
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+     init(collectionOption: Int) {
+        self.collectionOption = collectionOption
+        super.init(frame: .zero)
         setupCollectionView()
-        setupWhiteBarEffect()
-    }
+        setupRedBarEffect()
+        selectItemAtIndex(index: 0)
+     }
     // MARK: - Private
-    private func setupWhiteBarEffect(){
+    //    private func
+    private func setupRedBarEffect(){
         addSubview(redBarView)
         redBarView.translatesAutoresizingMaskIntoConstraints = false
         redBarLeftAnchorConstraint = redBarView.leftAnchor.constraint(equalTo: self.leftAnchor)
@@ -70,11 +67,7 @@ class MenuBarView: UIView {
         collectionView.dataSource = self
         collectionView.delegate = self
         addSubview(collectionView)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        collectionView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        collectionView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        collectionView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        collectionView.fillSuperView()
     }
     
     private func selectItemAtIndex(index: Int) {
@@ -91,24 +84,58 @@ class MenuBarView: UIView {
     }
     
 }
-    // MARK: - Collection DataSource
+// MARK: - Collection DataSource
 extension MenuBarView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        guard let test = menuBarItems else {return 3}
-        return test.count
+        guard let sectionNumber = collectionOption else { return 0 }
+//        print(sectionNumber)
+        let section = CollectionOptions(rawValue: sectionNumber)
+        switch section {
+        case .Main:
+            print("this is main flaoting menu \(MainOptions.allCases.count)")
+            
+            return MainOptions.allCases.count
+        case .Profile:
+            print("this is profile floating menu")
+            
+            
+            return ProfileOptions.allCases.count
+        case .CookBook:
+            
+            print("this is cookbook ")
+            
+            return CookBookOptions.allCases.count
+        case .none:
+            print("damn it")
+            return 0
+        }
+        //        return test.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: menuBarCellID, for: indexPath) as! MenuBarCell
-        if let test = menuBarItems {
-            cell.menuBarLabel.text = test[indexPath.item]
+        
+        guard let sectionNumber = collectionOption else { return UICollectionViewCell() }
+        let section = CollectionOptions(rawValue: sectionNumber)
+        switch section {
+        case .Main:
+            let text = MainOptions(rawValue: indexPath.item)?.description
+            cell.menuBarLabel.text = text
+        case .Profile:
+            let text = ProfileOptions(rawValue: indexPath.item)?.description
+            cell.menuBarLabel.text = text
+            
+        case .CookBook:
+            let text =  CookBookOptions(rawValue: indexPath.item)?.description
+            cell.menuBarLabel.text = text
+        case .none: break
         }
+        
         return cell
     }
 }
 
-    // MARK: - Collection FlowLayout Delegate
+// MARK: - Collection FlowLayout Delegate
 extension MenuBarView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -116,7 +143,7 @@ extension MenuBarView: UICollectionViewDelegateFlowLayout {
     }
 }
 
-    // MARK: - Collection Selection Delegate
+// MARK: - Collection Selection Delegate
 extension MenuBarView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.scrollToCellAtIndex(index: indexPath.item)
@@ -124,7 +151,7 @@ extension MenuBarView: UICollectionViewDelegate {
     }
 }
 
-    // MARK: - Collection Selection Delegate
+// MARK: - Collection Selection Delegate
 extension MenuBarView: CollectionSelectionDelegate {
     func selectCellAtIndex(index: Int) {
         selectItemAtIndex(index: index)

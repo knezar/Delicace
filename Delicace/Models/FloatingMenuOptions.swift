@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum OwnProfileMenuOptions: Int, CaseIterable, CustomStringConvertible {
+enum ProfileMenuOptions: Int, CaseIterable, CustomStringConvertible {
     
     case Favorites
     case TryOut

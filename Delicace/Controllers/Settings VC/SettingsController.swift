@@ -65,7 +65,6 @@ extension SettingsController: UITableViewDataSource {
         
         guard let section = SettingsOptions(rawValue: section) else {return 0}
         switch section {
-        
         case .Social: return SocialOptions.allCases.count
         case .Communication: return  CommunicationOptions.allCases.count
         }

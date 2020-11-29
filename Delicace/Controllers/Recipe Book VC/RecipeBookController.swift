@@ -9,15 +9,11 @@
 import UIKit
 
 class RecipeBookController: UIViewController {
-    // MARK: - Outlets
-    @IBOutlet weak var recipesCV: UICollectionView!
-    
-    
     // MARK: - Properties
-    let imageItems = ["Rec-1", "Rec-2", "Rec-3", "Rec-4", "Rec-5"]
-    let titleItems = ["Chermoula couscous", "Flaky chicken and almond pie", "Chermoula eggplant", "Garam masala bastilla", "Goat tagine with almonds"]
-    var delegate: HomeControllerDelegate?
+    
     let recipesCellID = "recipesCell"
+    var recipeCV: RecipeCollectionView!
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +35,10 @@ class RecipeBookController: UIViewController {
     }
     
     private func configureMainCollectionView() {
-        recipesCV.register(UINib(nibName:"RecipesCell", bundle: nil), forCellWithReuseIdentifier: recipesCellID)
-        recipesCV.delegate = self
-        recipesCV.dataSource = self
-        recipesCV.collectionViewLayout = CustomFlowLayout()
-        recipesCV.showsHorizontalScrollIndicator = false
+        recipeCV = RecipeCollectionView(collectionOption: 2)
+        view.addSubview(recipeCV)
+        recipeCV.translatesAutoresizingMaskIntoConstraints = false
+        recipeCV.fillSafeArea()
     }
     
     // MARK: - Actions
@@ -59,36 +54,36 @@ class RecipeBookController: UIViewController {
 
 }
 
-
-// MARK: - UICollectionViewDelegate
-extension RecipeBookController: UICollectionViewDelegate {
-    
-}
-
-// MARK: - UICollectionViewDataSource
-extension RecipeBookController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageItems.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        if collectionView == recipesCV {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: recipesCellID, for: indexPath) as! RecipesCell
-            
-            cell.titleLabel.text = titleItems[indexPath.row]
-            cell.recipeImage.image = UIImage(named: imageItems[indexPath.item])
-            
-            return cell
-        
-    }
-}
-
-// MARK: - UICollectionViewDelegateFlowLayout
-extension RecipeBookController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: recipesCV.bounds.size.width, height: recipesCV.bounds.size.width/2.5)
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-           return UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
-        }
-}
+//
+//// MARK: - UICollectionViewDelegate
+//extension RecipeBookController: UICollectionViewDelegate {
+//
+//}
+//
+//// MARK: - UICollectionViewDataSource
+//extension RecipeBookController: UICollectionViewDataSource {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return imageItems.count
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+////        if collectionView == recipesCV {
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: recipesCellID, for: indexPath) as! RecipesCell
+//
+//            cell.titleLabel.text = titleItems[indexPath.row]
+//            cell.recipeImage.image = UIImage(named: imageItems[indexPath.item])
+//
+//            return cell
+//
+//    }
+//}
+//
+//// MARK: - UICollectionViewDelegateFlowLayout
+//extension RecipeBookController: UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: recipesCV.bounds.size.width, height: recipesCV.bounds.size.width/2.5)
+//    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//           return UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
+//        }
+//}

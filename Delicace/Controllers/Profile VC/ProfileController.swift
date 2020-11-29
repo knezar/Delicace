@@ -14,10 +14,9 @@ class ProfileController: UIViewController {
     // MARK: - Properties
     
     let graphicHelper = GraphicHelper()
-    let imageItems = ["Rec-1", "Rec-2", "Rec-3", "Rec-4", "Rec-5"]
-    let titleItems = ["Chermoula couscous", "Flaky chicken and almond pie", "Chermoula eggplant", "Garam masala bastilla", "Goat tagine with almonds"]
-    let recipesCellID = "recipesCell"
-//    weak var menuBarView: MenuBarView!
+    var menu: MenuBarView!
+    var recipeCV: RecipeCollectionView!
+   
     
     // MARK: - Outlets
     
@@ -26,11 +25,9 @@ class ProfileController: UIViewController {
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    
-    @IBOutlet weak var menuBarView: MenuBarView!
-    
-    @IBOutlet weak var collectionView: UICollectionView!
-    
+    @IBOutlet weak var recipeCollectionView: UIView!
+    @IBOutlet weak var menuBarView: UIView!
+        
     // MARK: - Lifecycle
     
     
@@ -53,8 +50,8 @@ class ProfileController: UIViewController {
         super.viewDidLoad()
         ConfigNavUI()
         setNavBarIsTranslucent()
-        configureMenuBarView()
-        configureCollectionView()
+        configureCollections()
+//        configureCollectionView()
     }
     
     override func viewWillLayoutSubviews() {
@@ -62,32 +59,30 @@ class ProfileController: UIViewController {
         
         configureUserUI()
         
-        
     }
     
     // MARK: - Private
-    
-    
-    func configureMenuBarView() {
-        var menuBarItems = [String]()
-        for option in OwnProfileMenuOptions.allCases {
-            menuBarItems.append(option.description)
-        }
-        menuBarView.menuBarItems = menuBarItems
+    private func configureCollections() {
+        menu = MenuBarView(collectionOption: 1)
+        recipeCV = RecipeCollectionView(collectionOption: 1)
+        menu.delegate = recipeCV
+        recipeCV.delegate = menu
+        recipeCollectionView.addSubview(recipeCV)
+        recipeCV.fillSuperView()
+        menuBarView.addSubview(menu)
+        menu.fillSuperView()
     }
     
-    func configureUserUI() {
+    private func configureUserUI() {
         userImage.image = #imageLiteral(resourceName: "obama")
         userImage.layer.borderWidth = 3
         userImage.layer.borderColor = UIColor.white.cgColor
         userImage.setCornerRadius(cornerR: (userImage.bounds.height) / 2)
-//        userImage.clipsToBounds = true
-        
         nameLabel.text = " Barrack Obama"
         locationLabel.text = "Washington, D.C"
     }
     
-    func ConfigNavUI() {
+    private func ConfigNavUI() {
         view.backgroundColor = .myBgColor
         navigationController?.navigationBar.barStyle = .black
         navigationItem.leftBarButtonItem = navButtonConfiguration(image: #imageLiteral(resourceName: "Cancel"), selector:  #selector(cancelButtonToggeled))
@@ -99,24 +94,13 @@ class ProfileController: UIViewController {
     }
     
     
-    func setNavBarIsTranslucent() {
+    private func setNavBarIsTranslucent() {
         let navigationBarAppearace = UINavigationBar.appearance()
         
         navigationBarAppearace.isTranslucent = true
         
         navigationBarAppearace.setBackgroundImage(UIImage(), for: .default)
         navigationBarAppearace.shadowImage = UIImage()
-    }
-    
-    
-    private func configureCollectionView() {
-        
-        
-        collectionView.register(UINib(nibName:"RecipesCell", bundle: nil), forCellWithReuseIdentifier: recipesCellID)
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.collectionViewLayout = CustomFlowLayout()
-        collectionView.showsHorizontalScrollIndicator = false
     }
     // MARK: - Actions
     
@@ -138,26 +122,26 @@ extension ProfileController: UICollectionViewDelegate {
 }
 
 // MARK: - UICollectionViewDataSource
-extension ProfileController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageItems.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: recipesCellID, for: indexPath) as! RecipesCell
-        
-        
-        cell.titleLabel.text = titleItems[indexPath.row]
-        cell.recipeImage.image = UIImage(named: imageItems[indexPath.item])
-        return cell
-    }
-}
-
-// MARK: - UICollectionViewDelegateFlowLayout
-extension ProfileController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.size.width, height: collectionView.bounds.size.height/3.5)
-        
-    }
-}
+//extension ProfileController: UICollectionViewDataSource {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return imageItems.count
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: recipesCellID, for: indexPath) as! RecipesCell
+//
+//
+//        cell.titleLabel.text = titleItems[indexPath.row]
+//        cell.recipeImage.image = UIImage(named: imageItems[indexPath.item])
+//        return cell
+//    }
+//}
+//
+//// MARK: - UICollectionViewDelegateFlowLayout
+//extension ProfileController: UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: collectionView.bounds.size.width, height: collectionView.bounds.size.height/3.5)
+//
+//    }
+//}

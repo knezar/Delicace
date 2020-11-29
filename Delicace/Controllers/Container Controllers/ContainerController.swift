@@ -15,6 +15,7 @@ class ContainerController: UIViewController {
     var menuController: MenuController!
     var centerController: UIViewController!
     var homeController: HomeController!
+    var profileController: ProfileController!
     var dimmedView = UIView()
     private var heightConstraint: NSLayoutConstraint!
     private var widthConstraint: NSLayoutConstraint!

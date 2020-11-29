@@ -10,13 +10,10 @@ import UIKit
 
 class RecipeCollectionView: UIView {
     
-    let recipeFeedCellID = "RecipeFeedCell"
-    let trendingCellID = "TrendingCell"
-    let recentCellID = "RecentCell"
-    weak var delegate: CollectionSelectionDelegate?
-//    let menuBar = MenuBarView
-
     
+    // MARK: - Properties
+    var collectionOption: Int?
+    weak var delegate: CollectionSelectionDelegate?
     lazy var recipeCollction: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -31,73 +28,90 @@ class RecipeCollectionView: UIView {
     }()
     
     
-    
+//    let int = 0
     
     // MARK: - init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-//        menuBar.delegate = self
-
-        setupMainCollectionView()
-    }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-//                menuBar.delegate = self
-        let menuBar = MenuBarView()
-        menuBar.delegate = self
-
         setupMainCollectionView()
     }
     
+     init(collectionOption: Int) {
+        self.collectionOption = collectionOption
+        super.init(frame: .zero)
+        setupMainCollectionView()
+     }
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        setupMainCollectionView()
+//    }
+//
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//        setupMainCollectionView()
+//    }
     
-    func setupMainCollectionView() {
-        
-        recipeCollction.register(RecipeFeedCell.self, forCellWithReuseIdentifier: recipeFeedCellID)
-        recipeCollction.register(TrendingCell.self, forCellWithReuseIdentifier: trendingCellID)
-        recipeCollction.register(RecentCell.self, forCellWithReuseIdentifier: recentCellID)
-
+    // MARK: - Private
+    private func setupMainCollectionView() {
+        guard let collectionOption = collectionOption  else {return}
+        let section = CollectionOptions(rawValue: collectionOption)
+        switch section {
+        case .Main:
+            MainOptions.allCases.forEach { (cell) in
+                recipeCollction.register(cell.cell, forCellWithReuseIdentifier: cell.cellID)
+            }
+        case .Profile:
+            ProfileOptions.allCases.forEach { (cell) in
+                recipeCollction.register(cell.cell, forCellWithReuseIdentifier: cell.cellID)
+            }
+        case .CookBook:
+            guard let cell = ProfileOptions(rawValue: 2) else {return}
+            recipeCollction.register(cell.cell, forCellWithReuseIdentifier: cell.cellID)
+        case .none: break
+        }
         addSubview(recipeCollction)
-        recipeCollction.translatesAutoresizingMaskIntoConstraints = false
-        recipeCollction.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        recipeCollction.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        recipeCollction.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        recipeCollction.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        recipeCollction.fillSuperView()
     }
-    
-
-    
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let index = targetContentOffset.move().x / frame.width
-        delegate?.selectCellAtIndex(index: Int(index))
-    }
-
 }
 
 
 // MARK: - UICollectionViewDelegate
 extension RecipeCollectionView: UICollectionViewDelegate {
-
-//    scrollmen
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let index = targetContentOffset.move().x / frame.width
+        delegate?.selectCellAtIndex(index: Int(index))
+    }
     
 }
 
 
 // MARK: - UICollectionViewDataSource
 extension RecipeCollectionView: UICollectionViewDataSource {
-
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        guard let collectionOption = collectionOption else {return 1}
+        let section = CollectionOptions(rawValue: collectionOption)
+        switch section {
+        case .Main: return MainOptions.allCases.count
+        case .Profile: return ProfileOptions.allCases.count
+        case .CookBook: return CookBookOptions.allCases.count
+        case .none: return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.item == 0 {
-            return collectionView.dequeueReusableCell(withReuseIdentifier: recipeFeedCellID, for: indexPath)
-        } else if indexPath.item == 1 {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: trendingCellID, for: indexPath) as! TrendingCell
-        } else {
-            return collectionView.dequeueReusableCell(withReuseIdentifier: recentCellID, for: indexPath)
+        guard let collectionOption = collectionOption else {return UICollectionViewCell()}
+        let section = CollectionOptions(rawValue: collectionOption)
+        switch section {
+        case .Main: return collectionView.dequeueReusableCell(withReuseIdentifier: MainOptions(rawValue: indexPath.item)!.cellID, for: indexPath)
+        case .Profile: return collectionView.dequeueReusableCell(withReuseIdentifier: ProfileOptions(rawValue: indexPath.item)!.cellID, for: indexPath)
+        case .CookBook:
+            let cell = ProfileOptions(rawValue: 2)
+            return collectionView.dequeueReusableCell(withReuseIdentifier: cell!.cellID, for: indexPath)
+        case .none: return UICollectionViewCell()
         }
     }
 }

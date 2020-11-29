@@ -51,7 +51,6 @@ class ExpandingView: UIView {
         chatAddButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         chatAddButton.topAnchor.constraint(equalTo: topAnchor, constant: 2).isActive = true
         chatAddButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.25).isActive = true
-//        chatAddButton.heightAnchor.constraint(equalToConstant: chatAddButton.bounds.height)
         chatAddButton.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 0.25).isActive = true
         addSubview(recipeAddButton)
         recipeAddButton.translatesAutoresizingMaskIntoConstraints = false

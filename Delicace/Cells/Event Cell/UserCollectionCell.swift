@@ -46,18 +46,10 @@ class UserCollectionCell: UICollectionViewCell {
     
     func configureUI() {
         contentView.addSubview(textLabel)
-        textLabel.translatesAutoresizingMaskIntoConstraints = false
-        textLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        textLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        textLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        textLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        textLabel.fillSuperView()
         
         contentView.addSubview(userImage)
-        userImage.translatesAutoresizingMaskIntoConstraints = false
-        userImage.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        userImage.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        userImage.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        userImage.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        userImage.fillSuperView()
     }
     
     required init?(coder: NSCoder) {

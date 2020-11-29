@@ -14,9 +14,9 @@ class HomeController: UIViewController {
     @IBOutlet weak var expandingView: UIView!
     @IBOutlet weak var dimmView: UIView!
     @IBOutlet weak var speciallsView: SpeicalsCollectionView!
-    @IBOutlet weak var menuBarView: MenuBarView!
+    @IBOutlet weak var menuBarView: UIView!
     @IBOutlet weak var addButtonView: UIButton!
-    @IBOutlet weak var recipesCV: RecipeCollectionView!
+    @IBOutlet weak var recipeCollectionView: UIView!
     
     // MARK: - Properties
     
@@ -24,8 +24,8 @@ class HomeController: UIViewController {
     var isExpanded: Bool = false
     let graphicHelper = GraphicHelper()
     var delegate: HomeControllerDelegate?
-    let specialsCellID = "specialsCell"
-    let recipesCellID = "recipesCell"    
+    var menu: MenuBarView!
+    var recipeCV: RecipeCollectionView!
     private var recipeSearch = [SearchResults]()
     
     // MARK: - Lifecycle
@@ -36,9 +36,6 @@ class HomeController: UIViewController {
         configureNavBar()
         configureFloatingMenu()
         loadTestData()
-        menuBarView.delegate = recipesCV
-        recipesCV.delegate = menuBarView
-        
         //        RecipeSearchAPI.manager.fetchRecipes(url: " ") { (recipes) in
         //            print(recipes.results)
         //            self.recipeSearch = recipes.results
@@ -48,9 +45,10 @@ class HomeController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isTranslucent = false
+        configureNavBar()
     }
     override func viewWillLayoutSubviews() {
-        configureNavBar()
+        
     }
     
     // MARK: - Private
@@ -64,12 +62,14 @@ class HomeController: UIViewController {
     }
 
     private func configureFloatingMenu() {
-        var menuBarItems = [String]()
-        for option in HomeMenuOptions.allCases {
-            menuBarItems.append(option.description)
-        }
-        menuBarView.menuBarItems = menuBarItems
-        
+        menu = MenuBarView(collectionOption: 0)
+        recipeCV = RecipeCollectionView(collectionOption: 0)
+        menu.delegate = recipeCV
+        recipeCV.delegate = menu
+        recipeCollectionView.addSubview(recipeCV)
+        recipeCV.fillSuperView()
+        menuBarView.addSubview(menu)
+        menu.fillSuperView()
     }
     
     

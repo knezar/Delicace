@@ -10,4 +10,12 @@ import UIKit
 
 class RecentCell: RecipeFeedCell {
     
+    override func loadTestData() {
+        RecipeSearchAPI.manager.fetchRecipes(query: "chicken") { (recipes) in
+                    self.recipeSearch = recipes.results
+                } errorHandler: { (error) in
+                    print(error)
+                }
+        }
+    
 }

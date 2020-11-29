@@ -49,11 +49,7 @@ class ScrollIndicatorView: UIView, UICollectionViewDelegate, UICollectionViewDat
         collectionView.dataSource = self
         collectionView.delegate = self
         addSubview(collectionView)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        collectionView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        collectionView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        collectionView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        collectionView.fillSuperView()
         
         let selectedItem = IndexPath(item: 0, section: 0)
         collectionView.selectItem(at: selectedItem, animated: false, scrollPosition: UICollectionView.ScrollPosition())

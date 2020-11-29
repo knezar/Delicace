@@ -10,16 +10,12 @@ import UIKit
 
 class TrendingCell: RecipeFeedCell {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        backgroundColor = .yellow
+    override func loadTestData() {
+        RecipeSearchAPI.manager.fetchRecipes(query: "pasta") { (recipes) in
+                        self.recipeSearch = recipes.results
+                    } errorHandler: { (error) in
+                        print(error)
+                    }
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-//    back
 
 }

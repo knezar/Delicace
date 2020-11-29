@@ -14,8 +14,8 @@
                 <outlet property="addButtonView" destination="w89-hb-9mq" id="oVe-rM-KhY"/>
                 <outlet property="dimmView" destination="8Fc-FJ-gBM" id="4Vp-i1-cHc"/>
                 <outlet property="expandingView" destination="6JL-qC-Zas" id="Nad-fW-sZ6"/>
-                <outlet property="menuBarView" destination="Aq0-5G-dhN" id="nS6-Bm-SRv"/>
-                <outlet property="recipesCV" destination="3R1-Je-lzc" id="zx9-4E-QGr"/>
+                <outlet property="menuBarView" destination="Aq0-5G-dhN" id="YWv-fJ-4hQ"/>
+                <outlet property="recipeCollectionView" destination="3R1-Je-lzc" id="JVb-xl-llg"/>
                 <outlet property="speciallsView" destination="V94-6o-bUN" id="TPw-fb-Sxm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="u55-fY-deE"/>
             </connections>
