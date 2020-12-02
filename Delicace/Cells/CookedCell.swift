@@ -12,11 +12,10 @@ class CookedCell: RecipeFeedCell {
     
     
     override func loadTestData() {
-        RecipeSearchAPI.manager.fetchRecipes(query: "soups") { (recipes) in
-            self.recipeSearch = recipes.results
-        } errorHandler: { (error) in
-            print(error)
-        }
+        guard let recipes = TestDataAPI.manager.readLocalFile(forName: "LambaData") else {return}
+        
+        
+        recipeSearch = recipes
     }
   
     

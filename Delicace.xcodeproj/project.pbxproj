@@ -12,11 +12,22 @@
 		02396F3725356024002FE30F /* RecipeBookController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02396F3525356024002FE30F /* RecipeBookController.xib */; };
 		023D219625659F5700203154 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D219525659F5700203154 /* RecipeModel.swift */; };
 		023D219B2565A15500203154 /* ClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D219A2565A15500203154 /* ClientAPI.swift */; };
+		024387E82575F45B000EF0CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 024387E72575F45B000EF0CB /* GoogleService-Info.plist */; };
 		024CCB4825352D81004676B7 /* ChatDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024CCB4725352D81004676B7 /* ChatDetailController.xib */; };
 		02518A5E2571B824000D57BB /* CollectionViewOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02518A5D2571B824000D57BB /* CollectionViewOptions.swift */; };
 		025DCDF92572F8A000902EC8 /* FavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025DCDF82572F8A000902EC8 /* FavoritesCell.swift */; };
 		025DCDFC2572F8CD00902EC8 /* CookedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025DCDFB2572F8CD00902EC8 /* CookedCell.swift */; };
 		025DCDFF2572F95F00902EC8 /* MyRecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025DCDFE2572F95F00902EC8 /* MyRecipeCell.swift */; };
+		025DCE0A25741EC500902EC8 /* FishData.json in Sources */ = {isa = PBXBuildFile; fileRef = 025DCE0925741EC500902EC8 /* FishData.json */; };
+		025DCE0E25741FA600902EC8 /* SteakData.json in Resources */ = {isa = PBXBuildFile; fileRef = 025DCE0D25741FA600902EC8 /* SteakData.json */; };
+		025DCE17257420D600902EC8 /* DessertData.json in Resources */ = {isa = PBXBuildFile; fileRef = 025DCE16257420D600902EC8 /* DessertData.json */; };
+		025DCE1A2574213C00902EC8 /* PastaData.json in Resources */ = {isa = PBXBuildFile; fileRef = 025DCE192574213C00902EC8 /* PastaData.json */; };
+		025DCE252574219F00902EC8 /* SoupData.json in Resources */ = {isa = PBXBuildFile; fileRef = 025DCE242574219F00902EC8 /* SoupData.json */; };
+		025DCE29257421C300902EC8 /* LambaData.json in Resources */ = {isa = PBXBuildFile; fileRef = 025DCE28257421C300902EC8 /* LambaData.json */; };
+		025DCE2C257421E300902EC8 /* ChickenData.json in Resources */ = {isa = PBXBuildFile; fileRef = 025DCE2B257421E300902EC8 /* ChickenData.json */; };
+		025DCE332574229200902EC8 /* BeefData.json in Resources */ = {isa = PBXBuildFile; fileRef = 025DCE322574229200902EC8 /* BeefData.json */; };
+		025DCE36257422D600902EC8 /* SeaFoodData.json in Resources */ = {isa = PBXBuildFile; fileRef = 025DCE35257422D600902EC8 /* SeaFoodData.json */; };
+		025DCE392574233400902EC8 /* TestDataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025DCE382574233400902EC8 /* TestDataAPI.swift */; };
 		026D1506256AE42F002FB9B9 /* FloatingMenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D1505256AE42F002FB9B9 /* FloatingMenuOptions.swift */; };
 		02759EFA2562E0A600021997 /* ShadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02759EF92562E0A600021997 /* ShadedView.swift */; };
 		0284D58C25709B36008B2734 /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284D58B25709B36008B2734 /* TrendingCell.swift */; };
@@ -28,7 +39,7 @@
 		02A1FCF1254DCC2D00A1153E /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A1FCEF254DCC2D00A1153E /* EventCell.xib */; };
 		02AC7BD7256B8195007D0E8E /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC7BD6256B8195007D0E8E /* CustomNavigationController.swift */; };
 		02AC7BDD256C7110007D0E8E /* RecipeFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC7BDC256C7110007D0E8E /* RecipeFeedCell.swift */; };
-		02AC7BE0256C7736007D0E8E /* TestDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC7BDF256C7736007D0E8E /* TestDataModel.swift */; };
+		02AC7BE0256C7736007D0E8E /* TestDataEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC7BDF256C7736007D0E8E /* TestDataEnum.swift */; };
 		02C1A12A25699D3F005189E3 /* WhiteShadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1A12925699D3F005189E3 /* WhiteShadeView.swift */; };
 		02C2BC182535664D00FB183F /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2BC162535664D00FB183F /* ProfileController.swift */; };
 		02C2BC192535664D00FB183F /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C2BC172535664D00FB183F /* ProfileController.xib */; };
@@ -96,11 +107,22 @@
 		02396F3525356024002FE30F /* RecipeBookController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeBookController.xib; sourceTree = "<group>"; };
 		023D219525659F5700203154 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		023D219A2565A15500203154 /* ClientAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAPI.swift; sourceTree = "<group>"; };
+		024387E72575F45B000EF0CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		024CCB4725352D81004676B7 /* ChatDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatDetailController.xib; sourceTree = "<group>"; };
 		02518A5D2571B824000D57BB /* CollectionViewOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewOptions.swift; sourceTree = "<group>"; };
 		025DCDF82572F8A000902EC8 /* FavoritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCell.swift; sourceTree = "<group>"; };
 		025DCDFB2572F8CD00902EC8 /* CookedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookedCell.swift; sourceTree = "<group>"; };
 		025DCDFE2572F95F00902EC8 /* MyRecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecipeCell.swift; sourceTree = "<group>"; };
+		025DCE0925741EC500902EC8 /* FishData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FishData.json; sourceTree = "<group>"; };
+		025DCE0D25741FA600902EC8 /* SteakData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SteakData.json; sourceTree = "<group>"; };
+		025DCE16257420D600902EC8 /* DessertData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DessertData.json; sourceTree = "<group>"; };
+		025DCE192574213C00902EC8 /* PastaData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PastaData.json; sourceTree = "<group>"; };
+		025DCE242574219F00902EC8 /* SoupData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SoupData.json; sourceTree = "<group>"; };
+		025DCE28257421C300902EC8 /* LambaData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LambaData.json; sourceTree = "<group>"; };
+		025DCE2B257421E300902EC8 /* ChickenData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ChickenData.json; sourceTree = "<group>"; };
+		025DCE322574229200902EC8 /* BeefData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BeefData.json; sourceTree = "<group>"; };
+		025DCE35257422D600902EC8 /* SeaFoodData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SeaFoodData.json; sourceTree = "<group>"; };
+		025DCE382574233400902EC8 /* TestDataAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataAPI.swift; sourceTree = "<group>"; };
 		026D1505256AE42F002FB9B9 /* FloatingMenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingMenuOptions.swift; sourceTree = "<group>"; };
 		02759EF92562E0A600021997 /* ShadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadedView.swift; sourceTree = "<group>"; };
 		0284D58B25709B36008B2734 /* TrendingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
@@ -112,7 +134,7 @@
 		02A1FCEF254DCC2D00A1153E /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 		02AC7BD6256B8195007D0E8E /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		02AC7BDC256C7110007D0E8E /* RecipeFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFeedCell.swift; sourceTree = "<group>"; };
-		02AC7BDF256C7736007D0E8E /* TestDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataModel.swift; sourceTree = "<group>"; };
+		02AC7BDF256C7736007D0E8E /* TestDataEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataEnum.swift; sourceTree = "<group>"; };
 		02C1A12925699D3F005189E3 /* WhiteShadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteShadeView.swift; sourceTree = "<group>"; };
 		02C2BC162535664D00FB183F /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		02C2BC172535664D00FB183F /* ProfileController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
@@ -197,6 +219,22 @@
 				02396F3525356024002FE30F /* RecipeBookController.xib */,
 			);
 			path = "Recipe Book VC";
+			sourceTree = "<group>";
+		};
+		025DCE3B25743B6F00902EC8 /* Local Test Data */ = {
+			isa = PBXGroup;
+			children = (
+				025DCE0D25741FA600902EC8 /* SteakData.json */,
+				025DCE35257422D600902EC8 /* SeaFoodData.json */,
+				025DCE0925741EC500902EC8 /* FishData.json */,
+				025DCE192574213C00902EC8 /* PastaData.json */,
+				025DCE2B257421E300902EC8 /* ChickenData.json */,
+				025DCE322574229200902EC8 /* BeefData.json */,
+				025DCE28257421C300902EC8 /* LambaData.json */,
+				025DCE242574219F00902EC8 /* SoupData.json */,
+				025DCE16257420D600902EC8 /* DessertData.json */,
+			);
+			path = "Local Test Data";
 			sourceTree = "<group>";
 		};
 		02A1FCF3254DCC3700A1153E /* Event Cell */ = {
@@ -296,6 +334,8 @@
 		81083926244930F900FDE0AF /* Delicace */ = {
 			isa = PBXGroup;
 			children = (
+				024387E72575F45B000EF0CB /* GoogleService-Info.plist */,
+				025DCE3B25743B6F00902EC8 /* Local Test Data */,
 				81FC680B245B8F6600E5F7DD /* Models */,
 				81FC6814245B97EF00E5F7DD /* Client Api */,
 				8108394E2449318A00FDE0AF /* Controllers */,
@@ -513,7 +553,7 @@
 				81FCAC9A245EFFA60013DE74 /* SlideMenuOptions.swift */,
 				026D1505256AE42F002FB9B9 /* FloatingMenuOptions.swift */,
 				023D219525659F5700203154 /* RecipeModel.swift */,
-				02AC7BDF256C7736007D0E8E /* TestDataModel.swift */,
+				02AC7BDF256C7736007D0E8E /* TestDataEnum.swift */,
 				0284D59925718FE0008B2734 /* SettingsOptions.swift */,
 				02518A5D2571B824000D57BB /* CollectionViewOptions.swift */,
 			);
@@ -525,6 +565,7 @@
 			children = (
 				023D219A2565A15500203154 /* ClientAPI.swift */,
 				81FC680C245B959400E5F7DD /* UserGenApi.swift */,
+				025DCE382574233400902EC8 /* TestDataAPI.swift */,
 			);
 			path = "Client Api";
 			sourceTree = "<group>";
@@ -597,22 +638,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				025DCE2C257421E300902EC8 /* ChickenData.json in Resources */,
 				810839772449318A00FDE0AF /* RecipeController.xib in Resources */,
 				810839732449318A00FDE0AF /* ResetViewController.xib in Resources */,
 				02396F3725356024002FE30F /* RecipeBookController.xib in Resources */,
 				810839682449318A00FDE0AF /* LaunchScreen.storyboard in Resources */,
 				8108396C2449318A00FDE0AF /* MenuBarCell.xib in Resources */,
+				025DCE29257421C300902EC8 /* LambaData.json in Resources */,
 				02C2BC192535664D00FB183F /* ProfileController.xib in Resources */,
+				025DCE252574219F00902EC8 /* SoupData.json in Resources */,
 				02EDBB842535D95D0064D581 /* ChatDetailCell.xib in Resources */,
 				8108396F2449318A00FDE0AF /* FeedCell.xib in Resources */,
 				8108397A2449318A00FDE0AF /* SignupViewController.xib in Resources */,
 				81182A41245C8EFC00C8CFB8 /* RecipesCell.xib in Resources */,
+				024387E82575F45B000EF0CB /* GoogleService-Info.plist in Resources */,
 				024CCB4825352D81004676B7 /* ChatDetailController.xib in Resources */,
 				02EDBB7E2535D9300064D581 /* ChatTableCell.xib in Resources */,
+				025DCE36257422D600902EC8 /* SeaFoodData.json in Resources */,
 				81FDE0EF24553E1900A16194 /* Assets.xcassets in Resources */,
+				025DCE17257420D600902EC8 /* DessertData.json in Resources */,
+				025DCE1A2574213C00902EC8 /* PastaData.json in Resources */,
 				81182A40245C8EFC00C8CFB8 /* SpecialsCell.xib in Resources */,
 				8108397B2449318A00FDE0AF /* LoginViewController.xib in Resources */,
 				81182A39245C53F000C8CFB8 /* HomeController.xib in Resources */,
+				025DCE332574229200902EC8 /* BeefData.json in Resources */,
+				025DCE0E25741FA600902EC8 /* SteakData.json in Resources */,
 				02C34A4625379370009E59AC /* SettingsController.xib in Resources */,
 				02A1FCF1254DCC2D00A1153E /* EventCell.xib in Resources */,
 				02C2BC20253566B100FB183F /* CalendarController.xib in Resources */,
@@ -677,6 +727,7 @@
 				81FC680F245B96B800E5F7DD /* NetworkHelper.swift in Sources */,
 				02C2BC182535664D00FB183F /* ProfileController.swift in Sources */,
 				025DCDFF2572F95F00902EC8 /* MyRecipeCell.swift in Sources */,
+				025DCE0A25741EC500902EC8 /* FishData.json in Sources */,
 				02A1FCF0254DCC2D00A1153E /* EventCell.swift in Sources */,
 				81FCAC99245E985E0013DE74 /* CustomFlowLayout.swift in Sources */,
 				0284D59125709C73008B2734 /* RecipeCollectionView.swift in Sources */,
@@ -699,7 +750,7 @@
 				81182A3E245C8EFC00C8CFB8 /* SpecialsCell.swift in Sources */,
 				8108396E2449318A00FDE0AF /* FeedCell.swift in Sources */,
 				023D219625659F5700203154 /* RecipeModel.swift in Sources */,
-				02AC7BE0256C7736007D0E8E /* TestDataModel.swift in Sources */,
+				02AC7BE0256C7736007D0E8E /* TestDataEnum.swift in Sources */,
 				02DB5697256CD4380080A02E /* SpeicalsCollectionView.swift in Sources */,
 				02759EFA2562E0A600021997 /* ShadedView.swift in Sources */,
 				02396F3625356024002FE30F /* RecipeBookController.swift in Sources */,
@@ -711,6 +762,7 @@
 				81FDE0F12455EB3D00A16194 /* customColorsExtension.swift in Sources */,
 				8108396B2449318A00FDE0AF /* MenuBarCell.swift in Sources */,
 				02EDBB7D2535D9300064D581 /* ChatTableCell.swift in Sources */,
+				025DCE392574233400902EC8 /* TestDataAPI.swift in Sources */,
 				810839802449318A00FDE0AF /* ViewExtensions.swift in Sources */,
 				02518A5E2571B824000D57BB /* CollectionViewOptions.swift in Sources */,
 				02DB56A0256DD4820080A02E /* ExpandingView.swift in Sources */,

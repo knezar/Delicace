@@ -1,0 +1,2760 @@
+
+{
+    "results": [
+        {
+            "vegetarian": false,
+            "vegan": false,
+            "glutenFree": false,
+            "dairyFree": false,
+            "veryHealthy": false,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "weightWatcherSmartPoints": 27,
+            "gaps": "no",
+            "lowFodmap": false,
+            "aggregateLikes": 1,
+            "spoonacularScore": 77.0,
+            "healthScore": 42.0,
+            "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+            "license": "CC BY 3.0",
+            "sourceName": "Foodista",
+            "pricePerServing": 528.5,
+            "id": 649225,
+            "title": "Lamb Moussaka",
+            "readyInMinutes": 45,
+            "servings": 12,
+            "sourceUrl": "http://www.foodista.com/recipe/RSSXNKVB/lamb-moussaka",
+            "image": "https://spoonacular.com/recipeImages/649225-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "Lamb Moussaka might be just the main course you are searching for. This recipe makes 12 servings with <b>700 calories</b>, <b>34g of protein</b>, and <b>33g of fat</b> each. For <b>$3.29 per serving</b>, this recipe <b>covers 31%</b> of your daily requirements of vitamins and minerals. Head to the store and pick up wine, canned tomatoes, zucchini, and a few other things to make it today. To use up the salt you could follow this main course with the <a href=\"https://spoonacular.com/recipes/apple-turnovers-recipe-48175\">Apple Turnovers Recipe</a> as a dessert. 1 person has made this recipe and would make it again. This recipe is typical of Mediterranean cuisine. All things considered, we decided this recipe <b>deserves a spoonacular score of 73%</b>. This score is pretty good. Try <a href=\"https://spoonacular.com/recipes/lamb-moussaka-197182\">Lamb Moussaka</a>, <a href=\"https://spoonacular.com/recipes/lamb-and-eggplant-moussaka-97808\">Lamb and Eggplant Moussaka</a>, and <a href=\"https://spoonacular.com/recipes/potato-and-lamb-moussaka-97013\">Potato and Lamb Moussaka</a> for similar recipes.",
+            "cuisines": [
+                "Mediterranean",
+                "European",
+                "Greek"
+            ],
+            "dishTypes": [
+                "lunch",
+                "main course",
+                "main dish",
+                "dinner"
+            ],
+            "diets": [],
+            "occasions": [],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "CUT eggplant into 1/4\" (5mm) thick slices.",
+                            "ingredients": [
+                                {
+                                    "id": 11209,
+                                    "name": "eggplant",
+                                    "localizedName": "eggplant",
+                                    "image": "eggplant.png"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 2,
+                            "step": "Layer in colander, sprinkling each layer with salt.",
+                            "ingredients": [
+                                {
+                                    "id": 2047,
+                                    "name": "salt",
+                                    "localizedName": "salt",
+                                    "image": "salt.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404639,
+                                    "name": "colander",
+                                    "localizedName": "colander",
+                                    "image": "colander.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 3,
+                            "step": "Let stand 30 minutes.RINSE eggplant; pat dry.",
+                            "ingredients": [
+                                {
+                                    "id": 11209,
+                                    "name": "eggplant",
+                                    "localizedName": "eggplant",
+                                    "image": "eggplant.png"
+                                }
+                            ],
+                            "equipment": [],
+                            "length": {
+                                "number": 30,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 4,
+                            "step": "Place in single layer on baking sheet.",
+                            "ingredients": [],
+                            "equipment": [
+                                {
+                                    "id": 404727,
+                                    "name": "baking sheet",
+                                    "localizedName": "baking sheet",
+                                    "image": "baking-sheet.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 5,
+                            "step": "Brush with olive oil. Broil, turning once for 4 to 6 minutes on each side, until golden and softened. Set aside. Repeat until all eggplants are cooked.SAUTE zucchini in large oiled frying pan until tender-crisp. Set aside.Meat Sauce:COOK lamb in large saucepan on high heat, breaking up with spoon, for 5 minutes.",
+                            "ingredients": [
+                                {
+                                    "id": 11209,
+                                    "name": "eggplant",
+                                    "localizedName": "eggplant",
+                                    "image": "eggplant.png"
+                                },
+                                {
+                                    "id": 4053,
+                                    "name": "olive oil",
+                                    "localizedName": "olive oil",
+                                    "image": "olive-oil.jpg"
+                                },
+                                {
+                                    "id": 11477,
+                                    "name": "zucchini",
+                                    "localizedName": "zucchini",
+                                    "image": "zucchini.jpg"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "sauce",
+                                    "localizedName": "sauce",
+                                    "image": ""
+                                },
+                                {
+                                    "id": 10017224,
+                                    "name": "lamb",
+                                    "localizedName": "lamb",
+                                    "image": "lamb-shanks.jpg"
+                                },
+                                {
+                                    "id": 1065062,
+                                    "name": "meat",
+                                    "localizedName": "meat",
+                                    "image": "whole-chicken.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404645,
+                                    "name": "frying pan",
+                                    "localizedName": "frying pan",
+                                    "image": "pan.png"
+                                },
+                                {
+                                    "id": 404669,
+                                    "name": "sauce pan",
+                                    "localizedName": "sauce pan",
+                                    "image": "sauce-pan.jpg"
+                                }
+                            ],
+                            "length": {
+                                "number": 9,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 6,
+                            "step": "Drain off fat.",
+                            "ingredients": [],
+                            "equipment": []
+                        },
+                        {
+                            "number": 7,
+                            "step": "Add onions, garlic and oregano. Cook on medium for 5 minutes.",
+                            "ingredients": [
+                                {
+                                    "id": 2027,
+                                    "name": "oregano",
+                                    "localizedName": "oregano",
+                                    "image": "oregano.jpg"
+                                },
+                                {
+                                    "id": 11215,
+                                    "name": "garlic",
+                                    "localizedName": "garlic",
+                                    "image": "garlic.png"
+                                },
+                                {
+                                    "id": 11282,
+                                    "name": "onion",
+                                    "localizedName": "onion",
+                                    "image": "brown-onion.png"
+                                }
+                            ],
+                            "equipment": [],
+                            "length": {
+                                "number": 5,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 8,
+                            "step": "Add tomatoes, tomato paste and wine. Simmer 10 minutes, or until mixture starts to thicken. Stir in parsley, salt and pepper. Set aside.White Sauce:MELT margarine in large saucepan.",
+                            "ingredients": [
+                                {
+                                    "id": 1102047,
+                                    "name": "salt and pepper",
+                                    "localizedName": "salt and pepper",
+                                    "image": "salt-and-pepper.jpg"
+                                },
+                                {
+                                    "id": 11887,
+                                    "name": "tomato paste",
+                                    "localizedName": "tomato paste",
+                                    "image": "tomato-paste.jpg"
+                                },
+                                {
+                                    "id": 4073,
+                                    "name": "margarine",
+                                    "localizedName": "margarine",
+                                    "image": "butter-sliced.jpg"
+                                },
+                                {
+                                    "id": 11529,
+                                    "name": "tomato",
+                                    "localizedName": "tomato",
+                                    "image": "tomato.png"
+                                },
+                                {
+                                    "id": 11297,
+                                    "name": "parsley",
+                                    "localizedName": "parsley",
+                                    "image": "parsley.jpg"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "sauce",
+                                    "localizedName": "sauce",
+                                    "image": ""
+                                },
+                                {
+                                    "id": 14084,
+                                    "name": "wine",
+                                    "localizedName": "wine",
+                                    "image": "red-wine.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404669,
+                                    "name": "sauce pan",
+                                    "localizedName": "sauce pan",
+                                    "image": "sauce-pan.jpg"
+                                }
+                            ],
+                            "length": {
+                                "number": 10,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 9,
+                            "step": "Add flour, mixing until smooth. Gradually add milk. Cook, stirring constantly until mixture comes to a boil and is thickened.",
+                            "ingredients": [
+                                {
+                                    "id": 20081,
+                                    "name": "all purpose flour",
+                                    "localizedName": "all purpose flour",
+                                    "image": "flour.png"
+                                },
+                                {
+                                    "id": 1077,
+                                    "name": "milk",
+                                    "localizedName": "milk",
+                                    "image": "milk.png"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 10,
+                            "step": "Add salt and nutmeg.",
+                            "ingredients": [
+                                {
+                                    "id": 2025,
+                                    "name": "nutmeg",
+                                    "localizedName": "nutmeg",
+                                    "image": "ground-nutmeg.jpg"
+                                },
+                                {
+                                    "id": 2047,
+                                    "name": "salt",
+                                    "localizedName": "salt",
+                                    "image": "salt.jpg"
+                                }
+                            ],
+                            "equipment": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Add a bit of hot mixture to beaten eggs then return to saucepan and cook 2 minutes longer, stirring occasionally.To AssembleTips",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "Place pan on a baking sheet or piece of foil to catch any drips that may boil over.MAKE-AHEAD: After assembling, cool completely, uncovered in refrigerator. Cover with plastic wrap and refrigerate for 1 day or overwrap with heavy foil and freeze up to 3 weeks. Thaw in refrigerator 48 hours before baking.Replace lamb with beef.A thin bottom layer of sauteed sliced potatoes can be added.A make-ahead layered Greek casserole that's ideal for potlucks and family reunions.",
+                            "ingredients": [
+                                {
+                                    "id": 11352,
+                                    "name": "potato",
+                                    "localizedName": "potato",
+                                    "image": "potatoes-yukon-gold.png"
+                                },
+                                {
+                                    "id": 23572,
+                                    "name": "beef",
+                                    "localizedName": "beef",
+                                    "image": "beef-cubes-raw.png"
+                                },
+                                {
+                                    "id": 10017224,
+                                    "name": "lamb",
+                                    "localizedName": "lamb",
+                                    "image": "lamb-shanks.jpg"
+                                },
+                                {
+                                    "id": 10018364,
+                                    "name": "wrap",
+                                    "localizedName": "wrap",
+                                    "image": "flour-tortilla.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404727,
+                                    "name": "baking sheet",
+                                    "localizedName": "baking sheet",
+                                    "image": "baking-sheet.jpg"
+                                },
+                                {
+                                    "id": 404730,
+                                    "name": "plastic wrap",
+                                    "localizedName": "plastic wrap",
+                                    "image": "plastic-wrap.jpg"
+                                },
+                                {
+                                    "id": 404765,
+                                    "name": "aluminum foil",
+                                    "localizedName": "aluminum foil",
+                                    "image": "aluminum-foil.png"
+                                }
+                            ],
+                            "length": {
+                                "number": 2880,
+                                "unit": "minutes"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "spoonacularSourceUrl": "https://spoonacular.com/lamb-moussaka-649225"
+        },
+        {
+            "vegetarian": false,
+            "vegan": false,
+            "glutenFree": true,
+            "dairyFree": true,
+            "veryHealthy": false,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "weightWatcherSmartPoints": 2,
+            "gaps": "no",
+            "lowFodmap": true,
+            "aggregateLikes": 1,
+            "spoonacularScore": 45.0,
+            "healthScore": 10.0,
+            "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+            "license": "CC BY 3.0",
+            "sourceName": "Foodista",
+            "pricePerServing": 115.64,
+            "id": 649196,
+            "title": "Lamb Chop Fry",
+            "readyInMinutes": 45,
+            "servings": 10,
+            "sourceUrl": "http://www.foodista.com/recipe/XP45PMVM/lamb-chop-fry",
+            "image": "https://spoonacular.com/recipeImages/649196-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "Lamb Chop Fry might be just the main course you are searching for. For <b>$1.16 per serving</b>, this recipe <b>covers 11%</b> of your daily requirements of vitamins and minerals. Watching your figure? This gluten free, dairy free, fodmap friendly, and whole 30 recipe has <b>138 calories</b>, <b>17g of protein</b>, and <b>6g of fat</b> per serving. 1 person has made this recipe and would make it again. Head to the store and pick up oil, lamb chops, madras curry powder/curry powder, and a few other things to make it today. To use up the ginger you could follow this main course with the <a href=\"https://spoonacular.com/recipes/ginger-cake-with-crystallized-ginger-frosting-189279\">Ginger Cake with Crystallized Ginger Frosting</a> as a dessert. All things considered, we decided this recipe <b>deserves a spoonacular score of 51%</b>. This score is solid. Try <a href=\"https://spoonacular.com/recipes/lamb-chop-or-lamb-steak-marinade-97767\">Lamb Chop or Lamb Steak Marinade</a>, <a href=\"https://spoonacular.com/recipes/lamb-chop-lancashire-hot-pot-97886\">Lamb Chop Lancashire Hot Pot</a>, and <a href=\"https://spoonacular.com/recipes/double-lamb-chop-inferno-45808\">Double Lamb Chop Inferno</a> for similar recipes.",
+            "cuisines": [],
+            "dishTypes": [
+                "lunch",
+                "main course",
+                "main dish",
+                "dinner"
+            ],
+            "diets": [
+                "gluten free",
+                "dairy free",
+                "fodmap friendly"
+            ],
+            "occasions": [],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "Wash the lamb chops,pat dry, keep aside, ,grind all the above masalas add a tbsp of oil and apply to the chops .marinate for 45 minutes.heat oil in a heavy bottomed pan place the chops in the pan reduce the flame and cover and cook turn and cook on the other side till done.serve hot as a starter or with chapatis",
+                            "ingredients": [
+                                {
+                                    "id": 17305,
+                                    "name": "lamb chop",
+                                    "localizedName": "lamb chop",
+                                    "image": "lamb-chops.png"
+                                },
+                                {
+                                    "id": 4582,
+                                    "name": "cooking oil",
+                                    "localizedName": "cooking oil",
+                                    "image": "vegetable-oil.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404645,
+                                    "name": "frying pan",
+                                    "localizedName": "frying pan",
+                                    "image": "pan.png"
+                                }
+                            ],
+                            "length": {
+                                "number": 45,
+                                "unit": "minutes"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "spoonacularSourceUrl": "https://spoonacular.com/lamb-chop-fry-649196"
+        },
+        {
+            "vegetarian": false,
+            "vegan": false,
+            "glutenFree": true,
+            "dairyFree": true,
+            "veryHealthy": true,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "weightWatcherSmartPoints": 27,
+            "gaps": "no",
+            "lowFodmap": false,
+            "aggregateLikes": 2,
+            "spoonacularScore": 83.0,
+            "healthScore": 56.0,
+            "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+            "license": "CC BY 3.0",
+            "sourceName": "Foodista",
+            "pricePerServing": 522.72,
+            "id": 649248,
+            "title": "Lamb Tagine Stew",
+            "readyInMinutes": 45,
+            "servings": 4,
+            "sourceUrl": "http://www.foodista.com/recipe/W5XY7PWG/lamb-tagine-stew",
+            "image": "https://spoonacular.com/recipeImages/649248-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "Lamb Tagine Stew might be just the main course you are searching for. For <b>$5.25 per serving</b>, this recipe <b>covers 38%</b> of your daily requirements of vitamins and minerals. One serving contains <b>884 calories</b>, <b>46g of protein</b>, and <b>68g of fat</b>. 1 person has made this recipe and would make it again. A mixture of lamb stock, carrot, peas, and a handful of other ingredients are all it takes to make this recipe so tasty. From preparation to the plate, this recipe takes roughly <b>45 minutes</b>. It can be enjoyed any time, but it is especially good for <b>Autumn</b>. It is a good option if you're following a <b>caveman, gluten free, dairy free, and primal</b> diet. All things considered, we decided this recipe <b>deserves a spoonacular score of 84%</b>. This score is amazing. Similar recipes include <a href=\"https://spoonacular.com/recipes/lamb-tagine-98103\">Lamb Tagine</a>, <a href=\"https://spoonacular.com/recipes/lamb-tagine-97554\">Lamb Tagine</a>, and <a href=\"https://spoonacular.com/recipes/lamb-tagine-97586\">Lamb Tagine</a>.",
+            "cuisines": [],
+            "dishTypes": [
+                "lunch",
+                "main course",
+                "main dish",
+                "dinner"
+            ],
+            "diets": [
+                "gluten free",
+                "dairy free"
+            ],
+            "occasions": [
+                "fall",
+                "winter"
+            ],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "Saute lamb chops in 2 teaspoons of olive oil.",
+                            "ingredients": [
+                                {
+                                    "id": 17305,
+                                    "name": "lamb chop",
+                                    "localizedName": "lamb chop",
+                                    "image": "lamb-chops.png"
+                                },
+                                {
+                                    "id": 4053,
+                                    "name": "olive oil",
+                                    "localizedName": "olive oil",
+                                    "image": "olive-oil.jpg"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 2,
+                            "step": "Place 2 teaspoons of olive oil in a wok and add onions, carrots, salt and pepper, oregano and stock.",
+                            "ingredients": [
+                                {
+                                    "id": 1102047,
+                                    "name": "salt and pepper",
+                                    "localizedName": "salt and pepper",
+                                    "image": "salt-and-pepper.jpg"
+                                },
+                                {
+                                    "id": 4053,
+                                    "name": "olive oil",
+                                    "localizedName": "olive oil",
+                                    "image": "olive-oil.jpg"
+                                },
+                                {
+                                    "id": 11124,
+                                    "name": "carrot",
+                                    "localizedName": "carrot",
+                                    "image": "sliced-carrot.png"
+                                },
+                                {
+                                    "id": 2027,
+                                    "name": "oregano",
+                                    "localizedName": "oregano",
+                                    "image": "oregano.jpg"
+                                },
+                                {
+                                    "id": 11282,
+                                    "name": "onion",
+                                    "localizedName": "onion",
+                                    "image": "brown-onion.png"
+                                },
+                                {
+                                    "id": 1006615,
+                                    "name": "stock",
+                                    "localizedName": "stock",
+                                    "image": "chicken-broth.png"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404666,
+                                    "name": "wok",
+                                    "localizedName": "wok",
+                                    "image": "wok.png"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 3,
+                            "step": "Add lamb, mushrooms and peas.In a separate bowl, mix parsley, lemon juice and cinnamon.",
+                            "ingredients": [
+                                {
+                                    "id": 9152,
+                                    "name": "lemon juice",
+                                    "localizedName": "lemon juice",
+                                    "image": "lemon-juice.jpg"
+                                },
+                                {
+                                    "id": 11260,
+                                    "name": "mushrooms",
+                                    "localizedName": "mushrooms",
+                                    "image": "mushrooms.png"
+                                },
+                                {
+                                    "id": 2010,
+                                    "name": "cinnamon",
+                                    "localizedName": "cinnamon",
+                                    "image": "cinnamon.jpg"
+                                },
+                                {
+                                    "id": 11297,
+                                    "name": "parsley",
+                                    "localizedName": "parsley",
+                                    "image": "parsley.jpg"
+                                },
+                                {
+                                    "id": 10017224,
+                                    "name": "lamb",
+                                    "localizedName": "lamb",
+                                    "image": "lamb-shanks.jpg"
+                                },
+                                {
+                                    "id": 11304,
+                                    "name": "peas",
+                                    "localizedName": "peas",
+                                    "image": "peas.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404783,
+                                    "name": "bowl",
+                                    "localizedName": "bowl",
+                                    "image": "bowl.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 4,
+                            "step": "Add this mixture to the wok.",
+                            "ingredients": [],
+                            "equipment": [
+                                {
+                                    "id": 404666,
+                                    "name": "wok",
+                                    "localizedName": "wok",
+                                    "image": "wok.png"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 5,
+                            "step": "Serve with couscous.",
+                            "ingredients": [
+                                {
+                                    "id": 20028,
+                                    "name": "couscous",
+                                    "localizedName": "couscous",
+                                    "image": "couscous-cooked.jpg"
+                                }
+                            ],
+                            "equipment": []
+                        }
+                    ]
+                }
+            ],
+            "spoonacularSourceUrl": "https://spoonacular.com/lamb-tagine-stew-649248"
+        },
+        {
+            "vegetarian": false,
+            "vegan": false,
+            "glutenFree": true,
+            "dairyFree": false,
+            "veryHealthy": true,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "weightWatcherSmartPoints": 15,
+            "gaps": "no",
+            "lowFodmap": false,
+            "aggregateLikes": 1,
+            "spoonacularScore": 83.0,
+            "healthScore": 58.0,
+            "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+            "license": "CC BY 3.0",
+            "sourceName": "Foodista",
+            "pricePerServing": 513.16,
+            "id": 649199,
+            "title": "Lamb Chops Masala",
+            "readyInMinutes": 45,
+            "servings": 1,
+            "sourceUrl": "http://www.foodista.com/recipe/QX6SZ3D6/lamb-chops-masala",
+            "image": "https://spoonacular.com/recipeImages/649199-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "Lamb Chops Masala might be just the <b>Indian</b> recipe you are searching for. This recipe makes 1 servings with <b>498 calories</b>, <b>32g of protein</b>, and <b>18g of fat</b> each. For <b>$5.71 per serving</b>, this recipe <b>covers 37%</b> of your daily requirements of vitamins and minerals. 1 person were impressed by this recipe. From preparation to the plate, this recipe takes approximately <b>45 minutes</b>. It is a good option if you're following a <b>gluten free and primal</b> diet. Not a lot of people really liked this main course. Head to the store and pick up punjabi garam masala, coriander, yoghurt, and a few other things to make it today. To use up the yoghurt you could follow this main course with the <a href=\"https://spoonacular.com/recipes/5-minute-healthy-peach-frozen-yogurt-516109\">5-Minute Healthy Peach Frozen Yogurt</a> as a dessert. All things considered, we decided this recipe <b>deserves a spoonacular score of 87%</b>. This score is excellent. Try <a href=\"https://spoonacular.com/recipes/masala-lamb-chops-651180\">Masala Lamb Chops</a>, <a href=\"https://spoonacular.com/recipes/grilled-lamb-chops-with-garam-masala-97354\">Grilled Lamb Chops with Garam Masala</a>, and <a href=\"https://spoonacular.com/recipes/garam-masala-lamb-chops-with-apricot-couscous-697250\">Garam Masala Lamb Chops with Apricot Couscous</a> for similar recipes.",
+            "cuisines": [
+                "Indian",
+                "Asian"
+            ],
+            "dishTypes": [
+                "lunch",
+                "main course",
+                "main dish",
+                "dinner"
+            ],
+            "diets": [
+                "gluten free"
+            ],
+            "occasions": [],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "Here's a tasty Punjabi recipe for lamb chops. My folks originated from this area of the sub-continet and hence this was popular at home.",
+                            "ingredients": [
+                                {
+                                    "id": 17305,
+                                    "name": "lamb chop",
+                                    "localizedName": "lamb chop",
+                                    "image": "lamb-chops.png"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 2,
+                            "step": "Put the ginger and garlic into the container of an electric blender with 2-3 tablespoons of water and blend to a paste.",
+                            "ingredients": [
+                                {
+                                    "id": 11215,
+                                    "name": "garlic",
+                                    "localizedName": "garlic",
+                                    "image": "garlic.png"
+                                },
+                                {
+                                    "id": 11216,
+                                    "name": "ginger",
+                                    "localizedName": "ginger",
+                                    "image": "ginger.png"
+                                },
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404726,
+                                    "name": "blender",
+                                    "localizedName": "blender",
+                                    "image": "blender.png"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 3,
+                            "step": "Put the chops, tomatoes, onions, cayenne pepper, yoghurt, salt and ginger-garlic paste into a large wok or heavy-bottomed saucepan. Stir and bring to the boil. Turn the heat to low, cover and simmer for 50 minutes or until the chops are almost cooked.",
+                            "ingredients": [
+                                {
+                                    "id": 10093754,
+                                    "name": "ginger garlic paste",
+                                    "localizedName": "ginger garlic paste",
+                                    "image": "ginger-garlic-paste.png"
+                                },
+                                {
+                                    "id": 2031,
+                                    "name": "cayenne pepper",
+                                    "localizedName": "cayenne pepper",
+                                    "image": "chili-powder.jpg"
+                                },
+                                {
+                                    "id": 11529,
+                                    "name": "tomato",
+                                    "localizedName": "tomato",
+                                    "image": "tomato.png"
+                                },
+                                {
+                                    "id": 1116,
+                                    "name": "yogurt",
+                                    "localizedName": "yogurt",
+                                    "image": "plain-yogurt.jpg"
+                                },
+                                {
+                                    "id": 11282,
+                                    "name": "onion",
+                                    "localizedName": "onion",
+                                    "image": "brown-onion.png"
+                                },
+                                {
+                                    "id": 2047,
+                                    "name": "salt",
+                                    "localizedName": "salt",
+                                    "image": "salt.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404669,
+                                    "name": "sauce pan",
+                                    "localizedName": "sauce pan",
+                                    "image": "sauce-pan.jpg"
+                                },
+                                {
+                                    "id": 404666,
+                                    "name": "wok",
+                                    "localizedName": "wok",
+                                    "image": "wok.png"
+                                }
+                            ],
+                            "length": {
+                                "number": 50,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 4,
+                            "step": "Add the cumin seeds and simmer for 10 to 15 minutes or until the meat is tender and the sauce thick.",
+                            "ingredients": [
+                                {
+                                    "id": 2014,
+                                    "name": "cumin seeds",
+                                    "localizedName": "cumin seeds",
+                                    "image": "ground-cumin.jpg"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "sauce",
+                                    "localizedName": "sauce",
+                                    "image": ""
+                                },
+                                {
+                                    "id": 1065062,
+                                    "name": "meat",
+                                    "localizedName": "meat",
+                                    "image": "whole-chicken.jpg"
+                                }
+                            ],
+                            "equipment": [],
+                            "length": {
+                                "number": 10,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 5,
+                            "step": "Add the garam masala and lemon juice and stir.",
+                            "ingredients": [
+                                {
+                                    "id": 93663,
+                                    "name": "garam masala",
+                                    "localizedName": "garam masala",
+                                    "image": "garam-masala.jpg"
+                                },
+                                {
+                                    "id": 9152,
+                                    "name": "lemon juice",
+                                    "localizedName": "lemon juice",
+                                    "image": "lemon-juice.jpg"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 6,
+                            "step": "Sprinkle fresh coriander over the top and serve.TIPSIn the Punjab, tomatoes are grated to make a puree - don't be tempted to use ready-prepared tomato puree instead of fresh.The spice combinations in garam masala vary in different parts of India. In the Punjab this one which you can try making yourself is common: 5 tbsps coriander seeds, 3 tbsps cumin seeds, 2 1/2 tbsps black peppercorns, 2 1/2 black cardamom seeds, 2 in cinnamon stick, 4-5 cloves, 1/6 nutmeg.",
+                            "ingredients": [
+                                {
+                                    "id": 1022030,
+                                    "name": "black peppercorns",
+                                    "localizedName": "black peppercorns",
+                                    "image": "black-pepper.png"
+                                },
+                                {
+                                    "id": 2013,
+                                    "name": "whole coriander seeds",
+                                    "localizedName": "whole coriander seeds",
+                                    "image": "coriander-seeds.jpg"
+                                },
+                                {
+                                    "id": 11165,
+                                    "name": "fresh cilantro",
+                                    "localizedName": "fresh cilantro",
+                                    "image": "cilantro.png"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "cardamom seeds",
+                                    "localizedName": "cardamom seeds",
+                                    "image": "cardamom.jpg"
+                                },
+                                {
+                                    "id": 1002010,
+                                    "name": "cinnamon stick",
+                                    "localizedName": "cinnamon stick",
+                                    "image": "cinnamon.jpg"
+                                },
+                                {
+                                    "id": 93663,
+                                    "name": "garam masala",
+                                    "localizedName": "garam masala",
+                                    "image": "garam-masala.jpg"
+                                },
+                                {
+                                    "id": 11547,
+                                    "name": "tomato puree",
+                                    "localizedName": "tomato puree",
+                                    "image": "tomato-paste.jpg"
+                                },
+                                {
+                                    "id": 2014,
+                                    "name": "cumin seeds",
+                                    "localizedName": "cumin seeds",
+                                    "image": "ground-cumin.jpg"
+                                },
+                                {
+                                    "id": 11529,
+                                    "name": "tomato",
+                                    "localizedName": "tomato",
+                                    "image": "tomato.png"
+                                },
+                                {
+                                    "id": 1002011,
+                                    "name": "clove",
+                                    "localizedName": "clove",
+                                    "image": "cloves.jpg"
+                                },
+                                {
+                                    "id": 2025,
+                                    "name": "nutmeg",
+                                    "localizedName": "nutmeg",
+                                    "image": "ground-nutmeg.jpg"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 7,
+                            "step": "Put the coriander and the cumin into a cast-iron frying-pan over a medium heat.Stir until lightly roasted. Allow to cool. Grind with the remaining ingredients in a clean coffee grinder and store in a tightly lidded jar.This rich flavoursome dish originates in the fertile Punjab, a state now divided between India and Pakistan. There is nothing more important to a Punjabi man's diet than bread, and meals are accompanied by flat round cornbread rotis or rich, flaky pan-fried paratha layered with ghee(clarified butter).Rice is reserved for special occasions or for rice pudding, for the only food that makes a Punjabi feel he has eaten a proper meal is his bread! You of course, can serve this dish with plain boiled rice.",
+                            "ingredients": [
+                                {
+                                    "id": 93632,
+                                    "name": "clarified butter",
+                                    "localizedName": "clarified butter",
+                                    "image": "ghee.jpg"
+                                },
+                                {
+                                    "id": 1012013,
+                                    "name": "coriander",
+                                    "localizedName": "coriander",
+                                    "image": "ground-coriander.jpg"
+                                },
+                                {
+                                    "id": 18023,
+                                    "name": "cornbread",
+                                    "localizedName": "cornbread",
+                                    "image": "cornbread.jpg"
+                                },
+                                {
+                                    "id": 99217,
+                                    "name": "paratha",
+                                    "localizedName": "paratha",
+                                    "image": "pita-bread.jpg"
+                                },
+                                {
+                                    "id": 14209,
+                                    "name": "coffee",
+                                    "localizedName": "coffee",
+                                    "image": "brewed-coffee.jpg"
+                                },
+                                {
+                                    "id": 18064,
+                                    "name": "bread",
+                                    "localizedName": "bread",
+                                    "image": "white-bread.jpg"
+                                },
+                                {
+                                    "id": 1002014,
+                                    "name": "cumin",
+                                    "localizedName": "cumin",
+                                    "image": "ground-cumin.jpg"
+                                },
+                                {
+                                    "id": 93632,
+                                    "name": "ghee",
+                                    "localizedName": "ghee",
+                                    "image": "ghee.jpg"
+                                },
+                                {
+                                    "id": 20444,
+                                    "name": "rice",
+                                    "localizedName": "rice",
+                                    "image": "uncooked-white-rice.png"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404645,
+                                    "name": "frying pan",
+                                    "localizedName": "frying pan",
+                                    "image": "pan.png"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "spoonacularSourceUrl": "https://spoonacular.com/lamb-chops-masala-649199"
+        },
+        {
+            "vegetarian": false,
+            "vegan": false,
+            "glutenFree": false,
+            "dairyFree": true,
+            "veryHealthy": false,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "weightWatcherSmartPoints": 8,
+            "gaps": "no",
+            "lowFodmap": false,
+            "aggregateLikes": 1,
+            "spoonacularScore": 48.0,
+            "healthScore": 11.0,
+            "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+            "license": "CC BY 3.0",
+            "sourceName": "Foodista",
+            "pricePerServing": 159.36,
+            "id": 649182,
+            "title": "Lamb and Bacon Burgers",
+            "readyInMinutes": 45,
+            "servings": 6,
+            "sourceUrl": "http://www.foodista.com/recipe/GCJMSG65/lamb-and-bacon-burgers",
+            "image": "https://spoonacular.com/recipeImages/649182-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "The recipe Lamb and Bacon Burgers is ready <b>in around 45 minutes</b> and is definitely an amazing <b>dairy free</b> option for lovers of American food. This recipe serves 6 and costs $1.61 per serving. One serving contains <b>321 calories</b>, <b>12g of protein</b>, and <b>8g of fat</b>. Only a few people made this recipe, and 1 would say it hit the spot. Head to the store and pick up salt and pepper, iceberg lettuce, oregano, and a few other things to make it today. All things considered, we decided this recipe <b>deserves a spoonacular score of 52%</b>. This score is good. Try <a href=\"https://spoonacular.com/recipes/broiled-bacon-lamb-burgers-526272\">Broiled Bacon Lamb Burgers</a>, <a href=\"https://spoonacular.com/recipes/lamb-bacon-burgers-with-spicy-aioli-716447\">Lamb-Bacon Burgers with Spicy Aioli</a>, and <a href=\"https://spoonacular.com/recipes/bacon-and-cheese-stuffed-burgers-jucy-lucy-burgers-491957\">Bacon and Cheese Stuffed Burgers (Jucy Lucy Burgers)</a> for similar recipes.",
+            "cuisines": [
+                "American"
+            ],
+            "dishTypes": [
+                "side dish"
+            ],
+            "diets": [
+                "dairy free"
+            ],
+            "occasions": [],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "In a large bowl, mix together the lamb, breadcrumbs, onion, oregano, bacon and salt and pepper. Bind together with the egg.Divide the mixture into 6, roll into balls and flatten with the palm of your hand. Chill in the refrigerator for 30 minutes.",
+                            "ingredients": [
+                                {
+                                    "id": 1102047,
+                                    "name": "salt and pepper",
+                                    "localizedName": "salt and pepper",
+                                    "image": "salt-and-pepper.jpg"
+                                },
+                                {
+                                    "id": 18079,
+                                    "name": "breadcrumbs",
+                                    "localizedName": "breadcrumbs",
+                                    "image": "breadcrumbs.jpg"
+                                },
+                                {
+                                    "id": 2027,
+                                    "name": "oregano",
+                                    "localizedName": "oregano",
+                                    "image": "oregano.jpg"
+                                },
+                                {
+                                    "id": 10123,
+                                    "name": "bacon",
+                                    "localizedName": "bacon",
+                                    "image": "raw-bacon.png"
+                                },
+                                {
+                                    "id": 11282,
+                                    "name": "onion",
+                                    "localizedName": "onion",
+                                    "image": "brown-onion.png"
+                                },
+                                {
+                                    "id": 10017224,
+                                    "name": "lamb",
+                                    "localizedName": "lamb",
+                                    "image": "lamb-shanks.jpg"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "roll",
+                                    "localizedName": "roll",
+                                    "image": "dinner-yeast-rolls.jpg"
+                                },
+                                {
+                                    "id": 1123,
+                                    "name": "egg",
+                                    "localizedName": "egg",
+                                    "image": "egg.png"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404783,
+                                    "name": "bowl",
+                                    "localizedName": "bowl",
+                                    "image": "bowl.jpg"
+                                }
+                            ],
+                            "length": {
+                                "number": 30,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 2,
+                            "step": "Place the burgers on a preheated grill and cook for 5-6 minutes each side, or until cooked to your preferred doneness.",
+                            "ingredients": [],
+                            "equipment": [
+                                {
+                                    "id": 404706,
+                                    "name": "grill",
+                                    "localizedName": "grill",
+                                    "image": "grill.jpg"
+                                }
+                            ],
+                            "length": {
+                                "number": 6,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 3,
+                            "step": "Serve each burger in a warm toasted roll filled with a lettuce and tomato garnish.",
+                            "ingredients": [
+                                {
+                                    "id": 11252,
+                                    "name": "lettuce",
+                                    "localizedName": "lettuce",
+                                    "image": "iceberg-lettuce.jpg"
+                                },
+                                {
+                                    "id": 11529,
+                                    "name": "tomato",
+                                    "localizedName": "tomato",
+                                    "image": "tomato.png"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "roll",
+                                    "localizedName": "roll",
+                                    "image": "dinner-yeast-rolls.jpg"
+                                }
+                            ],
+                            "equipment": []
+                        }
+                    ]
+                }
+            ],
+            "spoonacularSourceUrl": "https://spoonacular.com/lamb-and-bacon-burgers-649182"
+        },
+        {
+            "vegetarian": false,
+            "vegan": false,
+            "glutenFree": true,
+            "dairyFree": true,
+            "veryHealthy": false,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "weightWatcherSmartPoints": 6,
+            "gaps": "no",
+            "lowFodmap": false,
+            "aggregateLikes": 1,
+            "spoonacularScore": 77.0,
+            "healthScore": 42.0,
+            "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+            "license": "CC BY 3.0",
+            "sourceName": "Foodista",
+            "pricePerServing": 487.88,
+            "id": 649186,
+            "title": "Lamb and Mushroom Stew",
+            "readyInMinutes": 45,
+            "servings": 6,
+            "sourceUrl": "http://www.foodista.com/recipe/J2TQVTSY/lamb-and-mushroom-stew",
+            "image": "https://spoonacular.com/recipeImages/649186-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "Need a <b>gluten free and dairy free main course</b>? Lamb and Mushroom Stew could be a spectacular recipe to try. This recipe makes 6 servings with <b>299 calories</b>, <b>26g of protein</b>, and <b>9g of fat</b> each. For <b>$4.51 per serving</b>, this recipe <b>covers 26%</b> of your daily requirements of vitamins and minerals. It can be enjoyed any time, but it is especially good for <b>Autumn</b>. This recipe is liked by 1 foodies and cooks. A mixture of onions, salt, basil leaves, and a handful of other ingredients are all it takes to make this recipe so delicious. To use up the onions you could follow this main course with the <a href=\"https://spoonacular.com/recipes/candy-corn-cupcakes-63881\">Candy Corn Cupcakes</a> as a dessert. From preparation to the plate, this recipe takes roughly <b>45 minutes</b>. All things considered, we decided this recipe <b>deserves a spoonacular score of 77%</b>. This score is solid. Try <a href=\"https://spoonacular.com/recipes/jos-lamb-stew-559327\">Jo’s Lamb Stew</a>, <a href=\"https://spoonacular.com/recipes/lamb-stew-373623\">Lamb Stew</a>, and <a href=\"https://spoonacular.com/recipes/lamb-stew-300924\">Lamb Stew</a> for similar recipes.",
+            "cuisines": [],
+            "dishTypes": [
+                "lunch",
+                "main course",
+                "main dish",
+                "dinner"
+            ],
+            "diets": [
+                "gluten free",
+                "dairy free"
+            ],
+            "occasions": [
+                "fall",
+                "winter"
+            ],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "In a 6-quart pressure cooker over high heat, frequently stir lamb until browned, about 15 minutes. With a slotted spoon, transfer lamb to a bowl.Meanwhile, rinse common mushrooms, trim stem ends, and quarter mushrooms. Rinse shiitakes, discard stems, and slice caps.In cooker, stir common mushrooms, shiitakes, onions, carrots, garlic, and pancetta until onions are lightly browned, about 10 minutes.",
+                            "ingredients": [
+                                {
+                                    "id": 11260,
+                                    "name": "mushrooms",
+                                    "localizedName": "mushrooms",
+                                    "image": "mushrooms.png"
+                                },
+                                {
+                                    "id": 11238,
+                                    "name": "shiitake mushrooms",
+                                    "localizedName": "shiitake mushrooms",
+                                    "image": "shiitake-mushrooms.png"
+                                },
+                                {
+                                    "id": 10410123,
+                                    "name": "pancetta",
+                                    "localizedName": "pancetta",
+                                    "image": "pancetta.png"
+                                },
+                                {
+                                    "id": 11124,
+                                    "name": "carrot",
+                                    "localizedName": "carrot",
+                                    "image": "sliced-carrot.png"
+                                },
+                                {
+                                    "id": 11215,
+                                    "name": "garlic",
+                                    "localizedName": "garlic",
+                                    "image": "garlic.png"
+                                },
+                                {
+                                    "id": 11282,
+                                    "name": "onion",
+                                    "localizedName": "onion",
+                                    "image": "brown-onion.png"
+                                },
+                                {
+                                    "id": 10017224,
+                                    "name": "lamb",
+                                    "localizedName": "lamb",
+                                    "image": "lamb-shanks.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404658,
+                                    "name": "pressure cooker",
+                                    "localizedName": "pressure cooker",
+                                    "image": "pressure-cooker.jpg"
+                                },
+                                {
+                                    "id": 404636,
+                                    "name": "slotted spoon",
+                                    "localizedName": "slotted spoon",
+                                    "image": "slotted-spoon.jpg"
+                                },
+                                {
+                                    "id": 404783,
+                                    "name": "bowl",
+                                    "localizedName": "bowl",
+                                    "image": "bowl.jpg"
+                                }
+                            ],
+                            "length": {
+                                "number": 25,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 2,
+                            "step": "Add lamb and juices, wine, basil, rosemary, and cloves.Seal cooker. Following manufacturer's instructions, bring to maximum pressure (15 pounds); adjust heat to stabilize cooking rate. Cook 20 minutes. Release pressure quickly, running cold water over pan.Open pan. If desired, discard cloves.",
+                            "ingredients": [
+                                {
+                                    "id": 2036,
+                                    "name": "rosemary",
+                                    "localizedName": "rosemary",
+                                    "image": "rosemary.jpg"
+                                },
+                                {
+                                    "id": 1002011,
+                                    "name": "clove",
+                                    "localizedName": "clove",
+                                    "image": "cloves.jpg"
+                                },
+                                {
+                                    "id": 2044,
+                                    "name": "basil",
+                                    "localizedName": "basil",
+                                    "image": "basil.jpg"
+                                },
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                },
+                                {
+                                    "id": 10017224,
+                                    "name": "lamb",
+                                    "localizedName": "lamb",
+                                    "image": "lamb-shanks.jpg"
+                                },
+                                {
+                                    "id": 14084,
+                                    "name": "wine",
+                                    "localizedName": "wine",
+                                    "image": "red-wine.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404645,
+                                    "name": "frying pan",
+                                    "localizedName": "frying pan",
+                                    "image": "pan.png"
+                                }
+                            ],
+                            "length": {
+                                "number": 20,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 3,
+                            "step": "Add peas to pan.",
+                            "ingredients": [
+                                {
+                                    "id": 11304,
+                                    "name": "peas",
+                                    "localizedName": "peas",
+                                    "image": "peas.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404645,
+                                    "name": "frying pan",
+                                    "localizedName": "frying pan",
+                                    "image": "pan.png"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 4,
+                            "step": "Mix cornstarch with 2 tablespoons water and stir into mixture, then stir stew over high heat until boiling. Season to taste with salt and pepper.",
+                            "ingredients": [
+                                {
+                                    "id": 1102047,
+                                    "name": "salt and pepper",
+                                    "localizedName": "salt and pepper",
+                                    "image": "salt-and-pepper.jpg"
+                                },
+                                {
+                                    "id": 20027,
+                                    "name": "corn starch",
+                                    "localizedName": "corn starch",
+                                    "image": "white-powder.jpg"
+                                },
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "stew",
+                                    "localizedName": "stew",
+                                    "image": ""
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 5,
+                            "step": "Serve with mashed potatoes or cooked rice.This recipe yields 6 servings.",
+                            "ingredients": [
+                                {
+                                    "id": 10220445,
+                                    "name": "cooked rice",
+                                    "localizedName": "cooked rice",
+                                    "image": "uncooked-white-rice.png"
+                                },
+                                {
+                                    "id": 11352,
+                                    "name": "potato",
+                                    "localizedName": "potato",
+                                    "image": "potatoes-yukon-gold.png"
+                                }
+                            ],
+                            "equipment": []
+                        }
+                    ]
+                }
+            ],
+            "spoonacularSourceUrl": "https://spoonacular.com/lamb-and-mushroom-stew-649186"
+        },
+        {
+            "vegetarian": false,
+            "vegan": false,
+            "glutenFree": true,
+            "dairyFree": true,
+            "veryHealthy": false,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "weightWatcherSmartPoints": 9,
+            "gaps": "no",
+            "lowFodmap": false,
+            "aggregateLikes": 4,
+            "spoonacularScore": 47.0,
+            "healthScore": 10.0,
+            "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+            "license": "CC BY 3.0",
+            "sourceName": "Foodista",
+            "pricePerServing": 152.01,
+            "id": 649214,
+            "title": "Lamb In Red Mole Sauce",
+            "readyInMinutes": 45,
+            "servings": 4,
+            "sourceUrl": "https://www.foodista.com/recipe/LT73VNJR/lamb-in-red-mole-sauce",
+            "image": "https://spoonacular.com/recipeImages/649214-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "If you have around <b>around 45 minutes</b> to spend in the kitchen, Lamb In Red Mole Sauce might be a great <b>gluten free and dairy free</b> recipe to try. This recipe serves 4 and costs $1.52 per serving. One serving contains <b>286 calories</b>, <b>4g of protein</b>, and <b>23g of fat</b>. This recipe from Foodista requires chipotle peppers, salt, sesame seeds, and canolan oil. It works well as a sauce. Only a few people made this recipe, and 4 would say it hit the spot. Overall, this recipe earns a <b>pretty good spoonacular score of 46%</b>. Similar recipes include <a href=\"https://spoonacular.com/recipes/lamb-in-red-mole-sauce-16171\">Lamb in Red Mole Sauce</a>, <a href=\"https://spoonacular.com/recipes/rack-of-lamb-mole-with-a-strawberry-balsamic-sauce-427281\">Rack of Lamb Mole with a Strawberry, Balsamic Sauce</a>, and <a href=\"https://spoonacular.com/recipes/chicken-enchiladas-with-red-mole-sauce-221103\">Chicken enchiladas with red mole sauce</a>.",
+            "cuisines": [],
+            "dishTypes": [
+                "sauce"
+            ],
+            "diets": [
+                "gluten free",
+                "dairy free"
+            ],
+            "occasions": [],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "To make mole sauce, soak chipotle peppers in hot water until soft.",
+                            "ingredients": [
+                                {
+                                    "id": 98839,
+                                    "name": "chipotle chiles",
+                                    "localizedName": "chipotle chiles",
+                                    "image": "chile-chipotle.jpg"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "sauce",
+                                    "localizedName": "sauce",
+                                    "image": ""
+                                },
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 2,
+                            "step": "Remove seeds and stem.",
+                            "ingredients": [
+                                {
+                                    "id": 93818,
+                                    "name": "seeds",
+                                    "localizedName": "seeds",
+                                    "image": "sunflower-seeds.jpg"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 3,
+                            "step": "Puree chipotles, roasted peppers, tomatoes and garlic until smooth and set aside.",
+                            "ingredients": [
+                                {
+                                    "id": 98839,
+                                    "name": "chipotle chiles",
+                                    "localizedName": "chipotle chiles",
+                                    "image": "chile-chipotle.jpg"
+                                },
+                                {
+                                    "id": 11529,
+                                    "name": "tomato",
+                                    "localizedName": "tomato",
+                                    "image": "tomato.png"
+                                },
+                                {
+                                    "id": 10111333,
+                                    "name": "peppers",
+                                    "localizedName": "peppers",
+                                    "image": "green-pepper.jpg"
+                                },
+                                {
+                                    "id": 11215,
+                                    "name": "garlic",
+                                    "localizedName": "garlic",
+                                    "image": "garlic.png"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 4,
+                            "step": "Toast oregano, cinnamon, sesame seeds and pepper until fragrant.",
+                            "ingredients": [
+                                {
+                                    "id": 12023,
+                                    "name": "sesame seeds",
+                                    "localizedName": "sesame seeds",
+                                    "image": "sesame-seeds.png"
+                                },
+                                {
+                                    "id": 2010,
+                                    "name": "cinnamon",
+                                    "localizedName": "cinnamon",
+                                    "image": "cinnamon.jpg"
+                                },
+                                {
+                                    "id": 2027,
+                                    "name": "oregano",
+                                    "localizedName": "oregano",
+                                    "image": "oregano.jpg"
+                                },
+                                {
+                                    "id": 1002030,
+                                    "name": "pepper",
+                                    "localizedName": "pepper",
+                                    "image": "pepper.jpg"
+                                },
+                                {
+                                    "id": 18070,
+                                    "name": "toast",
+                                    "localizedName": "toast",
+                                    "image": "toast"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 5,
+                            "step": "In a saucepan, heat canola oil, then add pureed vegetables, spices, chocolate, salt and tomato sauce.",
+                            "ingredients": [
+                                {
+                                    "id": 11549,
+                                    "name": "tomato sauce",
+                                    "localizedName": "tomato sauce",
+                                    "image": "tomato-sauce-or-pasta-sauce.jpg"
+                                },
+                                {
+                                    "id": 1014582,
+                                    "name": "canola oil",
+                                    "localizedName": "canola oil",
+                                    "image": "vegetable-oil.jpg"
+                                },
+                                {
+                                    "id": 11583,
+                                    "name": "vegetable",
+                                    "localizedName": "vegetable",
+                                    "image": "mixed-vegetables.png"
+                                },
+                                {
+                                    "id": 19081,
+                                    "name": "chocolate",
+                                    "localizedName": "chocolate",
+                                    "image": "milk-chocolate.jpg"
+                                },
+                                {
+                                    "id": 2035,
+                                    "name": "spices",
+                                    "localizedName": "spices",
+                                    "image": "spices.png"
+                                },
+                                {
+                                    "id": 2047,
+                                    "name": "salt",
+                                    "localizedName": "salt",
+                                    "image": "salt.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404669,
+                                    "name": "sauce pan",
+                                    "localizedName": "sauce pan",
+                                    "image": "sauce-pan.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 6,
+                            "step": "Heat until chocolate melts and then continue to simmer, covered, for 15 minutes, stirring frequently. If sauce is too thick, add water to thin as needed.",
+                            "ingredients": [
+                                {
+                                    "id": 19081,
+                                    "name": "chocolate",
+                                    "localizedName": "chocolate",
+                                    "image": "milk-chocolate.jpg"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "sauce",
+                                    "localizedName": "sauce",
+                                    "image": ""
+                                },
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                }
+                            ],
+                            "equipment": [],
+                            "length": {
+                                "number": 15,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 7,
+                            "step": "Heat oil in a large skillet.",
+                            "ingredients": [
+                                {
+                                    "id": 4582,
+                                    "name": "cooking oil",
+                                    "localizedName": "cooking oil",
+                                    "image": "vegetable-oil.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404645,
+                                    "name": "frying pan",
+                                    "localizedName": "frying pan",
+                                    "image": "pan.png"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 8,
+                            "step": "Season lamb on all sides liberally with salt and pepper, then sear in skillet until a brown crust forms on all sides.",
+                            "ingredients": [
+                                {
+                                    "id": 1102047,
+                                    "name": "salt and pepper",
+                                    "localizedName": "salt and pepper",
+                                    "image": "salt-and-pepper.jpg"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "crust",
+                                    "localizedName": "crust",
+                                    "image": ""
+                                },
+                                {
+                                    "id": 10017224,
+                                    "name": "lamb",
+                                    "localizedName": "lamb",
+                                    "image": "lamb-shanks.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404645,
+                                    "name": "frying pan",
+                                    "localizedName": "frying pan",
+                                    "image": "pan.png"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 9,
+                            "step": "Lay browned lamb in a piece of heavy duty aluminum foil and pour mole sauce over. Seal tightly so that no air escapes and the sauce wont leak out. (Double foil is a good idea.)",
+                            "ingredients": [
+                                {
+                                    "id": 0,
+                                    "name": "sauce",
+                                    "localizedName": "sauce",
+                                    "image": ""
+                                },
+                                {
+                                    "id": 10017224,
+                                    "name": "lamb",
+                                    "localizedName": "lamb",
+                                    "image": "lamb-shanks.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404765,
+                                    "name": "aluminum foil",
+                                    "localizedName": "aluminum foil",
+                                    "image": "aluminum-foil.png"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 10,
+                            "step": "Bake at 325 degrees F for 3-4 hours, until lamb is tender and falls from the bone.",
+                            "ingredients": [
+                                {
+                                    "id": 0,
+                                    "name": "bone",
+                                    "localizedName": "bone",
+                                    "image": ""
+                                },
+                                {
+                                    "id": 10017224,
+                                    "name": "lamb",
+                                    "localizedName": "lamb",
+                                    "image": "lamb-shanks.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404784,
+                                    "name": "oven",
+                                    "localizedName": "oven",
+                                    "image": "oven.jpg"
+                                },
+                                {
+                                    "id": 404784,
+                                    "name": "oven",
+                                    "localizedName": "oven",
+                                    "image": "oven.jpg",
+                                    "temperature": {
+                                        "number": 325.0,
+                                        "unit": "Fahrenheit"
+                                    }
+                                }
+                            ],
+                            "length": {
+                                "number": 240,
+                                "unit": "minutes"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "spoonacularSourceUrl": "https://spoonacular.com/lamb-in-red-mole-sauce-649214"
+        },
+        {
+            "vegetarian": false,
+            "vegan": false,
+            "glutenFree": true,
+            "dairyFree": false,
+            "veryHealthy": false,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "weightWatcherSmartPoints": 22,
+            "gaps": "no",
+            "lowFodmap": false,
+            "aggregateLikes": 0,
+            "spoonacularScore": 63.0,
+            "healthScore": 25.0,
+            "creditsText": "marioziv",
+            "license": "spoonacular's terms",
+            "sourceName": "spoonacular",
+            "pricePerServing": 274.36,
+            "id": 157834,
+            "title": "LAMB AND KIDNEY HOT- POT",
+            "author": "marioziv",
+            "readyInMinutes": 90,
+            "servings": 4,
+            "sourceUrl": "http://spoonacular.com/-1388249557196",
+            "image": "https://spoonacular.com/recipeImages/157834-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "Need a <b>gluten free main course</b>? LAMB AND KIDNEY HOT- POT could be an awesome recipe to try. One serving contains <b>663 calories</b>, <b>34g of protein</b>, and <b>46g of fat</b>. For <b>$2.74 per serving</b>, this recipe <b>covers 29%</b> of your daily requirements of vitamins and minerals. If you have butter, potatoes, middle neck of lamb, and a few other ingredients on hand, you can make it. To use up the onions you could follow this main course with the <a href=\"https://spoonacular.com/recipes/candy-corn-cupcakes-63881\">Candy Corn Cupcakes</a> as a dessert. From preparation to the plate, this recipe takes about <b>1 hour and 30 minutes</b>. Try <a href=\"https://spoonacular.com/recipes/instant-pot-chicken-pot-pie-soup-916463\">Instant Pot Chicken Pot Pie Soup</a>, <a href=\"https://spoonacular.com/recipes/instant-pot-one-pot-spaghetti-with-meat-sauce-926527\">Instant Pot One-Pot Spaghetti with Meat Sauce</a>, and <a href=\"https://spoonacular.com/recipes/the-best-hot-fudge-sauce-912157\">The Best Hot Fudge Sauce</a> for similar recipes.",
+            "cuisines": [],
+            "dishTypes": [
+                "lunch",
+                "main course",
+                "main dish",
+                "dinner"
+            ],
+            "diets": [
+                "gluten free"
+            ],
+            "occasions": [],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "Heat the oven to 160 c. gas mark",
+                            "ingredients": [],
+                            "equipment": [
+                                {
+                                    "id": 404784,
+                                    "name": "oven",
+                                    "localizedName": "oven",
+                                    "image": "oven.jpg",
+                                    "temperature": {
+                                        "number": 160.0,
+                                        "unit": "Celsius"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": 2,
+                            "step": "Trim the pieces of meat of any surplus fat and rinse off any loose splinters of bone (sometimes the bones splinter when the butcher chops them).",
+                            "ingredients": [
+                                {
+                                    "id": 0,
+                                    "name": "bone",
+                                    "localizedName": "bone",
+                                    "image": ""
+                                },
+                                {
+                                    "id": 1065062,
+                                    "name": "meat",
+                                    "localizedName": "meat",
+                                    "image": "whole-chicken.jpg"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 3,
+                            "step": "Peel away the fat surrounding the kidney. Nick the skin on the rounded side of each kidney and draw it back on each side until it is attached by the core only. Draw out as much core as possible and then cut off skin and core close ti kidney.",
+                            "ingredients": [
+                                {
+                                    "id": 13323,
+                                    "name": "kidney",
+                                    "localizedName": "kidney",
+                                    "image": "liver.jpg"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 4,
+                            "step": "Cut each kidney in half horizontally.",
+                            "ingredients": [
+                                {
+                                    "id": 13323,
+                                    "name": "kidney",
+                                    "localizedName": "kidney",
+                                    "image": "liver.jpg"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 5,
+                            "step": "Peel the onion and cut into thin slices.",
+                            "ingredients": [
+                                {
+                                    "id": 11282,
+                                    "name": "onion",
+                                    "localizedName": "onion",
+                                    "image": "brown-onion.png"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 6,
+                            "step": "Peel the potatoes and cut into 6 mm. thick slices.",
+                            "ingredients": [
+                                {
+                                    "id": 11352,
+                                    "name": "potato",
+                                    "localizedName": "potato",
+                                    "image": "potatoes-yukon-gold.png"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 7,
+                            "step": "Fill a hot-pot or deep casserole with alternate layers of potato, meat and kidney, and onions, starting with a layer of potatoes. Season lightly between each layer.",
+                            "ingredients": [
+                                {
+                                    "id": 11352,
+                                    "name": "potato",
+                                    "localizedName": "potato",
+                                    "image": "potatoes-yukon-gold.png"
+                                },
+                                {
+                                    "id": 13323,
+                                    "name": "kidney",
+                                    "localizedName": "kidney",
+                                    "image": "liver.jpg"
+                                },
+                                {
+                                    "id": 11282,
+                                    "name": "onion",
+                                    "localizedName": "onion",
+                                    "image": "brown-onion.png"
+                                },
+                                {
+                                    "id": 1065062,
+                                    "name": "meat",
+                                    "localizedName": "meat",
+                                    "image": "whole-chicken.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404752,
+                                    "name": "pot",
+                                    "localizedName": "pot",
+                                    "image": "stock-pot.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 8,
+                            "step": "Pour on the cold stock. Top with a layer of potato, arranging the slices so that they overlap each other like roof tiles to completely cover the meat. Do the potatoes with tiny pieces of butter, and put the lid on tightly.",
+                            "ingredients": [
+                                {
+                                    "id": 11352,
+                                    "name": "potato",
+                                    "localizedName": "potato",
+                                    "image": "potatoes-yukon-gold.png"
+                                },
+                                {
+                                    "id": 1001,
+                                    "name": "butter",
+                                    "localizedName": "butter",
+                                    "image": "butter-sliced.jpg"
+                                },
+                                {
+                                    "id": 1006615,
+                                    "name": "stock",
+                                    "localizedName": "stock",
+                                    "image": "chicken-broth.png"
+                                },
+                                {
+                                    "id": 1065062,
+                                    "name": "meat",
+                                    "localizedName": "meat",
+                                    "image": "whole-chicken.jpg"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 9,
+                            "step": "Cook in the centre of the oven for one and an half hour, reducing heat if necessary.",
+                            "ingredients": [],
+                            "equipment": [
+                                {
+                                    "id": 404784,
+                                    "name": "oven",
+                                    "localizedName": "oven",
+                                    "image": "oven.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 10,
+                            "step": "Uncover the hot-pot and cook for a further half an hour to allow the potatoes to brown.",
+                            "ingredients": [
+                                {
+                                    "id": 11352,
+                                    "name": "potato",
+                                    "localizedName": "potato",
+                                    "image": "potatoes-yukon-gold.png"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404752,
+                                    "name": "pot",
+                                    "localizedName": "pot",
+                                    "image": "stock-pot.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 11,
+                            "step": "Serve from the pot.",
+                            "ingredients": [],
+                            "equipment": [
+                                {
+                                    "id": 404752,
+                                    "name": "pot",
+                                    "localizedName": "pot",
+                                    "image": "stock-pot.jpg"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "spoonacularSourceUrl": "https://spoonacular.com/lamb-and-kidney-hot-pot-157834"
+        },
+        {
+            "vegetarian": false,
+            "vegan": false,
+            "glutenFree": false,
+            "dairyFree": false,
+            "veryHealthy": false,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "weightWatcherSmartPoints": 34,
+            "gaps": "no",
+            "lowFodmap": false,
+            "aggregateLikes": 4,
+            "spoonacularScore": 58.0,
+            "healthScore": 15.0,
+            "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+            "license": "CC BY 3.0",
+            "sourceName": "Foodista",
+            "pricePerServing": 296.08,
+            "id": 649178,
+            "title": "Lamb & Sweet Potato Pot Pie",
+            "readyInMinutes": 45,
+            "servings": 8,
+            "sourceUrl": "http://www.foodista.com/recipe/4YLB3GZ3/lamb-sweet-potato-pot-pie",
+            "image": "https://spoonacular.com/recipeImages/649178-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "You can never have too many main course recipes, so give Lamb & Sweet Potato Pot Pie a try. One serving contains <b>918 calories</b>, <b>20g of protein</b>, and <b>64g of fat</b>. For <b>$2.82 per serving</b>, this recipe <b>covers 23%</b> of your daily requirements of vitamins and minerals. From preparation to the plate, this recipe takes around <b>45 minutes</b>. 4 people have made this recipe and would make it again. Head to the store and pick up demi glace, caraway seeds, kosher salt, and a few other things to make it today. To use up the lemon zest you could follow this main course with the <a href=\"https://spoonacular.com/recipes/orange-marmalade-cookies-with-orange-zest-icing-589746\">Orange Marmalade Cookies with Orange Zest Icing</a> as a dessert. All things considered, we decided this recipe <b>deserves a spoonacular score of 58%</b>. This score is good. Try <a href=\"https://spoonacular.com/recipes/instant-pot-chicken-pot-pie-soup-916463\">Instant Pot Chicken Pot Pie Soup</a>, <a href=\"https://spoonacular.com/recipes/chicken-pot-pie-pockets-908274\">Chicken Pot Pie Pockets</a>, and <a href=\"https://spoonacular.com/recipes/homemade-chicken-pot-pie-soup-922614\">Homemade Chicken Pot Pie Soup</a> for similar recipes.",
+            "cuisines": [],
+            "dishTypes": [
+                "lunch",
+                "main course",
+                "main dish",
+                "dinner"
+            ],
+            "diets": [],
+            "occasions": [],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "Start with crust.",
+                            "ingredients": [
+                                {
+                                    "id": 0,
+                                    "name": "crust",
+                                    "localizedName": "crust",
+                                    "image": ""
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 2,
+                            "step": "Combine flour, sugar, rosemary, thyme and salt in a large bowl.",
+                            "ingredients": [
+                                {
+                                    "id": 2036,
+                                    "name": "rosemary",
+                                    "localizedName": "rosemary",
+                                    "image": "rosemary.jpg"
+                                },
+                                {
+                                    "id": 20081,
+                                    "name": "all purpose flour",
+                                    "localizedName": "all purpose flour",
+                                    "image": "flour.png"
+                                },
+                                {
+                                    "id": 19335,
+                                    "name": "sugar",
+                                    "localizedName": "sugar",
+                                    "image": "sugar-in-bowl.png"
+                                },
+                                {
+                                    "id": 2049,
+                                    "name": "thyme",
+                                    "localizedName": "thyme",
+                                    "image": "thyme.jpg"
+                                },
+                                {
+                                    "id": 2047,
+                                    "name": "salt",
+                                    "localizedName": "salt",
+                                    "image": "salt.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404783,
+                                    "name": "bowl",
+                                    "localizedName": "bowl",
+                                    "image": "bowl.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 3,
+                            "step": "Add chilled butter and combine with a pastry blender.",
+                            "ingredients": [
+                                {
+                                    "id": 1001,
+                                    "name": "butter",
+                                    "localizedName": "butter",
+                                    "image": "butter-sliced.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404726,
+                                    "name": "blender",
+                                    "localizedName": "blender",
+                                    "image": "blender.png"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 4,
+                            "step": "Add shortening and combine to cut into flour and butter mixture.",
+                            "ingredients": [
+                                {
+                                    "id": 4615,
+                                    "name": "shortening",
+                                    "localizedName": "shortening",
+                                    "image": "shortening.jpg"
+                                },
+                                {
+                                    "id": 1001,
+                                    "name": "butter",
+                                    "localizedName": "butter",
+                                    "image": "butter-sliced.jpg"
+                                },
+                                {
+                                    "id": 20081,
+                                    "name": "all purpose flour",
+                                    "localizedName": "all purpose flour",
+                                    "image": "flour.png"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 5,
+                            "step": "Mixture should resemble coarse cornmeal.Slowly add ice water by tablespoons.",
+                            "ingredients": [
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                },
+                                {
+                                    "id": 35137,
+                                    "name": "cornmeal",
+                                    "localizedName": "cornmeal",
+                                    "image": "cornmeal.png"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 6,
+                            "step": "Mix well after each addition until dough begins to stick together.",
+                            "ingredients": [
+                                {
+                                    "id": 0,
+                                    "name": "dough",
+                                    "localizedName": "dough",
+                                    "image": "pizza-dough"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 7,
+                            "step": "Place dough on a flat surface and divide into 2 even pieces.",
+                            "ingredients": [
+                                {
+                                    "id": 0,
+                                    "name": "dough",
+                                    "localizedName": "dough",
+                                    "image": "pizza-dough"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 8,
+                            "step": "Roll into balls, dust lightly with flour and wrap in plastic.",
+                            "ingredients": [
+                                {
+                                    "id": 20081,
+                                    "name": "all purpose flour",
+                                    "localizedName": "all purpose flour",
+                                    "image": "flour.png"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "roll",
+                                    "localizedName": "roll",
+                                    "image": "dinner-yeast-rolls.jpg"
+                                },
+                                {
+                                    "id": 10018364,
+                                    "name": "wrap",
+                                    "localizedName": "wrap",
+                                    "image": "flour-tortilla.jpg"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 9,
+                            "step": "Place in fridge for at least an hour.Toss lamb with salt, pepper, caraway seeds, garlic and flour.  Set aside.As dough chills, swirl a bit of olive oil in the bottom of a very wide and deep pan. When sizzling, add lamb pieces and cook on medium heat until just browned.  Scoop onto a separate plate.If necessary, swirl a bit more olive oil in the same pan.  Scrape up all the drippings on the pan, then slide onion and celery, cooking down until they soften and go translucent.",
+                            "ingredients": [
+                                {
+                                    "id": 2005,
+                                    "name": "caraway seeds",
+                                    "localizedName": "caraway seeds",
+                                    "image": "caraway-seeds.jpg"
+                                },
+                                {
+                                    "id": 4053,
+                                    "name": "olive oil",
+                                    "localizedName": "olive oil",
+                                    "image": "olive-oil.jpg"
+                                },
+                                {
+                                    "id": 11143,
+                                    "name": "celery",
+                                    "localizedName": "celery",
+                                    "image": "celery.jpg"
+                                },
+                                {
+                                    "id": 11215,
+                                    "name": "garlic",
+                                    "localizedName": "garlic",
+                                    "image": "garlic.png"
+                                },
+                                {
+                                    "id": 1002030,
+                                    "name": "pepper",
+                                    "localizedName": "pepper",
+                                    "image": "pepper.jpg"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "dough",
+                                    "localizedName": "dough",
+                                    "image": "pizza-dough"
+                                },
+                                {
+                                    "id": 20081,
+                                    "name": "all purpose flour",
+                                    "localizedName": "all purpose flour",
+                                    "image": "flour.png"
+                                },
+                                {
+                                    "id": 11282,
+                                    "name": "onion",
+                                    "localizedName": "onion",
+                                    "image": "brown-onion.png"
+                                },
+                                {
+                                    "id": 10017224,
+                                    "name": "lamb",
+                                    "localizedName": "lamb",
+                                    "image": "lamb-shanks.jpg"
+                                },
+                                {
+                                    "id": 2047,
+                                    "name": "salt",
+                                    "localizedName": "salt",
+                                    "image": "salt.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404645,
+                                    "name": "frying pan",
+                                    "localizedName": "frying pan",
+                                    "image": "pan.png"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 10,
+                            "step": "Pour in wine and demi glace.  Stir well.",
+                            "ingredients": [
+                                {
+                                    "id": 93612,
+                                    "name": "demi glace",
+                                    "localizedName": "demi glace",
+                                    "image": "gravy.jpg"
+                                },
+                                {
+                                    "id": 14084,
+                                    "name": "wine",
+                                    "localizedName": "wine",
+                                    "image": "red-wine.jpg"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 11,
+                            "step": "Add lamb back to the vegetables, followed by peas and bay leaf.   Cover, turn down to a simmer and cook about 15 minutes.Stir together water and cornstarch and pour into lamb and veggies.",
+                            "ingredients": [
+                                {
+                                    "id": 20027,
+                                    "name": "corn starch",
+                                    "localizedName": "corn starch",
+                                    "image": "white-powder.jpg"
+                                },
+                                {
+                                    "id": 11583,
+                                    "name": "vegetable",
+                                    "localizedName": "vegetable",
+                                    "image": "mixed-vegetables.png"
+                                },
+                                {
+                                    "id": 2004,
+                                    "name": "bay leaves",
+                                    "localizedName": "bay leaves",
+                                    "image": "bay-leaves.jpg"
+                                },
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                },
+                                {
+                                    "id": 10017224,
+                                    "name": "lamb",
+                                    "localizedName": "lamb",
+                                    "image": "lamb-shanks.jpg"
+                                },
+                                {
+                                    "id": 11304,
+                                    "name": "peas",
+                                    "localizedName": "peas",
+                                    "image": "peas.jpg"
+                                }
+                            ],
+                            "equipment": [],
+                            "length": {
+                                "number": 15,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 12,
+                            "step": "Mix well.",
+                            "ingredients": [],
+                            "equipment": []
+                        },
+                        {
+                            "number": 13,
+                            "step": "Add sweet potatoes and cook another 5-7 minutes.",
+                            "ingredients": [
+                                {
+                                    "id": 11507,
+                                    "name": "sweet potato",
+                                    "localizedName": "sweet potato",
+                                    "image": "sweet-potato.png"
+                                }
+                            ],
+                            "equipment": [],
+                            "length": {
+                                "number": 7,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 14,
+                            "step": "Remove from heat and cool completely.",
+                            "ingredients": [],
+                            "equipment": []
+                        },
+                        {
+                            "number": 15,
+                            "step": "Remove bay leaf.Once filling has cooled, take chilled dough and, on a floured surface, roll one ball for bottom crust layer.  Drop in 9-inch pie dish and trim edges.",
+                            "ingredients": [
+                                {
+                                    "id": 2004,
+                                    "name": "bay leaves",
+                                    "localizedName": "bay leaves",
+                                    "image": "bay-leaves.jpg"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "crust",
+                                    "localizedName": "crust",
+                                    "image": ""
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "dough",
+                                    "localizedName": "dough",
+                                    "image": "pizza-dough"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "roll",
+                                    "localizedName": "roll",
+                                    "image": "dinner-yeast-rolls.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 405915,
+                                    "name": "pie form",
+                                    "localizedName": "pie form",
+                                    "image": "pie-pan.png"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 16,
+                            "step": "Place in the fridge and roll second piece of dough for top.",
+                            "ingredients": [
+                                {
+                                    "id": 0,
+                                    "name": "dough",
+                                    "localizedName": "dough",
+                                    "image": "pizza-dough"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "roll",
+                                    "localizedName": "roll",
+                                    "image": "dinner-yeast-rolls.jpg"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 17,
+                            "step": "Remove bottom crust layer from fridge and pour in filling.  Top with second layer and trim edges if necessary.",
+                            "ingredients": [
+                                {
+                                    "id": 0,
+                                    "name": "crust",
+                                    "localizedName": "crust",
+                                    "image": ""
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 18,
+                            "step": "Roll top crust edge over bottom crust.  Put back in the fridge or pop in freezer 2-4 minutes for a quick chill if dough feels at all soft.*Just before baking, brush milk over top crust.",
+                            "ingredients": [
+                                {
+                                    "id": 0,
+                                    "name": "crust",
+                                    "localizedName": "crust",
+                                    "image": ""
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "dough",
+                                    "localizedName": "dough",
+                                    "image": "pizza-dough"
+                                },
+                                {
+                                    "id": 1077,
+                                    "name": "milk",
+                                    "localizedName": "milk",
+                                    "image": "milk.png"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "roll",
+                                    "localizedName": "roll",
+                                    "image": "dinner-yeast-rolls.jpg"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "pop",
+                                    "localizedName": "pop",
+                                    "image": ""
+                                }
+                            ],
+                            "equipment": [],
+                            "length": {
+                                "number": 4,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 19,
+                            "step": "Bake in a preheated oven at 375 degrees for 45-50 minutes or until golden brown.Heres where you can make this dish early.",
+                            "ingredients": [],
+                            "equipment": [
+                                {
+                                    "id": 404784,
+                                    "name": "oven",
+                                    "localizedName": "oven",
+                                    "image": "oven.jpg"
+                                }
+                            ],
+                            "length": {
+                                "number": 50,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 20,
+                            "step": "Let the filling cool completely in the fridge.  When cool, assemble pie with both layers and filling and chill until ready to bake.  As for the continuous chilling methods, this is the best way to keep a flakey crust.  Never, never, never bake soft, soggy dough.  Avoid a disaster and overchill if necessary!",
+                            "ingredients": [
+                                {
+                                    "id": 0,
+                                    "name": "crust",
+                                    "localizedName": "crust",
+                                    "image": ""
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "dough",
+                                    "localizedName": "dough",
+                                    "image": "pizza-dough"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404784,
+                                    "name": "oven",
+                                    "localizedName": "oven",
+                                    "image": "oven.jpg"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "spoonacularSourceUrl": "https://spoonacular.com/lamb-sweet-potato-pot-pie-649178"
+        },
+        {
+            "vegetarian": false,
+            "vegan": false,
+            "glutenFree": false,
+            "dairyFree": true,
+            "veryHealthy": true,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "weightWatcherSmartPoints": 16,
+            "gaps": "no",
+            "lowFodmap": false,
+            "aggregateLikes": 1,
+            "spoonacularScore": 81.0,
+            "healthScore": 66.0,
+            "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+            "license": "CC BY 3.0",
+            "sourceName": "Foodista",
+            "pricePerServing": 1178.97,
+            "id": 649187,
+            "title": "Lamb and Rice Noodle Stir Fry",
+            "readyInMinutes": 45,
+            "servings": 4,
+            "sourceUrl": "http://www.foodista.com/recipe/627K5XPD/lamb-and-rice-noodle-stir-fry",
+            "image": "https://spoonacular.com/recipeImages/649187-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "Lamb and Rice Noodle Stir Fry might be just the main course you are searching for. Watching your figure? This dairy free and pescatarian recipe has <b>555 calories</b>, <b>28g of protein</b>, and <b>22g of fat</b> per serving. This recipe serves 4 and costs $4.08 per serving. 1 person has tried and liked this recipe. A mixture of mustard, rice noodles, coriander freshly torn to garnish, and a handful of other ingredients are all it takes to make this recipe so flavorful. To use up the macadamia nuts you could follow this main course with the <a href=\"https://spoonacular.com/recipes/banana-bread-with-chocolate-and-macadamia-nuts-556448\">Banana bread with chocolate and macadamia nuts</a> as a dessert. From preparation to the plate, this recipe takes approximately <b>45 minutes</b>. All things considered, we decided this recipe <b>deserves a spoonacular score of 82%</b>. This score is outstanding. Try <a href=\"https://spoonacular.com/recipes/spicy-orange-lamb-and-noodle-stir-fry-98079\">Spicy Orange Lamb and Noodle Stir-Fry</a>, <a href=\"https://spoonacular.com/recipes/shrimp-rice-noodle-stir-fry-544027\">Shrimp & Rice Noodle Stir Fry</a>, and <a href=\"https://spoonacular.com/recipes/chicken-and-rice-noodle-stir-fry-with-ginger-and-basil-706965\">Chicken and Rice Noodle Stir-Fry with Ginger and Basil</a> for similar recipes.",
+            "cuisines": [],
+            "dishTypes": [
+                "lunch",
+                "main course",
+                "main dish",
+                "dinner"
+            ],
+            "diets": [
+                "dairy free"
+            ],
+            "occasions": [],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "Heat the wok on the floor of the roasting ovenuntil required.Soak the rice noodles in boiling water for 5 minutes.",
+                            "ingredients": [
+                                {
+                                    "id": 20133,
+                                    "name": "rice noodles",
+                                    "localizedName": "rice noodles",
+                                    "image": "dried-rice-noodles.jpg"
+                                },
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404666,
+                                    "name": "wok",
+                                    "localizedName": "wok",
+                                    "image": "wok.png"
+                                }
+                            ],
+                            "length": {
+                                "number": 5,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 2,
+                            "step": "Drain them and rinse thoroughly in cold water then leave until required.",
+                            "ingredients": [
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 3,
+                            "step": "Add the oil to the wok then stir fry the lamb on the boiling platefor 3 to 4 minutes until well browned.",
+                            "ingredients": [
+                                {
+                                    "id": 10017224,
+                                    "name": "lamb",
+                                    "localizedName": "lamb",
+                                    "image": "lamb-shanks.jpg"
+                                },
+                                {
+                                    "id": 4582,
+                                    "name": "cooking oil",
+                                    "localizedName": "cooking oil",
+                                    "image": "vegetable-oil.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404666,
+                                    "name": "wok",
+                                    "localizedName": "wok",
+                                    "image": "wok.png"
+                                }
+                            ],
+                            "length": {
+                                "number": 3,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 4,
+                            "step": "Add all the vegetables except the bean sprouts.Continue stir frying for 3 to 4 minutes then add the bean sprouts nuts horseradish mustard ginger and salt or soy sauce to taste.Toss in the rice noodles with the hot sin sauce and cook for a further 12 minutes until everything is piping hot.",
+                            "ingredients": [
+                                {
+                                    "id": 11043,
+                                    "name": "bean sprouts",
+                                    "localizedName": "bean sprouts",
+                                    "image": "bean-sprouts.jpg"
+                                },
+                                {
+                                    "id": 20133,
+                                    "name": "rice noodles",
+                                    "localizedName": "rice noodles",
+                                    "image": "dried-rice-noodles.jpg"
+                                },
+                                {
+                                    "id": 1002055,
+                                    "name": "horseradish",
+                                    "localizedName": "horseradish",
+                                    "image": "horseradish.jpg"
+                                },
+                                {
+                                    "id": 11583,
+                                    "name": "vegetable",
+                                    "localizedName": "vegetable",
+                                    "image": "mixed-vegetables.png"
+                                },
+                                {
+                                    "id": 16124,
+                                    "name": "soy sauce",
+                                    "localizedName": "soy sauce",
+                                    "image": "soy-sauce.jpg"
+                                },
+                                {
+                                    "id": 2046,
+                                    "name": "mustard",
+                                    "localizedName": "mustard",
+                                    "image": "regular-mustard.jpg"
+                                },
+                                {
+                                    "id": 11216,
+                                    "name": "ginger",
+                                    "localizedName": "ginger",
+                                    "image": "ginger.png"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "sauce",
+                                    "localizedName": "sauce",
+                                    "image": ""
+                                },
+                                {
+                                    "id": 12135,
+                                    "name": "nuts",
+                                    "localizedName": "nuts",
+                                    "image": "nuts-mixed.jpg"
+                                },
+                                {
+                                    "id": 2047,
+                                    "name": "salt",
+                                    "localizedName": "salt",
+                                    "image": "salt.jpg"
+                                }
+                            ],
+                            "equipment": [],
+                            "length": {
+                                "number": 15,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 5,
+                            "step": "Serve immediatley garnished with the coriander.Noodles can be made from many different cereals and I have used the rice variety for this stir fry as they are very quick to cook and a little bit different. Use the agaluxe wok or a heavy ground based wok for this recipe.",
+                            "ingredients": [
+                                {
+                                    "id": 1012013,
+                                    "name": "coriander",
+                                    "localizedName": "coriander",
+                                    "image": "ground-coriander.jpg"
+                                },
+                                {
+                                    "id": 20420,
+                                    "name": "pasta",
+                                    "localizedName": "pasta",
+                                    "image": "fusilli.jpg"
+                                },
+                                {
+                                    "id": 20444,
+                                    "name": "rice",
+                                    "localizedName": "rice",
+                                    "image": "uncooked-white-rice.png"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404666,
+                                    "name": "wok",
+                                    "localizedName": "wok",
+                                    "image": "wok.png"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 6,
+                            "step": "Serves 4",
+                            "ingredients": [],
+                            "equipment": []
+                        }
+                    ]
+                }
+            ],
+            "spoonacularSourceUrl": "https://spoonacular.com/lamb-and-rice-noodle-stir-fry-649187"
+        }
+    ],
+    "offset": 0,
+    "number": 10,
+    "totalResults": 31
+}
