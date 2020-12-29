@@ -16,10 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+
         // Override point for customization after application launch.
         if #available(iOS 13.0, *) {
+            FirebaseApp.configure()
             return true
         } else {
+
             self.window = UIWindow(frame: UIScreen.main.bounds)
             if let window = window {
                 let rootViewController = MainNavigationController()
@@ -27,7 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 window.rootViewController = rootViewController
                 window.makeKeyAndVisible()
             }
-            
             FirebaseApp.configure()
             return true
         }

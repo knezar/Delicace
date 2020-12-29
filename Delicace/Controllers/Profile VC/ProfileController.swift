@@ -64,7 +64,7 @@ class ProfileController: UIViewController {
     // MARK: - Private
     private func configureCollections() {
         menu = MenuBarView(collectionOption: 1)
-        recipeCV = RecipeCollectionView(collectionOption: 1)
+        recipeCV = RecipeCollectionView(collectionOption: .Profile)
         menu.delegate = recipeCV
         recipeCV.delegate = menu
         recipeCollectionView.addSubview(recipeCV)
@@ -74,12 +74,12 @@ class ProfileController: UIViewController {
     }
     
     private func configureUserUI() {
-        userImage.image = #imageLiteral(resourceName: "obama")
+        userImage.image = #imageLiteral(resourceName: "golden-eagle")
         userImage.layer.borderWidth = 3
         userImage.layer.borderColor = UIColor.white.cgColor
         userImage.setCornerRadius(cornerR: (userImage.bounds.height) / 2)
-        nameLabel.text = " Barrack Obama"
-        locationLabel.text = "Washington, D.C"
+        nameLabel.text = " Golden Eagle"
+        locationLabel.text = "Denver, CO"
     }
     
     private func ConfigNavUI() {

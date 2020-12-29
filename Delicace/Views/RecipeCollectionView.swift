@@ -12,7 +12,7 @@ class RecipeCollectionView: UIView {
     
     
     // MARK: - Properties
-    var collectionOption: Int?
+    var collectionOption: CollectionOptions.AllCases.Element?
     weak var delegate: CollectionSelectionDelegate?
     lazy var recipeCollction: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -37,7 +37,7 @@ class RecipeCollectionView: UIView {
         setupMainCollectionView()
     }
     
-     init(collectionOption: Int) {
+     init(collectionOption: CollectionOptions.AllCases.Element) {
         self.collectionOption = collectionOption
         super.init(frame: .zero)
         setupMainCollectionView()
@@ -54,9 +54,12 @@ class RecipeCollectionView: UIView {
     
     // MARK: - Private
     private func setupMainCollectionView() {
+        
+        collectionOption = .Main
         guard let collectionOption = collectionOption  else {return}
-        let section = CollectionOptions(rawValue: collectionOption)
-        switch section {
+        print(CollectionOptions.Main)
+//        let collectionOption = CollectionOptions(rawValue: collectionOption)
+        switch collectionOption {
         case .Main:
             MainOptions.allCases.forEach { (cell) in
                 recipeCollction.register(cell.cell, forCellWithReuseIdentifier: cell.cellID)
@@ -68,7 +71,7 @@ class RecipeCollectionView: UIView {
         case .CookBook:
             guard let cell = ProfileOptions(rawValue: 2) else {return}
             recipeCollction.register(cell.cell, forCellWithReuseIdentifier: cell.cellID)
-        case .none: break
+//        case .none: break
         }
         addSubview(recipeCollction)
         recipeCollction.fillSuperView()
@@ -93,25 +96,23 @@ extension RecipeCollectionView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let collectionOption = collectionOption else {return 1}
-        let section = CollectionOptions(rawValue: collectionOption)
-        switch section {
+//        let section = CollectionOptions(rawValue: collectionOption)
+        switch collectionOption {
         case .Main: return MainOptions.allCases.count
         case .Profile: return ProfileOptions.allCases.count
         case .CookBook: return CookBookOptions.allCases.count
-        case .none: return 0
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let collectionOption = collectionOption else {return UICollectionViewCell()}
-        let section = CollectionOptions(rawValue: collectionOption)
-        switch section {
+//        let collectionOption = CollectionOptions(rawValue: collectionOption)
+        switch collectionOption {
         case .Main: return collectionView.dequeueReusableCell(withReuseIdentifier: MainOptions(rawValue: indexPath.item)!.cellID, for: indexPath)
         case .Profile: return collectionView.dequeueReusableCell(withReuseIdentifier: ProfileOptions(rawValue: indexPath.item)!.cellID, for: indexPath)
         case .CookBook:
             let cell = ProfileOptions(rawValue: 2)
             return collectionView.dequeueReusableCell(withReuseIdentifier: cell!.cellID, for: indexPath)
-        case .none: return UICollectionViewCell()
         }
     }
 }

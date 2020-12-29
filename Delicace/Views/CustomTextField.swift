@@ -19,7 +19,7 @@ class CustomTextField: UITextField {
     func addBorderAndColor() {
         let color = UIColor.getRGB(red: 254, green: 164, blue: 163)
         self.layer.borderWidth = 0.5
-        self.layer.borderColor = color.cgColor
+        self.layer.borderColor = UIColor.myPink.cgColor
         self.layer.cornerRadius = 30
         self.clipsToBounds = true
     }

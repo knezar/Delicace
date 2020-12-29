@@ -63,7 +63,7 @@ class HomeController: UIViewController {
 
     private func configureFloatingMenu() {
         menu = MenuBarView(collectionOption: 0)
-        recipeCV = RecipeCollectionView(collectionOption: 0)
+        recipeCV = RecipeCollectionView(collectionOption: .Main)
         menu.delegate = recipeCV
         recipeCV.delegate = menu
         recipeCollectionView.addSubview(recipeCV)

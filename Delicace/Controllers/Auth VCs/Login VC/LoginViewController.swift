@@ -7,16 +7,17 @@
 //
 
 import UIKit
-
+import Firebase
 
 
 class LoginViewController: UIViewController {
-        
+    
     // MARK: - Properties
     
     let graphicHelper = GraphicHelper()
     var delegate: LoginControllerDelegate?
-
+//    var handle: AuthStateDidChangeListenerHandle?
+    
     // MARK: - Outlets
     @IBOutlet weak var signinButton: UIButton!
     @IBOutlet weak var userNameTextField: UITextField!
@@ -25,13 +26,25 @@ class LoginViewController: UIViewController {
     
     
     // MARK: - Lifecycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+//            // ...
+//        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureTextFields()
         configureSignInButton()
     }
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+//        Auth.auth().removeStateDidChangeListener(handle!)
+    }
+    
     // MARK: - Private
     private func configureSignInButton() {
         signinButton.layer.cornerRadius = signinButton.frame.height / 2
@@ -54,18 +67,31 @@ class LoginViewController: UIViewController {
         ]
         textField.attributedPlaceholder = NSAttributedString(string: text, attributes: attrs)
     }
-
+    
     // MARK: - Actions
     @IBAction func didPressLoginButton(_ sender: Any) {
         guard
-        let userName = userNameTextField.text,
-        let password = passwordTextField.text
+            let email = userNameTextField.text,
+            let password = passwordTextField.text
         else {return}
-        let parameters = ["email": userName, "password":password]
         
-        UserDefaultsHelper.manager.setIsLoggedIn(bool: true)
-        dismiss(animated: true, completion: nil)
-        delegate?.finishLoggingIn()
+//        print(email, password)
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
+            guard let result = authResult, error == nil else {
+                print("error: User Don't exist")
+                return
+            }
+            let user = result.user
+            print(user)
+            self.delegate?.finishLoggingIn()
+        }
+        
+            //            guard let strongSelf = self else { return }
+
+            // ...
+//        UserDefaultsHelper.manager.setIsLoggedIn(bool: true)
+//        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func didPressCreateAccount(_ sender: UIButton) {

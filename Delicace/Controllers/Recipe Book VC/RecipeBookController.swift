@@ -35,7 +35,7 @@ class RecipeBookController: UIViewController {
     }
     
     private func configureMainCollectionView() {
-        recipeCV = RecipeCollectionView(collectionOption: 2)
+        recipeCV = RecipeCollectionView(collectionOption: .CookBook)
         view.addSubview(recipeCV)
         recipeCV.translatesAutoresizingMaskIntoConstraints = false
         recipeCV.fillSafeArea()
